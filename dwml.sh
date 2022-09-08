@@ -5,6 +5,7 @@ makepkg -si
 sudo pacman -Syu
 yay -S ly -y
 yay -S git -y
+yay -S wget
 git clone dwm
 git clone git://git.suckless.org/st
 cd st
@@ -14,7 +15,7 @@ cd dwm
 sudo make clean install
 yay -S vlc -y
 yay -S librewolf -y
-git clone https://www.privateinternetaccess.com/installer/pia-nm.sh
+wget https://www.privateinternetaccess.com/installer/pia-nm.sh
 chmod +x pia-nm.sh
 ./pia-nn-sh
 yay -S caja -y
@@ -42,15 +43,6 @@ yay -S imlib2
 yay -S noto-fonts-cjk
 yay -S noto-fonts-emoji
 yay -S  nerd-fonts-jetbrains-mono
-git clone https://github.com/Templarian/MaterialDesign-Font
 yay -S picom
 yay -S feh
 yay -S rofi
-git clone https://github.com/siduck/chadwm --depth 1  ~/.config
-cd ~/.config/chadwm/
-mv eww ~/.config
-sudo make install
-cp -r ~/.config/chadwm/eww ~/.config/
-eww open eww
-cd script
-mv chadwm.desktop /killertofus/share/xsessions/chadwm.desktop  
