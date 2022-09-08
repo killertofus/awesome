@@ -3,46 +3,42 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 sudo pacman -Syu
-yay -S ly -y
-yay -S git -y
+yay -S ly -Y
+yay -S git -Y
 yay -S wget
-git clone dwm
-git clone git://git.suckless.org/st
-cd st
-sudo make clean install
-cd ..
-cd dwm
-sudo make clean install
-yay -S vlc -y
-yay -S librewolf -y
+yay -S plasma-desktop
+git clone --recurse-submodules https://github.com/fairyglade/ly
+cd ly
+make
+make run
+make install install
+systemctl enable ly.service
+yay -S vlc -Y
+yay -S librewolf -Y
 wget https://www.privateinternetaccess.com/installer/pia-nm.sh
 chmod +x pia-nm.sh
 ./pia-nn-sh
-yay -S caja -y
-yay -S chatterino2-7tv-git -y
-yay -S vscodium -y
-sudo pacman -S streamlink
-yay -S streamlink-twitch-gui-bin -y
+yay -S caja -Y
+yay -S chatterino2-7tv-git -Y
+yay -S vscodium -Y
+sudo pacman -S streamlink -Y
+yay -S streamlink-twitch-gui-bin -Y
 yay -Syu
-yay -S qbittorrent -y
-yay -S jdownloader2 -y
-yay -S rustdesk -y
-yay -S obs
-yay -S stacer -y
-yay -S gnome-disk-utility -y
-yay -S nano -y
-yay -S alacritty -y
-yay -S remmina -y
-yay -S p7zip-gui -y
-yay -S fish -y
-yay -S flameshot -y
-yay -S github-desktop-bin -y
-yay -S timeshift
-yay -S dash
-yay -S imlib2
-yay -S noto-fonts-cjk
-yay -S noto-fonts-emoji
-yay -S  nerd-fonts-jetbrains-mono
-yay -S picom
-yay -S feh
-yay -S rofi
+yay -S qbittorrent -Y
+yay -S jdownloader2 -Y
+yay -S rustdesk -Y
+yay -S obs -Y
+yay -S stacer -Y
+yay -S gnome-disk-utility -Y
+yay -S nano -Y
+yay -S alacritty -Y
+yay -S remmina -Y
+yay -S p7zip-gui -Y
+yay -S fish -Y
+yay -S flameshot -Y
+yay -S github-desktop-bin -Y
+yay -S timeshift -Y
+yay -S dash -Y
+yay -S imlib2 -Y
+yay -S noto-fonts-cjk -Y
+yay -S noto-fonts-emoji -Y
