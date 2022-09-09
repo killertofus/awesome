@@ -3,24 +3,21 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 sudo pacman -Syu
+cd
+yay -S chatterino2-7tv-git -Y
+yay -S vscodium -Y
 yay -S ly -Y
 yay -S git -Y
 yay -S wget
 yay -S plasma-desktop
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-make
-make run
-make install install
-systemctl enable ly.service
+yay -S sddm
+sudo systemctl enable sddm.service
 yay -S vlc -Y
 yay -S librewolf -Y
-wget https://www.privateinternetaccess.com/installer/pia-nm.sh
-chmod +x pia-nm.sh
-./pia-nn-sh
+wget https://installers.privateinternetaccess.com/download/pia-linux-3.3.1-06924.run
+chmod +x pia-linux-3.3.1-06924.run
+sh ./pia-linux-3.3.1-06924.run
 yay -S caja -Y
-yay -S chatterino2-7tv-git -Y
-yay -S vscodium -Y
 sudo pacman -S streamlink -Y
 yay -S streamlink-twitch-gui-bin -Y
 yay -Syu
