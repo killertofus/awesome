@@ -6,7 +6,6 @@ sudo pacman -Syu
 cd
 yay -S chatterino2-7tv-git -Y
 yay -S vscodium -Y
-yay -S ly -Y
 yay -S git -Y
 yay -S wget
 yay -S plasma-desktop
