@@ -12,3 +12,5 @@ sudo systemctl enable sddm.service
 cd Config
 mv Config/rc.lua ~/.config/awesome
 mv Config/rofi.rasi ~/.config/awesome/home/configuration
+cd 
+mv Wallpaper.jpg ~/Pictures
