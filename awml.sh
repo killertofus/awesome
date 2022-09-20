@@ -10,7 +10,7 @@ chmod +x pia-linux-3.3.1-06924.run
 sh ./pia-linux-3.3.1-06924.run
 sudo systemctl enable sddm.service
 cd Config
-mv Config/rc.lua ~/.config/awesome
-mv Config/rofi.rasi ~/.config/awesome/home/configuration
+mv rc.lua ~/.config/awesome
+mv rofi.rasi ~/.config/awesome/home/configuration
 cd 
 mv Wallpaper.jpg ~/Pictures
