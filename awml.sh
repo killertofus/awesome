@@ -9,3 +9,5 @@ wget https://installers.privateinternetaccess.com/download/pia-linux-3.3.1-06924
 chmod +x pia-linux-3.3.1-06924.run
 sh ./pia-linux-3.3.1-06924.run
 sudo systemctl enable sddm.service
+mv Config/rc.lua ~/.config/awesome
+mv Config/rofi.rasi ~/.config/awesome/home/configuration
