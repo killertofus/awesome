@@ -169,7 +169,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -253,7 +253,7 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
-    awful.key({ modkey },    "r",             function () 
+    awful.key({  },    "Super_L",             function () 
         --running the run prompt, in this case
         awful.util.spawn("rofi -show drun") end,
         {description = "run prompt in rofi", group = "launcher"}),
