@@ -11,7 +11,7 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
+-- local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
@@ -89,8 +89,9 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
+                                    { "open terminal", terminal },
+                                    { "lock",  "xscreensaver-command -lock"}
+	   				}
                         })
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
@@ -105,7 +106,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock ("%a %b %d %I %M")
+mytextclock = wibox.widget.textclock ("%a %b %d %I:%M%P")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -255,8 +256,8 @@ globalkeys = gears.table.join(
         --running the run prompt, in this case
         awful.util.spawn("rofi -show drun") end,
         {description = "run prompt in rofi", group = "launcher"}),
-    awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end), 
-    -- Layout manipulation
+        awful.key({ }, "Prit", function () awful.util.spawn("flameshot gui") end), 
+    -- Layot manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
@@ -283,8 +284,8 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
+    awful.key({},            "Print",     function () awful.spawn("flameshot gui") end ),
+    awful.key({ modkey,           }, "z",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),
@@ -556,7 +557,22 @@ client.connect_signal("request::titlebars", function(c)
         layout = wibox.layout.align.horizontal
     }
 end)
+-- Autorun programs
+autorun = true
+autorunApps =
+{
+   "xscreensaver",
+   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &",
+   "consonance",
+   "dunst",
+   "volumeicon",
 
+}
+if autorun then
+   for app = 1, #autorunApps do
+       awful.util.spawn(autorunApps[app])
+   end
+end
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
