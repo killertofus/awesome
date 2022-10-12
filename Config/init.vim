@@ -1,6 +1,6 @@
 set number
 call plug#begin()
-autocmd VimEnter * NERDTree
+
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -19,6 +19,5 @@ function! s:check_back_space() abort
 endfunction
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
                                            \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+autocmd VimEnter * NERDTree
 autocmd InsertEnter * :let @/="" | :nohl
-autocmd FileType python map <buffer> <c-r> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <c-r> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
