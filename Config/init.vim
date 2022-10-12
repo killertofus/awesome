@@ -12,10 +12,10 @@ Plug 'ap/vim-css-color'
 Plug 'thinca/vim-quickrun'
 call plug#end()
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+let col = col('.') - 1
+return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
-                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+\"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 autocmd VimEnter * NERDTree
 autocmd InsertEnter * :let @/="" | :nohl
