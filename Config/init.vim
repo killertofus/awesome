@@ -12,6 +12,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-quickrun'
 Plug 'KabbAmine/vCoolor.vim'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 function! s:check_back_space() abort
 let col = col('.') - 1
@@ -23,3 +24,5 @@ autocmd InsertEnter  :let @/="" | :nohl
 :set clipboard=unnamed
 :set autoindent
 :syntax on
+:set spell
+let g:airline_deus_bg='dark'
