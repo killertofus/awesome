@@ -11,8 +11,8 @@ cd zsh
 mv dracula.zsh-theme lib ..
 sudo apt update
 sudo apt install zsh-autosuggestions -y
-sudo apt remove libreoffice gnome-games nano -y 
-sudo snap remove firefox -y
+sudo apt remove libreoffice gnome-games nano snap -y 
+sudo snap remove firefox
 sudo add-apt-repository ppa:mozillateam/ppa -y
 sudo apt remove --autoremove firefox -y
 echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
