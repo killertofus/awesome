@@ -25,3 +25,4 @@ systemctl daemon-reload
 systemctl enable x11vnc.service
 systemctl start x11vnc.service
 systemctl status x11vnc.service
+sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
