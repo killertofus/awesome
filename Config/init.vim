@@ -9,11 +9,14 @@ Plug 'thinca/vim-quickrun'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0'}
 call plug#end()
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-z> :NERDTreeFind<CR>
 nnoremap <C-r> :QuickRun <CR>
 function! s:check_back_space() abort
 let col = col('.') - 1
@@ -27,3 +30,4 @@ autocmd InsertEnter  :let @/="" | :nohl
 :syntax on
 :set spell
 let g:airline_deus_bg='dark'
+
