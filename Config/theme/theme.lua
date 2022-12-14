@@ -18,18 +18,18 @@ theme.tasklist_plain_task_name = true
 theme.tasklist_disable_task_name = true
 
 -- Colors
-theme.bg_normal     = "#fefefe"
+theme.bg_normal     = "#44475a"
 theme.bg_focus      = "#dfdfdf"
-theme.titlebar_bg_normal = "#fefefe"
-theme.titlebar_bg_focus  = "#dfdfdf"
+theme.titlebar_bg_normal = "#44475a"
+theme.titlebar_bg_focus  = "#44475a"
 theme.tasklist_bg_focus  = theme.bg_normal
 theme.bg_urgent     = "#fefefe"
 theme.bg_minimize   = "#fefefe"
 theme.bg_systray    = theme.bg_normal
-theme.fg_focus      = "#ffffff"
-theme.bg_focus      = "#535d6c"
+theme.fg_focus      = "#dfdfdf"
+theme.bg_focus      = "#44475a"
 theme.textclock_fg  = "#c5d5e1"
-theme.accent2       = "#c5d5e1"
+theme.accent2       = "#dfdfdf"
 theme.accent3       = "#c5d5e1"
 
 theme.taglist_bg_focus  = theme.accent2
