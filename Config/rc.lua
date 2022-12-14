@@ -11,9 +11,10 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
--- local naughty = require("naughty")
+local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local dpi = beautiful.xresources.apply_dpi
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -44,12 +45,14 @@ end
 -- }}}
 
 -- {{{ Variable definitions
--- themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- Themes define colours, icons, font and wallpapers.
+beautiful.init(gears.filesystem.get_configuration_dir() .. "theme/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nano"
+browser = "librewolf"
+filemanager = "caja"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -63,40 +66,35 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
-    -- awful.layout.suit.corner.ne,
-    -- awful.layout.suit.corner.sw,
-    -- awful.layout.suit.corner.se,
 }
 -- }}}
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
- 
    { "restart", awesome.restart },
-   
+   { "quit", function() awesome.quit() end },
+{ "lock", "xscreensaver-command -lock" },
+
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal },
-                                    { "lock",  "xscreensaver-command -lock"}
-	   				}
+
+
+
+
+mymainmenu = awful.menu({ items = { { "  awesome", myawesomemenu },
+				    --{ "  power", powermenu },
+				    
+                                    { "  terminal", terminal },
+				    --{ "  files", filemanager },
+				    { "  browser", browser}
+                                  }
                         })
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
-
+				     
+				     
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
@@ -106,7 +104,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock ("%a %b %d %I:%M%P")
+mytextclock = wibox.widget.textclock('%I %M')
+mytextclock:set_font("Comfortaa Medium 12")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -168,7 +167,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -184,36 +183,153 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytaglist = awful.widget.taglist {
         screen  = s,
         filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
+        buttons = taglist_buttons,
+	style   = {
+		shape = gears.shape.rounded_rect
+	},
     }
-
+    -- Systray ig
+    systray = wibox.widget.systray()
+    
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
     }
 
-    -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
-
-
- -- Add widgets to the wibox
- s.mywibox:setup {
+    local wb = awful.wibar { position = "bottom", height = 45, bg = beautiful.bg_focus }
+wb:setup {
     layout = wibox.layout.align.horizontal,
-    { -- Left widgets
+    { -- Left Side
+	{
+	    {
+		{
+		    {
+			{
+			    mylauncher,
+			    layout = wibox.layout.fixed.horizontal
+			},
+			bg     = beautiful.bg_normal,
+			shape  = gears.shape.squircle,
+			widget = wibox.container.background
+		    },
+		    margins = 7,
+		    widget  = wibox.container.margin
+		},
+		bg     = beautiful.bg_normal,
+		shape  = gears.shape.rounded_rect,
+		widget = wibox.container.background
+	    },
+	    margins = 5,
+	    widget  = wibox.container.margin
+	},
+	{ -- Center
+	    {
+		{
+		    {
+                        s.mytaglist,
+		        layout = wibox.layout.fixed.horizontal
+		    },
+		    top     = 6,
+		    bottom  = 6,
+		    left    = 10,
+		    right   = 10,
+		    widget  = wibox.container.margin
+	        },
+		shape  = gears.shape.rounded_rect,
+		bg     = beautiful.bg_normal,
+		fg     = beautiful.fg_normal,
+		widget = wibox.container.background
+	    },
+	    top     = 5,
+	    bottom  = 5,
+	    widget  = wibox.container.margin
+	},
         layout = wibox.layout.fixed.horizontal,
-        mylauncher,
-        s.mytaglist,
-        mytextclock,
-        s.mypromptbox,
     },
-    s.mytasklist, -- Middle widget
-    { -- Right widgets
-        layout = wibox.layout.fixed.horizontal,
-        wibox.widget.systray(),
-        mytextclock,
-        
+    {
+	{
+	    {
+		{
+		    {
+    	                s.mytasklist,
+		        layout = wibox.layout.fixed.horizontal
+		    },
+		    top = 6,
+		    bottom = 6,
+		    left = 14,
+		    right = 6,
+		    widget  = wibox.container.margin
+		},
+		shape  = gears.shape.rounded_rect,
+		bg     = beautiful.bg_normal,
+		widget = wibox.container.background
+	    },
+	    margins = 5,
+	    widget  = wibox.container.margin
+	},
+	halign = "center",
+	layout = wibox.container.place
+    },
+    {
+	{
+	    {
+		{
+		    {
+			systray,
+			layout = wibox.layout.fixed.horizontal
+		    },
+		    margins = 8,
+		    widget  = wibox.container.margin
+		},
+		bg = beautiful.bg_normal,
+		shape = gears.shape.rounded_rect,
+		widget = wibox.container.background
+	    },
+	    top     = 5,
+	    bottom  = 5,
+	    widget  = wibox.container.margin
+	},
+	{ -- Right Side
+	    {
+	        {
+		    {
+			{
+			    {
+				{
+		            	    mytextclock,
+		            	    layout = wibox.layout.fixed.horizontal
+				},
+				left = 7,
+				right = 7,
+				widget = wibox.container.margin
+			    },
+			    bg     = beautiful.textclock_fg,
+			    fg     = beautiful.bg_normal,
+			    shape  = gears.shape.rounded_rect,
+			    widget = wibox.container.background
+			},
+			top    = 3,
+			bottom = 3,
+			left   = 2,
+			right  = 2,
+			widget  = wibox.container.margin
+		    },
+		    top     = 2,
+		    bottom  = 2,
+		    left    = 2,
+		    right   = 2,
+		    widget  = wibox.container.margin
+	        },
+		shape  = gears.shape.rounded_rect,
+	        bg     = beautiful.bg_normal,
+	        widget = wibox.container.background
+	    },
+	    margins = 5,
+	    widget  = wibox.container.margin
+	},
+	layout = wibox.layout.fixed.horizontal
     },
 }
 end)
@@ -252,12 +368,8 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
-    awful.key({  },    "Super_L",             function () 
-        --running the run prompt, in this case
-        awful.util.spawn("rofi -show drun") end,
-        {description = "run prompt in rofi", group = "launcher"}),
-        awful.key({ }, "Prit", function () awful.util.spawn("flameshot gui") end), 
-    -- Layot manipulation
+
+    -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
@@ -278,14 +390,23 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
+
+ awful.key({  },    "Super_L",             function () 
+        --running the run prompt, in this case
+        awful.util.spawn("rofi -show drun") end,
+        {description = "run prompt in rofi", group = "launcher"}), 
+     awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end), 
+
+
+
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({},            "Print",     function () awful.spawn("flameshot gui") end ),
-    awful.key({ modkey,           }, "z",     function () awful.tag.incmwfact( 0.05)          end,
+
+    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),
@@ -315,7 +436,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "q",     function () awful.screen.focused().mypromptbox:run() end,
+    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -461,6 +582,7 @@ awful.rules.rules = {
      }
     },
 
+
     -- Floating clients.
     { rule_any = {
         instance = {
@@ -497,11 +619,8 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = true }
     },
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
 }
--- }}}
+
 
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
@@ -532,47 +651,103 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c) : setup {
+    awful.titlebar(c, {size = 45, position = "top"}) : setup {
         { -- Left
-            awful.titlebar.widget.iconwidget(c),
-            buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal
+	    {
+		{
+			{	
+				{
+					awful.titlebar.widget.iconwidget(c),
+					layout = wibox.layout.fixed.horizontal
+				},
+				margins = 5,	
+				widget  = wibox.container.margin
+			},
+			bg     = beautiful.bg_normal,
+			shape  = gears.shape.rounded_rect,
+			widget = wibox.container.background
+		},
+		top    = 5,
+		bottom = 5,
+		left   = 5,
+		widget = wibox.container.margin
+	    },
+            layout  = wibox.layout.fixed.horizontal,
         },
         { -- Middle
-            { -- Title
-                align  = "center",
-                widget = awful.titlebar.widget.titlewidget(c)
+	    {
+		{
+		    {
+			{
+			    {
+				{
+				    {
+			    	        awful.titlebar.widget.titlewidget(c),
+			    	        layout = wibox.layout.align.horizontal
+				    },
+				    top = 3,
+				    bottom = 3,
+				    right = 5,
+				    left  = 5,
+				    widget  = wibox.container.margin
+				},
+				bg  = beautiful.textclock_fg,
+				fg  = beautiful.bg_normal,
+				shape = gears.shape.rounded_rect,
+				widget = wibox.container.background
+			    },
+			    margins = 2,
+			    widget  = wibox.container.margin
+			},
+			left = 2,
+			right = 2,
+			top   = 2,
+			bottom = 2,
+			widget  = wibox.container.margin
+		    },
+		    bg     = beautiful.bg_normal,
+		    fg     = beautiful.textclock_fg,
+		    shape  = gears.shape.rounded_rect,
+		    widget = wibox.container.background
+		},
+		margins = 5,
+		widget = wibox.container.margin
             },
-            buttons = buttons,
-            layout  = wibox.layout.flex.horizontal
+	    halign    = "center",
+	    buttons   = buttons,
+            layout    = wibox.container.place
         },
         { -- Right
-            awful.titlebar.widget.floatingbutton (c),
-            awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
-            awful.titlebar.widget.closebutton    (c),
-            layout = wibox.layout.fixed.horizontal()
+	    nil,
+	    nil,
+	    {	    
+		    {
+		    	{	
+				{
+					awful.titlebar.widget.ontopbutton(c),
+					awful.titlebar.widget.maximizedbutton(c),
+					awful.titlebar.widget.closebutton(c),
+					layout = wibox.layout.fixed.horizontal
+			        },
+				left   = 6,
+				right  = 5,
+				widget = wibox.container.margin
+		    	},
+		    	shape  = gears.shape.rounded_rect,
+		    	bg     = beautiful.bg_normal,
+		    	widget = wibox.container.background,
+	            },
+		    top    = 6,
+		    bottom = 6,
+		    right  = 5,
+		    widget = wibox.container.margin
+	    },
+            layout = wibox.layout.fixed.horizontal
         },
         layout = wibox.layout.align.horizontal
     }
 end)
--- Autorun programs
-autorun = true
-autorunApps =
-{
-   "xscreensaver",
-   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &",
-   "consonance",
-   "dunst",
-   "volumeicon",
 
-}
-if autorun then
-   for app = 1, #autorunApps do
-       awful.util.spawn(autorunApps[app])
-   end
-end
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
@@ -582,3 +757,11 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+-- Utils
+awful.util.spawn("nm-applet")
+
+-- Autostart
+awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
+awful.spawn.with_shell("dunst")
+awful.spawn.with_shell("xscreensaver -nosplash")
+awful.spawn.with_shell("volumeicon")
