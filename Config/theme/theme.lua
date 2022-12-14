@@ -74,7 +74,7 @@ theme.titlebar_floating_button_normal_inactive = themes_path.."default/titlebar/
 theme.titlebar_floating_button_focus_inactive  = themes_path.."default/titlebar/floating_focus_inactive.png"
 theme.titlebar_floating_button_normal_active = themes_path.."default/titlebar/floating_normal_active.png"
 theme.titlebar_floating_button_focus_active  = themes_path.."default/titlebar/floating_focus_active.png"
-theme.wallpaper = themes_path.."walls/nothingatall.jpeg"
+theme.wallpaper = themes_path.."Wallpaper/background.png"
 
 -- Layout Icons
 theme.layout_floating  = themes_path.."icons/floating.png"
