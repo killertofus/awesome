@@ -4,9 +4,7 @@ cd yay
 makepkg -si
 sudo pacman -Syu
 cd
-yay -S  rofi chatterino2-git git wget awesome vlc librewolf caja streamlink streamlink-twitch-gui-bin qbittorrent jdownloader2 rustdesk obs gnome-disk-utility neovim alacritty remmina p7zip-gui zsh flameshot github-desktop-bin timeshift noto-fonts-cjk noto-fonts-emoji lsd -y
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-wget https://installers.privateinternetaccess.com/download/pia-linux-3.3.1-06924.run
+yay -S  rofi chatterino2-git git piavpn-bin wget awesome vlc librewolf caja streamlink streamlink-twitch-gui-bin qbittorrent jdownloader2 rustdesk obs gnome-disk-utility neovim alacritty remmina p7zip-gui zsh flameshot github-desktop-bin timeshift noto-fonts-cjk noto-fonts-emoji lsd -y
 chmod +x pia-linux-3.3.1-06924.run
 sh ./pia-linux-3.3.1-06924.run
 sudo systemctl enable sddm.service
