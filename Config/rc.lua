@@ -766,4 +766,4 @@ awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 awful.spawn.with_shell("dunst")
 awful.spawn.with_shell("xscreensaver -nosplash")
 awful.spawn.with_shell("volumeicon")
-awful.spawn.with_shell("piavpn-bin")
+awful.spawn.with_shell("/opt/piavpn/bin/pia-client %u")
