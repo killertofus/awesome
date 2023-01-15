@@ -4,7 +4,7 @@ cd yay
 makepkg -si
 sudo pacman -Syu
 cd
-yay -S  rofi chatterino2-git git piavpn-bin wget awesome vlc librewolf caja streamlink streamlink-twitch-gui-bin qbittorrent jdownloader2 rustdesk obs gnome-disk-utility neovim alacritty remmina p7zip-gui zsh flameshot github-desktop-bin timeshift noto-fonts-cjk noto-fonts-emoji lsd -y
+yay -S  rofi chatterino2-git git piavpn-bin wget awesome vlc librewolf caja streamlink streamlink-twitch-gui-bin qbittorrent jdownloader2 ripgrep rustdesk obs gnome-disk-utility neovim alacritty remmina p7zip-gui zsh flameshot github-desktop-bin timeshift noto-fonts-cjk noto-fonts-emoji lsd -y
 cd Config
 mv rc.lua ~/.config/awesome
 mv rofi.rasi ~/.config/awesome/home/configuration
