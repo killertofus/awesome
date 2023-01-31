@@ -392,7 +392,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
 
- awful.key({  },    "Super_L",             function () 
+ awful.key({  },    "Alt_L",             function () 
         --running the run prompt, in this case
         awful.util.spawn("rofi -show drun") end,
         {description = "run prompt in rofi", group = "launcher"}), 
