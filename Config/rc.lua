@@ -105,7 +105,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock('%I %M')
+mytextclock = wibox.widget.textclock('%a, %b, %d, %I:%M %p')
 mytextclock:set_font("Comfortaa Medium 12")
 
 -- Create a wibox for each screen and add it
