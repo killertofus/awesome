@@ -3,7 +3,6 @@ set encoding=UTF-8
 call plug#begin()
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-quickrun'
 Plug 'KabbAmine/vCoolor.vim'
