@@ -394,7 +394,7 @@ globalkeys = gears.table.join(
 
  awful.key({  },    "Alt_L",             function () 
         --running the run prompt, in this case
-        awful.util.spawn("rofi -show drun") end,
+         awful.util.spawn("rofi -show drun -show-icons") end,
         {description = "run prompt in rofi", group = "launcher"}), 
      awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end), 
 
