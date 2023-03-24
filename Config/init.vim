@@ -30,4 +30,4 @@ autocmd InsertEnter  :let @/="" | :nohl
 :syntax on
 :set spell
 let g:airline_deus_bg='dark'
-
+colorscheme slate
