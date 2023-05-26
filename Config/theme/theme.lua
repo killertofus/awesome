@@ -55,7 +55,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(40)
-theme.menu_width  = dpi(180)
+theme.menu_width  = dpi(170)
 
 -- Titlebar Button Icons
 theme.titlebar_close_button_normal = themes_path.."icons/inac.png"
@@ -64,7 +64,7 @@ theme.titlebar_close_button_focus  = themes_path.."icons/close.png"
 theme.titlebar_ontop_button_normal_inactive = themes_path.."icons/inac.png"
 theme.titlebar_ontop_button_focus_inactive  = themes_path.."icons/ontop.png"
 theme.titlebar_ontop_button_normal_active = themes_path.."icons/inac.png"
-theme.titlebar_ontop_button_focus_active  = themes_path.."icons/ontop.png"
+theme.titlebar_ontop_button_focus_active  = themes_path.."icons/ontopp.png"
 
 theme.titlebar_maximized_button_normal_inactive = themes_path.."icons/inac.png"
 theme.titlebar_maximized_button_focus_inactive  = themes_path.."icons/max.png"
