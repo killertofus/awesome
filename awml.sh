@@ -2,9 +2,10 @@ pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+yay --devel --save
 sudo pacman -Syu
 cd
-yay -S  rofi chatterino2-git git piavpn-bin wget awesome vlc librewolf caja streamlink streamlink-twitch-gui-bin qbittorrent jdownloader2 ripgrep rustdesk obs gnome-disk-utility neovim alacritty remmina p7zip-gui zsh flameshot github-desktop-bin timeshift noto-fonts-cjk noto-fonts-emoji lsd -y
+yay -S  rofi chatterino2-git git piavpn-bin wget awesome vlc librewolf caja streamlink zellij streamlink-twitch-gui-bin qbittorrent jdownloader2 ripgrep rustdesk obs gnome-disk-utility neovim alacritty remmina p7zip-gui zsh flameshot github-desktop-bin timeshift noto-fonts-cjk noto-fonts-emoji lsd -y
 cd Config
 mv rc.lua ~/.config/awesome
 mv rofi.rasi ~/.config/awesome/home/configuration
