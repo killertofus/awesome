@@ -7,6 +7,7 @@ sudo pacman -Syu
 cd
 yay -S  rofi chatterino2-git git piavpn-bin wget awesome vlc librewolf caja streamlink libtmux tmux streamlink-twitch-gui-bin qbittorrent jdownloader2 ripgrep rustdesk obs gnome-disk-utility neovim alacritty sftpman-gtk xarchiver unzip zsh flameshot github-desktop-bin timeshift noto-fonts-cjk noto-fonts-emoji lsd -y
 cd Config
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mv rc.lua ~/.config/awesome
 mv rofi.rasi ~/.config/awesome/home/configuration
 cd 
