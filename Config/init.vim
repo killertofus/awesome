@@ -3,11 +3,14 @@ set encoding=UTF-8
 call plug#begin()
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-quickrun'
+Plug 'KabbAmine/vCoolor.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'vim-scripts/dbext.vim'
 Plug 'davidgranstrom/nvim-markdown-preview'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0'}
@@ -31,3 +34,4 @@ autocmd InsertEnter  :let @/="" | :nohl
 :set spell
 let g:airline_deus_bg='dark'
 colorscheme slate
+set list listchars=tab:>\ ,trail:-,eol:$
