@@ -13,4 +13,3 @@ mv rofi.rasi ~/.config/awesome/home/configuration
 cd 
 mv Wallpaper.jpg ~/Pictures
 echo "RANGER_LOAD_DEFAULT_RC=false"
-git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
