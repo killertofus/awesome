@@ -10,6 +10,7 @@ Plug 'KabbAmine/vCoolor.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'xiyaowong/transparent.nvim'
 Plug 'vim-scripts/dbext.vim'
 Plug 'davidgranstrom/nvim-markdown-preview'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
@@ -35,3 +36,5 @@ autocmd InsertEnter  :let @/="" | :nohl
 let g:airline_deus_bg='dark'
 colorscheme slate
 set list listchars=tab:>\ ,trail:-,eol:$
+hi Normal guibg=NONE ctermbg=NONE
+
