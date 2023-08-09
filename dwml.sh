@@ -1,5 +1,5 @@
 
-sudo apt install rofi fonts-hack fonts-noto-core picom ranger git gnupg lsb-release apt-transport-https ca-certificates wget awesome w3m vlc caja streamlink python-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver unzip zsh flameshot timeshift lsd -y
+sudo apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https ca-certificates xdotool wget awesome w3m vlc caja streamlink python-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver unzip zsh flameshot timeshift lsd -y
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
@@ -47,11 +47,20 @@ sudo apt update
 sudo apt install github-desktop
 
 ./Jdownloader2.sh
-
-cd Config
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cd config
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+znap pull
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+mv init.vim ~/.config/nvim/
+mv alacritty.yml ~/.config/alacritty/alacritty.yml
 mv rc.lua ~/.config/awesome
 mv rofi.rasi ~/.config/awesome/home/configuration
 cd 
 mv Wallpaper.jpg ~/Pictures
+xdot key control alt f5
+kill echo $XDG_CURRENT_DESKTOP
+sudo apt purge echo $XDG_CURRENT_DESKTOP
 echo "RANGER_LOAD_DEFAULT_RC=false"
