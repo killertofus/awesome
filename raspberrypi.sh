@@ -3,7 +3,7 @@ sudo apt-get install lightdm x11vnc nvim git kodi zsh -y
 wget https://installers.privateinternetaccess.com/download/pia-linux-arm64-3.3.1-06924.run
 sh ./pia-linux-arm64-3.3.1-06924.run
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo 'deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-autosuggestions/Raspbian_11/ /' | sudo tee /etc/apt/sources.list.d/shells:zsh-users:zsh-autosuggestions.list
+echo 'deb https://download.opensuse.org/repositories/shells:/zsh-users:/zsh-autosuggestions/Raspbian_11/ /' | sudo tee /etc/apt/sources.list.d/shells:zsh-users:zsh-autosuggestions.list
 curl -fsSL https://download.opensuse.org/repositories/shells:zsh-users:zsh-autosuggestions/Raspbian_11/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_zsh-users_zsh-autosuggestions.gpg > /dev/null
 cd .oh-my-zsh/themes/
 git clone https://github.com/dracula/zsh.git
