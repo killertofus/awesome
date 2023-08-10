@@ -1,8 +1,8 @@
-apt purge $DESKTOP_SESSION -y
+sudo apt purge $DESKTOP_SESSION -y
  #remove below when alacritty is in the mint repos
  add-apt-repository ppa:aslatter/ppa
  apt update
-apt purge wayland youtube-dl warpinator vim-comon snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
+apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
  apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome ca-certificates xdotool wget awesome w3m vlc caja streamlink feh python-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip zsh flameshot timeshift lsd -y
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
