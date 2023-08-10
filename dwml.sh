@@ -33,19 +33,11 @@ curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
-| grep "browser_download_url 
-.*-X86_64AppImage" \
+| grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
 
-
-
-curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
-| grep "browser_download_url 
-.*-x86_64.deb" \
-| cut -d : -f 2,3 \
-| tr -d \" \
 
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
