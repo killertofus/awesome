@@ -63,7 +63,9 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
+cd debian
 mv .zshrc ~/
+cd ..
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
 mv rc.lua ~/.config/awesome
