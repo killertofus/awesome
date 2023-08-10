@@ -1,5 +1,4 @@
-kill echo $XDG_CURRENT_DESKTOP
- apt purge echo $XDG_CURRENT_DESKTOP -y
+apt purge $DESKTOP_SESSION -y
  #remove below when alacritty is in the mint repos
  add-apt-repository ppa:aslatter/ppa
  apt update
