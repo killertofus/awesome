@@ -3,7 +3,7 @@ sudo apt purge $DESKTOP_SESSION -y
  add-apt-repository ppa:aslatter/ppa
  apt update
 apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
- apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome ca-certificates xdotool wget awesome w3m vlc caja streamlink feh python-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip zsh flameshot timeshift lsd -y
+ apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome build-essential libpam0g-dev libxcb-xkb-dev ca-certificates xdotool wget awesome w3m vlc caja streamlink feh python-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip zsh flameshot timeshift lsd -y
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
@@ -52,6 +52,15 @@ apt install github-desktop
 
 ./Jdownloader2.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --recurse-submodules https://github.com/fairyglade/ly
+cd ly
+make
+make run
+make install installsystemd
+systemctl enable ly.service
+systemctl start ly.service
+systemctl disable getty@tty2.service
+cd ..
 cd config
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
