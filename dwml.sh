@@ -1,10 +1,17 @@
-
-sudo apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https ca-certificates xdotool wget awesome w3m vlc caja streamlink python-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver unzip zsh flameshot timeshift lsd -y
+apt install xdot
+xdot key control alt f5
+kill echo $XDG_CURRENT_DESKTOP
+ apt purge echo $XDG_CURRENT_DESKTOP -y
+ #remove below when alacritty is in the mint repos
+ add-apt-repository ppa:aslatter/ppa
+ apt update
+apt purge wayland youtube-dl warpinator vim-comon snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
+ apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome ca-certificates xdotool wget awesome w3m vlc caja streamlink feh python-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip zsh flameshot timeshift lsd -y
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
 
-sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
+ tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
 Types: deb
 URIs: https://deb.librewolf.net
 Suites: $distro
@@ -13,9 +20,9 @@ Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
 
-sudo apt update
+apt update
 
-sudo apt install librewolf -y
+apt install librewolf -y
 
 
 curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
@@ -43,8 +50,8 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
-sudo apt update
-sudo apt install github-desktop
+apt update
+apt install github-desktop
 
 ./Jdownloader2.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -59,8 +66,4 @@ mv alacritty.yml ~/.config/alacritty/alacritty.yml
 mv rc.lua ~/.config/awesome
 mv rofi.rasi ~/.config/awesome/home/configuration
 cd 
-mv Wallpaper.jpg ~/Pictures
-xdot key control alt f5
-kill echo $XDG_CURRENT_DESKTOP
-sudo apt purge echo $XDG_CURRENT_DESKTOP
 echo "RANGER_LOAD_DEFAULT_RC=false"
