@@ -1,4 +1,5 @@
-sudo apt purge $DESKTOP_SESSION -y
+#!/bin/bash
+sudo apt purge "$DESKTOP_SESSION" -y
  #remove below when alacritty is in the mint repos
  add-apt-repository ppa:aslatter/ppa
  apt update
@@ -53,13 +54,17 @@ apt install github-desktop
 ./Jdownloader2.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-make
+for dir in *ly
+do
+  (
+  make
 make run
 make install installsystemd
 systemctl enable ly.service
 systemctl start ly.service
 systemctl disable getty@tty2.service
+  )
+done
 cd ..
 cd config
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -72,9 +77,12 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
-cd debian
-mv .zshrc ~/
-cd ..
+for dir in *debian
+do
+  (
+ mv .zshrc ~/.zshrc
+  )
+done
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
 mv rc.lua ~/.config/awesome
