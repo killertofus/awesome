@@ -23,9 +23,11 @@ apt update
 apt install librewolf -y
 
 
+
 curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
-| grep "Chatterino-Ubuntu-.*deb" \
+| grep "Chatterino-Ubuntu.*deb" \
 | cut -d : -f 2,3 \
+| tr -d \" \
 | wget -qi -
 
 
