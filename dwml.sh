@@ -1,4 +1,4 @@
-apt install xdot
+apt install xdotool
 xdot key control alt f5
 kill echo $XDG_CURRENT_DESKTOP
  apt purge echo $XDG_CURRENT_DESKTOP -y
