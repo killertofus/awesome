@@ -1,5 +1,5 @@
 apt install xdotool
-xdottool key control alt f5
+xdotool key control alt f5
 kill echo $XDG_CURRENT_DESKTOP
  apt purge echo $XDG_CURRENT_DESKTOP -y
  #remove below when alacritty is in the mint repos
