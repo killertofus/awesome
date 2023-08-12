@@ -32,10 +32,10 @@ curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 | wget -qi -
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
-| grep "browser_download_url 
-.*-X86_64AppImage" \
+| grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
-| wget -qi -\
+| tr -d \" \
+| wget -qi -
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "browser_download_url 
