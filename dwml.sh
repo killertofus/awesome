@@ -29,7 +29,6 @@ curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 | grep "-x86_64.AppImage" \
 | cut -d : -f 2,3 \
 | wget -qi - >
-chmod +x Chatterino-x86_64.AppImage 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "browser_download_url 
