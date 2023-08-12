@@ -42,7 +42,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 .*-x86_64.deb" \
 | cut -d : -f 2,3 \
 | tr -d \" \
-find ./  -regextype posix-egrep -regex '.*a{3,5}.*' -print0 | xargs -0 chmod +x
+find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 
 cd -
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
