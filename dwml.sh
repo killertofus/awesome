@@ -23,12 +23,13 @@ apt update
 apt install librewolf -y
 
 
+cd /usr/local/bin
+
 curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 | grep "-x86_64.AppImage" \
 | cut -d : -f 2,3 \
-| wget -qi - > /.chatterino
-
-cd /usr/local/bin
+| wget -qi - >
+chmod +x Chatterino-x86_64.AppImage 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "browser_download_url 
@@ -36,7 +37,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
-
+chmod +x "*-X86_64AppImage"
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
