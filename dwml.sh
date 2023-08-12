@@ -37,7 +37,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
-chmod +x "*-X86_64AppImage"
+| chmod +x "*-X86_64AppImage"
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
