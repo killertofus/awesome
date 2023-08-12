@@ -26,8 +26,7 @@ apt install librewolf -y
 cd /usr/local/bin
 
 curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
-| grep "browser_download_url
-.*-x86_64.AppImage" \
+| grep ".*-x86_64.AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
