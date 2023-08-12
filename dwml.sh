@@ -23,7 +23,9 @@ apt update
 apt install librewolf -y
 
 
+
 curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
+<<<<<<< HEAD
 | grep "-x86_64.AppImage" \
 | cut -d : -f 2,3 \
 | wget -qi - > /.chatterino
@@ -33,6 +35,9 @@ cd /usr/local/bin
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "browser_download_url 
 .*-X86_64AppImage" \
+=======
+| grep "Chatterino-Ubuntu.*deb" \
+>>>>>>> 5208654110a29ac29f57e56dafae9504c743609c
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
@@ -40,10 +45,11 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
-| grep "browser_download_url 
-.*-x86_64.deb" \
+| grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
+| wget -qi -
+
 
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
