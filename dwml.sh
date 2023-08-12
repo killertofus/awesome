@@ -38,7 +38,6 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | tr -d \" \
 | wget -qi -\
 
-cd -
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "browser_download_url 
 .*-x86_64.deb" \
@@ -46,6 +45,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | tr -d \" \
 find ./  -regextype posix-egrep -regex '.*a{3,5}.*' -print0 | xargs -0 chmod +x
 
+cd -
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
 apt update
