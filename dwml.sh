@@ -52,6 +52,7 @@ apt install github-desktop
 
 ./Jdownloader2.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+systemctl set-default multi-user
 git clone --recurse-submodules https://github.com/fairyglade/ly
 for dir in *ly
 do
