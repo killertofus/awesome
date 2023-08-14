@@ -2,7 +2,6 @@
 #!/usr/bin/zsh
 sudo apt purge "$DESKTOP_SESSION" -y
 sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo apt install awesome
  #remove below when alacritty is in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
@@ -61,7 +60,6 @@ systemctl disable getty@tty2.service
 done
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-znap pull
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
