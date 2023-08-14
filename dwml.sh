@@ -76,7 +76,6 @@ do
   )
 done
 cd config
-znap pull
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
 mv rc.lua ~/.config/awesome
