@@ -40,12 +40,6 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
-
-curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
-| grep "browser_download_url 
-.*-x86_64.deb" \
-| cut -d : -f 2,3 \
-| tr -d \" \
 find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 
 cd -
