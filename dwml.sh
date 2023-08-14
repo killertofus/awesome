@@ -1,7 +1,7 @@
 #!/bin/bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo apt purge "$DESKTOP_SESSION" -y
 sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo apt install awesome
  #remove below when alacritty is in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
