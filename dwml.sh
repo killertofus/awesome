@@ -1,10 +1,11 @@
 #!/bin/bash
 sudo apt purge "$DESKTOP_SESSION" -y
+sudo apt install zsh
  #remove below when alacritty is in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
  apt update
 apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
-sudo apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome build-essential libpam0g-dev libxcb-xkb-dev ca-certificates xdotool wget awesome w3m vlc caja streamlink feh python3-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip zsh flameshot timeshift zsh lsd -y
+sudo apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome build-essential libpam0g-dev libxcb-xkb-dev ca-certificates xdotool wget awesome w3m vlc caja streamlink feh python3-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip flameshot timeshift zsh lsd -y
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
