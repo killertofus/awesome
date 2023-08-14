@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/bin/sh -l
 sudo apt purge "$DESKTOP_SESSION" -y
 sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
