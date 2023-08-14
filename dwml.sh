@@ -1,11 +1,13 @@
 #!/bin/bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo apt purge "$DESKTOP_SESSION" -y
 sudo apt install zsh
+sudo apt install awesome
  #remove below when alacritty is in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
  apt update
+sudo apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome build-essential libpam0g-dev libxcb-xkb-dev ca-certificates xdotool wget w3m vlc caja streamlink feh python3-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip flameshot timeshift zsh lsd -y
 apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
-sudo apt install rofi fonts-hack fonts-noto-core curl picom ranger git gnupg lsb-release apt-transport-https policykit-1-gnome build-essential libpam0g-dev libxcb-xkb-dev ca-certificates xdotool wget awesome w3m vlc caja streamlink feh python3-libtmux tmux qbittorrent ripgrep obs-studio gnome-disk-utility neovim alacritty xarchiver blueman unzip flameshot timeshift zsh lsd -y
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
@@ -52,19 +54,15 @@ apt update
 apt install github-desktop
 
 ./Jdownloader2.sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 systemctl set-default multi-user
 git clone --recurse-submodules https://github.com/fairyglade/ly
-for dir in *ly
-do
-  (
-  make
+cd ly
+make
 make run
 make install installsystemd
 systemctl enable ly.service
 systemctl start ly.service
 systemctl disable getty@tty2.service
-  )
 done
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
