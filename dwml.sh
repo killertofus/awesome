@@ -83,3 +83,4 @@ mv rofi.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 cd 
 echo "RANGER_LOAD_DEFAULT_RC=false"
+./zwml.sh
