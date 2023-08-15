@@ -6,7 +6,7 @@ xargs sudo apt purge <dwmlrmvpkgs.txt
  sudo add-apt-repository ppa:aslatter/ppa
  apt update
  apt install alacritty
-
+curl -sS https://webi.sh/lsd | sh
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
