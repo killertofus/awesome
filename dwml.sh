@@ -4,8 +4,9 @@ sudo apt purge "$DESKTOP_SESSION" -y
 sudo apt install zsh
 sudo apt install awesome
 apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
- #remove below when alacritty is in the mint repos
+ #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
+ cargo install lsd
  apt update
  apt install alacritty
 xargs sudo apt install <dwmlpkgs.txt
