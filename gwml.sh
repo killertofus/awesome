@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
@@ -10,7 +11,6 @@ mv alacritty.yml ~/.config/alacritty/
 mv rc.lua theme ~/.config/awesome
 mv rofi.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --skip-chsh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
