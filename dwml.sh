@@ -64,5 +64,5 @@ mv picom.conf ~/.config/picom
 cd ..
 echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
-update
+sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
 ./gwml.sh
