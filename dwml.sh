@@ -66,4 +66,4 @@ cd ..
 echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
 update
-./zwml.sh
+./gwml.sh
