@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
-xargs sudo apt purge <dwmlrmvpkgs.txt
+xargs sudo dpkg purge <dwmlrmvpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
  apt update
