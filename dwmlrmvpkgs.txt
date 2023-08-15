@@ -1,1 +1,15 @@
-youtube-dl warpinator vim-common vim-tiny snap rhythmbox rhythmbox-plugins rhythmbox-data rhythmbox-tray-icon p7zip-full dictionaries-comon libreoffice-base-core hypnotix emacsen-common gnome-games nemo
+dictionaries-comon 
+emacsen-common
+gnome-games
+hypnotix
+libreoffice-base-core
+nemo
+p7zip-full
+rhythmbox-data
+rhythmbox-plugins
+rhythmbox-tray-icon
+snap rhythmbox
+vim-common
+vim-tiny
+warpinator
+youtube-dl
