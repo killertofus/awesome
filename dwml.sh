@@ -10,6 +10,7 @@ mv alacritty.yml ~/.config/alacritty/
 mv rc.lua theme ~/.config/awesome
 mv rofi.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
+cd -
 #sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
 xargs sudo dpkg --purge <dwmlrmvpkgs.txt
