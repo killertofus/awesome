@@ -46,11 +46,6 @@ wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee 
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
 sudo apt update
 sudo apt install github-desktop
-
-cd config/debian
-mv .zshrc ~/.
-cd ..
-
 cd ..
 echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
@@ -58,3 +53,6 @@ sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && s
 
 ./Jdownloader2.sh "-Dfilelinks=dlc,jdc,ccf,rsdf" "-Ddesktoplink=true" "-Dquicklaunch=false"
 ./gwml.sh
+cd config/debian
+mv .zshrc ~/.
+cd ..
