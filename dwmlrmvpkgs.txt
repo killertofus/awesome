@@ -3,7 +3,6 @@ dictionaries-comon
 gnome-games
 hypnotix
 libreoffice-base-core
-nemo
 p7zip-full
 rhythmbox-tray-icon
 rhythmbox-data
