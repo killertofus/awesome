@@ -3,7 +3,7 @@ sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
 xargs sudo dpkg --purge <dwmlrmvpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
- sudo add-apt-repository ppa:aslatter/ppa
+ sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
  sudo apt install alacritty
 curl -sS https://webi.sh/lsd | sh
@@ -54,7 +54,7 @@ cd ..
 cd ..
 echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
-sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
+sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 
 ./Jdownloader2.sh
 ./gwml.sh
