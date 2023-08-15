@@ -55,7 +55,7 @@ mkdir -p ~/.config/picom
 
 cd config/debian
 mv .zshrc ~/.
-cd ..//..
+cd ..
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
 mv rc.lua theme ~/.config/awesome
