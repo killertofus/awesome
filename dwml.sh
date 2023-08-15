@@ -3,9 +3,11 @@
 sudo apt purge "$DESKTOP_SESSION" -y
 sudo apt install zsh
 sudo apt install awesome
+apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
  #remove below when alacritty is in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
  apt update
+ apt install alacritty
 xargs sudo apt install <dwmlpkgs.txt
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
