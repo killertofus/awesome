@@ -51,8 +51,9 @@ echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 
-./Jdownloader2.sh "-Dfilelinks=dlc,jdc,ccf,rsdf" "-Ddesktoplink=true" "-Dquicklaunch=false"
+
 ./gwml.sh
 cd config/debian
 mv .zshrc ~/.
 cd ..
+./Jdownloader2.sh
