@@ -2,7 +2,7 @@
 #!/usr/bin/zsh
 #sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
-apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
+xargs sudo apt purge <dwmlrmvpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
  cargo install lsd
