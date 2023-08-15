@@ -1,4 +1,4 @@
-#!usr/bin/env zsh
+#!/usr/bin/env zsh
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
