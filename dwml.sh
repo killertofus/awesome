@@ -50,15 +50,6 @@ apt install github-desktop
 
 ./Jdownloader2.sh
 systemctl set-default multi-user
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-make
-make run
-sudo make install installsystemd
-sudo systemctl enable ly.service
-sudo systemctl start ly.service
-sudo systemctl disable getty@tty2.service
-done
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
