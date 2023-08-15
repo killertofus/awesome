@@ -60,6 +60,7 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
+
 cd config/debian
 mv .zshrc ~/.
 cd -
@@ -70,4 +71,5 @@ mv rofi.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 cd ..
 echo "RANGER_LOAD_DEFAULT_RC=false"
+sudo systemctl enable lightdm
 ./zwml.sh
