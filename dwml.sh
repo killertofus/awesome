@@ -61,13 +61,9 @@ mkdir -p ~/.config/awesome
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 cd config
-for dir in *debian
-do
-  (
- mv .zshrc ~/.zshrc
-  )
-done
-cd config
+cd debian
+mv .zshrc ~/.
+cd -
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
 mv rc.lua theme ~/.config/awesome
