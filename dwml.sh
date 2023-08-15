@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 #!/usr/bin/zsh
-sudo apt purge "$DESKTOP_SESSION" -y
+#sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
 apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
  #remove below when alacritty and lsd are in the mint repos
@@ -54,10 +54,10 @@ git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
 make run
-make install installsystemd
-systemctl enable ly.service
-systemctl start ly.service
-systemctl disable getty@tty2.service
+sudo make install installsystemd
+sudo systemctl enable ly.service
+sudo systemctl start ly.service
+sudo systemctl disable getty@tty2.service
 done
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
