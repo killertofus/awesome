@@ -1,15 +1,4 @@
 #!/usr/bin/env bash
-mkdir -p ~/.config/nvim
-mkdir -p ~/.config/alacritty
-mkdir -p ~/.config/awesome
-mkdir -p ~/.config/rofi
-mkdir -p ~/.config/picom
-cd config
-mv init.vim ~/.config/nvim/
-mv alacritty.yml ~/.config/alacritty/
-mv rc.lua theme ~/.config/awesome
-mv rofi.rasi ~/.config/rofi
-mv picom.conf ~/.config/picom
 cd -
 #sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
