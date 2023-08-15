@@ -1,5 +1,4 @@
-#!/usr/bin/env bash 
-#!/usr/bin/zsh
+#!/usr/bin/env bash
 #sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
 xargs sudo apt purge <dwmlrmvpkgs.txt
