@@ -1,3 +1,4 @@
+"$DESKTOP_SESSION"
 dictionaries-comon 
 emacsen-common
 gnome-games
