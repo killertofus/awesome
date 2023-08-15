@@ -5,7 +5,6 @@ xargs sudo apt install <dwmlpkgs.txt
 xargs sudo apt purge <dwmlrmvpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
- cargo install lsd
  apt update
  apt install alacritty
 
@@ -49,11 +48,6 @@ apt update
 apt install github-desktop
 
 ./Jdownloader2.sh
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
@@ -62,7 +56,7 @@ mkdir -p ~/.config/picom
 
 cd config/debian
 mv .zshrc ~/.
-cd -
+cd ..//..
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
 mv rc.lua theme ~/.config/awesome
