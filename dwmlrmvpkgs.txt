@@ -1,13 +1,13 @@
-dictionaries-comon 
 emacsen-common
+dictionaries-comon 
 gnome-games
 hypnotix
 libreoffice-base-core
 nemo
 p7zip-full
+rhythmbox-tray-icon
 rhythmbox-data
 rhythmbox-plugins
-rhythmbox-tray-icon
 snap rhythmbox
 vim-common
 vim-tiny
