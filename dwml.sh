@@ -1,15 +1,14 @@
 #!/usr/bin/env bash 
 #!/usr/bin/zsh
 sudo apt purge "$DESKTOP_SESSION" -y
-sudo apt install zsh
-sudo apt install awesome
+xargs sudo apt install <dwmlpkgs.txt
 apt purge wayland youtube-dl warpinator vim-common snap rhythmbox p7zip libreoffice-base hypnotix emacsen-common
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa
  cargo install lsd
  apt update
  apt install alacritty
-xargs sudo apt install <dwmlpkgs.txt
+
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
