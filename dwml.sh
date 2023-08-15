@@ -70,7 +70,7 @@ done
 cd config
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
-mv rc.lua ~/.config/awesome
+mv rc.lua theme ~/.config/awesome
 mv rofi.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 cd 
