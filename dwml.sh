@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+mkdir -p ~/.config/nvim
+mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/awesome
+mkdir -p ~/.config/rofi
+mkdir -p ~/.config/picom
+cd config
+mv init.vim ~/.config/nvim/
+mv alacritty.yml ~/.config/alacritty/
+mv rc.lua theme ~/.config/awesome
+mv rofi.rasi ~/.config/rofi
+mv picom.conf ~/.config/picom
 #sudo apt purge "$DESKTOP_SESSION" -y
 xargs sudo apt install <dwmlpkgs.txt
 xargs sudo dpkg --purge <dwmlrmvpkgs.txt
@@ -46,20 +57,10 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 apt update
 apt install github-desktop
 
-mkdir -p ~/.config/nvim
-mkdir -p ~/.config/alacritty
-mkdir -p ~/.config/awesome
-mkdir -p ~/.config/rofi
-mkdir -p ~/.config/picom
-
 cd config/debian
 mv .zshrc ~/.
 cd ..
-mv init.vim ~/.config/nvim/
-mv alacritty.yml ~/.config/alacritty/
-mv rc.lua theme ~/.config/awesome
-mv rofi.rasi ~/.config/rofi
-mv picom.conf ~/.config/picom
+
 cd ..
 echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
