@@ -49,7 +49,14 @@ echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
 
-
+ git clone --recurse-submodules https://github.com/fairyglade/ly
+cd ly
+make
+make run
+make install installsystemd
+sudo systemctl enable ly.service
+systemctl disable getty@tty2.service
+cd -
 ./gwml.sh
 cd config/debian
 mv .zshrc ~/.
