@@ -5,6 +5,7 @@ xargs sudo apt purge -m <dwmlrmvpkgs.txt
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
  sudo apt install alacritty
+ curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
