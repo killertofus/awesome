@@ -5,6 +5,7 @@ xargs sudo dpkg --purge --force-depends <dwmlrmvpkgs.txt
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
  sudo apt install alacritty
+ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
  curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
