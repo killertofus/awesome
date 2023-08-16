@@ -58,7 +58,6 @@ cd ..
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
-make run
-make install installsystemd
-sudo systemctl enable ly.service
+sudo make install installsystemd
+sudo systemctl enable ly.service -f
 systemctl disable getty@tty2.service
