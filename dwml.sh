@@ -26,14 +26,8 @@ apt update
 
 apt install librewolf -y
 
-
+flatpak install flathub com.chatterino.chatterino
 cd /usr/local/bin
-
-curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
-| grep ".*-x86_64.AppImage" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "x86_64.*AppImage" \
