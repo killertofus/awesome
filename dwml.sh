@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 xargs sudo apt install <dwmlpkgs.txt
-xargs sudo apt purge -m <dwmlrmvpkgs.txt
+xargs sudo dpkg --purge --force-depends <dwmlrmvpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
