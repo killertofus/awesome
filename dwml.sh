@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo ./dwmlrmvpkgs.sh
+./dwmlrmvpkgs.sh
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
