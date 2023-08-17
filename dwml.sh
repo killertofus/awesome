@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-xargs sudo apt purge emacsen-common dictionaries-comon $DESKTOP_SESSION gnome-games hypnotix hexchat libreoffice-base-core p7zip-full rhythmbox-tray-icon rhythmbox-data rhythmbox-plugins snap rhythmbox vim-common vim-tiny warpinator youtube-dl yelp
+sudo apt purge --remove emacsen-common dictionaries-comon $DESKTOP_SESSION gnome-games hypnotix hexchat libreoffice-base-core p7zip-full rhythmbox-tray-icon rhythmbox-data rhythmbox-plugins snap rhythmbox vim-common vim-tiny warpinator youtube-dl yelp
 
 xargs sudo apt install <dwmlpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
