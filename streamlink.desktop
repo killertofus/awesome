@@ -2,6 +2,6 @@
 Type=Application
 Icon=/var/lib/flatpak/exports/share/icons/hicolor/256x256/apps/com.chatterino.chatterino.png
 Name=streamlink-twitch-gui
-Exec=/home/one23/Downloads/streamlinktwitch
+Exec=/usr/local/bin/Streamlink Twitch GUI
 Terminal=false
 Hidden=false
