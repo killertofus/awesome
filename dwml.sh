@@ -56,7 +56,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 | wget -qi -
  
  mv *.AppImage rustdesk
-mv rustdesk Chatterino Streamlibk_Twitch_gui /usr/local/bin
+sudo mv rustdesk Chatterino Streamlibk_Twitch_gui /usr/local/bin
 
 
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
