@@ -27,7 +27,7 @@ sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
-cd /usr/local/bin
+
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "x86_64.*AppImage" \
@@ -56,11 +56,9 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 | wget -qi -
  
  mv *.AppImage rustdesk
+mv rustdesk Chatterino Streamlibk_Twitch_gui /usr/local/bin
 
 
-
-cd -
-pwd
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
 sudo apt update
