@@ -69,7 +69,6 @@ sudo apt install github-desktop
 echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo systemctl enable lightdm
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
-cd -
 ./gwml.sh
 cd config/debian
 mv .zshrc ~/.
