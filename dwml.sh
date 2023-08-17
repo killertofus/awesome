@@ -36,6 +36,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | wget -qi -
 find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
  mv *.AppImage Streamlink Twitch GUI
+
 curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 | grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
