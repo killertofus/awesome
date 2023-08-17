@@ -72,7 +72,7 @@ cd -
 ./gwml.sh
 cd config/debian
 mv .zshrc ~/.
-cd ..
+cd ..//..
 ./Jdownloader2.sh
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
