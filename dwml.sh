@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo apt purge --remove emacsen-common dictionaries-comon $DESKTOP_SESSION gnome-games hypnotix hexchat libreoffice-base-core p7zip-full rhythmbox-tray-icon rhythmbox-data rhythmbox-plugins snap rhythmbox vim-common vim-tiny warpinator youtube-dl yelp
+sudo apt purge --remove emacsen-common dictionaries-comon $DESKTOP_SESSION gnome-games hypnotix hexchat libreoffice-base-core p7zip-full rhythmbox-tray-icon rhythmbox-data rhythmbox-plugins snapd snap rhythmbox vim-common vim-tiny warpinator youtube-dl yelp
 
 xargs sudo apt install <dwmlpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
@@ -80,3 +80,4 @@ make
 sudo make install installsystemd
 sudo systemctl enable ly.service -f
 systemctl disable getty@tty2.service
+rm -rf ~/snap
