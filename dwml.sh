@@ -26,7 +26,7 @@ sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
-mkdir -p /usr/local/bin
+sudo mkdir -p /usr/local/bin
 cd /usr/local/bin
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
