@@ -75,6 +75,7 @@ git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
 sudo make install installsystemd
+chsh -s $(which zsh)
 sudo systemctl enable ly.service -f
 systemctl disable getty@tty2.service
 rm -rf ~/snap
