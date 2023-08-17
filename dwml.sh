@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-sudo apt purge --remove emacsen-common dictionaries-comon $DESKTOP_SESSION gnome-games hypnotix hexchat libreoffice-base-core p7zip-full rhythmbox-tray-icon rhythmbox-data rhythmbox-plugins snapd snap rhythmbox vim-common vim-tiny warpinator youtube-dl yelp
-
-xargs sudo apt install <dwmlpkgs.txt
+./dwmlrmvpkgs.sh
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
