@@ -2,6 +2,7 @@ emacsen-common
 dictionaries-comon 
 gnome-games
 hypnotix
+hexchat
 libreoffice-base-core
 p7zip-full
 rhythmbox-tray-icon
