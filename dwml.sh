@@ -25,10 +25,10 @@ y
 apt update
 
 apt install librewolf -y
-mv streamlink.desktop /usr/share/applications
-mv chatterino.desktop /usr/share/applications
-mv rustdesk.desktop /usr/share/applications
-mv *.png /usr/share/icons
+sudo mv streamlink.desktop /usr/share/applications
+sudo mv chatterino.desktop /usr/share/applications
+sudo mv rustdesk.desktop /usr/share/applications
+sudo mv *.png /usr/share/icons
 cd /usr/local/bin
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
