@@ -3,7 +3,7 @@
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
- sudo apt install alacritty
+ sudo apt install alacritty -y
  curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
