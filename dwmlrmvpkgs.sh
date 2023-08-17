@@ -1,4 +1,4 @@
-pkgToRemoveListFull="dictionaries-comon emacsen-common $DESKTOP_SESSION gnome-games hypnotix hexchat libreoffice-base-core p7zip-full rhythmbox-tray-icon rhythmbox-data rhythmbox-plugins snapd snap rhythmbox vim-common vim-tiny warpinator youtube-dl yelp"
+pkgToRemoveListFull="dictionaries-comon emacsen-common $DESKTOP_SESSION gnome-games gnome-terminal hypnotix hexchat libreoffice-base-core p7zip-full rhythmbox-tray-icon rhythmbox-data rhythmbox-plugins snapd snap rhythmbox vim-common vim-tiny warpinator youtube-dl yelp *gnome*"
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(dpkg --status $pkgToRemove &> /dev/null)
