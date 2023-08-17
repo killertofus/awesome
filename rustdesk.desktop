@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Icon=/var/lib/flatpak/exports/share/icons/hicolor/256x256/apps/com.chatterino.chatterino.png
+Name=rustdesk
+Exec=/usr/local/bin/rustdesk
+Terminal=false
+Hidden=false
