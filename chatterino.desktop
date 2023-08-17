@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Icon=/var/lib/flatpak/exports/share/icons/hicolor/256x256/apps/com.chatterino.chatterino.png
+Icon=/usr/share/icons/chatterino.png
 Name=chatterino
 Exec=/usr/local/bin/chatterino
 Terminal=false
