@@ -26,6 +26,7 @@ sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
+mkdir -p /usr/local/bin
 cd /usr/local/bin
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
@@ -34,7 +35,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | tr -d \" \
 | wget -qi -
 find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
- mv *.AppImage Streamlink Twitch GUI
+ mv *.AppImage Streamlink_Twitch_GUI
  
 
 
