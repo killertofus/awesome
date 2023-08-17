@@ -19,7 +19,6 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
-y
 apt update
 
 apt install librewolf -y
