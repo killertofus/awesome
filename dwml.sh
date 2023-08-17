@@ -42,7 +42,14 @@ curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
+ mv *.AppImage Chatterino
 
+curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
+| grep "x86_64.*AppImage" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -
+ mv *.AppImage rustdesk
 
 cd -
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
