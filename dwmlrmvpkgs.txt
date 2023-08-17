@@ -13,3 +13,4 @@ vim-common
 vim-tiny
 warpinator
 youtube-dl
+yelp
