@@ -19,7 +19,7 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
-apt update
+sudo apt update
 
 apt install librewolf -y
 sudo mv streamlink.desktop /usr/share/applications
