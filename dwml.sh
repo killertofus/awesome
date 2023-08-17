@@ -25,8 +25,9 @@ y
 apt update
 
 apt install librewolf -y
-
-flatpak install flathub com.chatterino.chatterino
+mv streamlink.desktop /usr/share/applications
+mv chatterino.desktop /usr/share/applications
+mv rustdesk.desktop /usr/share/applications
 cd /usr/local/bin
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
@@ -36,6 +37,10 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | wget -qi -
 find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
  mv *.AppImage Streamlink Twitch GUI
+ 
+
+
+
 
 curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 | grep "x86_64.*AppImage" \
@@ -44,12 +49,16 @@ curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
 | wget -qi -
  mv *.AppImage Chatterino
 
+
 curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 | grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
+ 
  mv *.AppImage rustdesk
+
+
 
 cd -
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
