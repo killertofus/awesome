@@ -10,6 +10,7 @@ curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
 rm -rf ~/snap
 wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
+mkdir -p ~/.themes
 mv dracula.qbtheme ~/.themes
 wget https://github.com/dracula/gtk/archive/master.zip
 unzip master.zip
