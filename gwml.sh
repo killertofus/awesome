@@ -5,12 +5,14 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
+mkdir -p ~/.config/tmux
 cd config
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty/
 mv rc.lua theme ~/.config/awesome
 mv rofi.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
+mv tmux.conf ~/.config/tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
