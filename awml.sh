@@ -5,8 +5,8 @@ makepkg -si
 yay --devel --save
 sudo pacman -Syu
 cd -
-sudo pacman -S   <awmlpkgs.txt -y
-yay -S <ywml.txt
+sudo pacman -S <awmlpkgs.txt -y
+yay -S <ywml.txt -y
 ./gwml.sh
 chsh -s $(which zsh)
 echo "RANGER_LOAD_DEFAULT_RC=false"
