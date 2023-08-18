@@ -72,7 +72,6 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 sudo apt update
 sudo apt install github-desktop
 echo "RANGER_LOAD_DEFAULT_RC=false"
-sudo systemctl enable lightdm
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
 ./gwml.sh
 cd config/debian
