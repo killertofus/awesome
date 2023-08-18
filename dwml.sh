@@ -6,7 +6,7 @@ mkdir -p .themes
  sudo dpkg --add-architecture i386
  sudo mkdir -pm755 /etc/apt/keyrings
  sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
- sudo apt-add-repository deb https://dl.winehq.org/wine-builds/ubuntu/ ${linux_release_name} main
+ sudo apt-add-repository deb https://dl.winehq.org/wine-builds/ubuntu/ ${linux_release_name} .sources
  sudo apt update
  sudo apt install wine -y
  sudo apt install alacritty -y
