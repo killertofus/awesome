@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 xargs sudo apt install <dwmlpkgs.txt
+mkdir -p .themes
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo apt update
@@ -8,6 +9,8 @@ xargs sudo apt install <dwmlpkgs.txt
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
 rm -rf ~/snap
+wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
+mv dracula.qbtheme ~/.themes
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
