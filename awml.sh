@@ -1,6 +1,6 @@
 cd /usr/share/xsessions
-sudo pacman -S xdotool tmux
-
+sudo pacman -S tmux
+tmux new "sudo pacman -S <awmlpkgs.txt; sleep 100" ';' split "yay -S <ywml.txt; sleep 100"
 sudo rm -rf *
 cd -
 sudo pacman -S --needed git base-devel
@@ -10,8 +10,6 @@ makepkg -si
 yay --devel --save
 sudo pacman -Syu
 cd -
-sudo pacman -S <awmlpkgs.txt -y
-yay -S <ywml.txt -y
 ./gwml.sh
 chsh -s $(which zsh)
 echo "RANGER_LOAD_DEFAULT_RC=false"
