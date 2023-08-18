@@ -1,4 +1,6 @@
 cd /usr/share/xsessions
+sudo pacman -S xdotool
+
 sudo rm -rf *
 cd -
 sudo pacman -S --needed git base-devel
