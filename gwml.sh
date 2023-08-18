@@ -9,13 +9,12 @@ mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
 cd config
 mv init.vim ~/.config/nvim/
-mv alacritty.yml ~/.config/alacritty/
+mv alacritty.yml ~/.config/alacritty
 mv rc.lua theme ~/.config/awesome
 mv rofi.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 mv tmux.conf ~/.config/tmux
-mv rc.conf ~/.ranger/
-mv plugins ~/.ranger/
+mv  plugins rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
