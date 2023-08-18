@@ -28,7 +28,7 @@ Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
 sudo apt update
 
-apt install librewolf -y
+sudo apt install librewolf -y
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
