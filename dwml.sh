@@ -86,6 +86,6 @@ sudo make install installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-./dwmlrmvpkgs.sh
+sudo ./dwmlrmvpkgs.sh
 chsh -s $(which zsh)
 
