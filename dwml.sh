@@ -87,4 +87,4 @@ sudo systemctl disable getty@tty2.service
 cd -
 sudo ./dwmlrmvpkgs.sh
 chsh -s $(which zsh)
-
+sudo apt purge $DESKTOP_SESSION
