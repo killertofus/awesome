@@ -3,7 +3,12 @@ xargs sudo apt install <dwmlpkgs.txt
 mkdir -p .themes
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
+ sudo dpkg --add-architecture i38
+ sudo mkdir -pm755 /etc/apt/keyrings
+ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+ sudo apt-add-repository deb https://dl.winehq.org/wine-builds/ubuntu/ ${linux_release_name} main
  sudo apt update
+ sudo apt install wine -y
  sudo apt install alacritty -y
  curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
