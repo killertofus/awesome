@@ -1,5 +1,5 @@
 cd /usr/share/xsessions
-sudo pacman -S xdotool
+sudo pacman -S xdotool tmux
 
 sudo rm -rf *
 cd -
