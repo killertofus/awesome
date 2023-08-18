@@ -78,7 +78,7 @@ cd ly
 make
 sudo make install installsystemd
 sudo systemctl enable ly.service -f
-systemctl disable getty@tty2.service
+sudo systemctl disable getty@tty2.service
 cd -
 ./dwmlrmvpkgs.sh
 chsh -s $(which zsh)
