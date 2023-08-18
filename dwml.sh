@@ -11,6 +11,9 @@ source ~/config/envman/PATH.env
 rm -rf ~/snap
 wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
 mv dracula.qbtheme ~/.themes
+wget https://github.com/dracula/gtk/archive/master.zip
+unzip master.zip
+mv *zip gtk ~/.themes
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
