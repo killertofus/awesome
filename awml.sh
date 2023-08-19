@@ -1,7 +1,7 @@
 cd /usr/share/xsessions
 sudo pacman -S tmux
 
-tmux new "awk '{print $1}'  awmlpkgs.txt |  xargs sudo pacman -S ; sleep 100" ';' split "awk '{print $1}'  ywmlpkgs.txt |  xargs yay -S ; sleep 100"
+tmux new "sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) ; sleep 100" ';' split "yay -S $(cat ywmlpkgs.txt | cut -d' ' -f1) ; sleep 100"
 sudo rm -rf *
 cd -
 sudo pacman -S --needed git base-devel
