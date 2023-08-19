@@ -3,7 +3,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay -S < ywmlpkgs.txt -y
-sudo pacman -S < awmlpkgs.txt -y
+sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 yay --devel --save
 sudo pacman -Syu
 cd -
