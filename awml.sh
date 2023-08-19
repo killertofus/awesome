@@ -1,9 +1,5 @@
-cd /usr/share/xsessions
-sudo pacman -S tmux
-
-tmux new "while read pkg; do sudo pacman -S --needed $pkg; done <awmlpkgs.txt ; sleep 100" ';' split "yay -S $(cat ywmlpkgs.txt | cut -d' ' -f1) ; sleep 100"
-sudo rm -rf *
-cd -
+yay -S <ywml.txt -y
+sudo pacman -S <awmlpkgs.txt -y
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
