@@ -1,4 +1,4 @@
-yay -S <ywml.txt -y
+yay -S <ywmlpkgs.txt -y
 sudo pacman -S <awmlpkgs.txt -y
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
