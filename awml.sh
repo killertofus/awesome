@@ -9,5 +9,5 @@ yay --devel --save
 sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
 ./gwml.sh
-chsh -s $(which zsh)
+chsh -s /usr/bin/zsh
 echo "RANGER_LOAD_DEFAULT_RC=false"
