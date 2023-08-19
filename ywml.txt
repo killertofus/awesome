@@ -1,5 +1,4 @@
-ttf-dejavu-ib 
-piavpn-bin 
+ttf-dejavu-ib piavpn-bin 
 librewolf-bin 
 streamlink-twitch-gui-bin 
 jdownloader2 
