@@ -3,7 +3,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd -
-for word in $(cat ywmlpkgs.txt); do yay -S -needed $word || true; done
+for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 yay --devel --save
 sudo pacman -Syu
