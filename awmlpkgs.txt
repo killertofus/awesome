@@ -21,10 +21,10 @@ ttf-nerd-fonts-symbols
 neovim 
 alacritty 
 xarchiver 
-unzip 
 zsh 
 flameshot 
 timeshift 
 noto-fonts-cjk 
 noto-fonts-emoji 
 lsd
+unzip
