@@ -7,7 +7,7 @@ for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $wor
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 yay --devel --save
 sudo pacman -Syu
-cd -
+sudo pacman -Qttdq | sudo pacman -Rns -
 ./gwml.sh
 chsh -s $(which zsh)
 echo "RANGER_LOAD_DEFAULT_RC=false"
