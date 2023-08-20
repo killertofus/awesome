@@ -91,4 +91,6 @@ sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
 sudo ./dwmlrmvpkgs.sh
+cd /usr/share/xsessions
+sudo rm -rf *
 chsh -s $(which zsh)
