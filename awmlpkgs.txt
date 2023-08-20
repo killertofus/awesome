@@ -10,6 +10,7 @@ wget
 awesome 
 w3m 
 vlc
+steam
 bluez
 blueman
 caja
