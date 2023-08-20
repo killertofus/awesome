@@ -24,7 +24,8 @@ xarchiver
 zsh 
 flameshot
 timeshift 
-noto-fonts-cjk 
+noto-fonts-cjk
+noto-fonts
 noto-fonts-emoji 
 lsd
 unzip
