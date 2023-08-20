@@ -12,7 +12,8 @@ w3m
 vlc
 bluez
 blueman
-caja 
+caja
+gnome-boxes
 streamlink 
 python-libtmux 
 tmux
