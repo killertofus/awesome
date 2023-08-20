@@ -96,7 +96,6 @@ cd -
 if [  -n "$(uname -a | grep mint)" ]; then
 sudo ./dwmlrmvpkgs.sh
 else
- sudo apt install emacs
 fi  
 
 chsh -s $(which zsh)
