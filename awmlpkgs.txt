@@ -12,7 +12,8 @@ vlc
 caja 
 streamlink 
 python-libtmux 
-tmux 
+tmux
+neofetch
 qbittorrent 
 ripgrep 
 obs-studio 
