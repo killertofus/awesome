@@ -51,4 +51,3 @@ openssh
 networkmanager
 mono
 btop
-jellyfin-bin
