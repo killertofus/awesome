@@ -5,6 +5,7 @@ makepkg -si
 cd -
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
+sudo systemctl enable ly
 yay --devel --save
 sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
