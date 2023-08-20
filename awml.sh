@@ -8,7 +8,8 @@ sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 yay --devel --save
 sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
-yay -Scc
+yay -Scc 
+sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 ./gwml.sh
 chsh -s /usr/bin/zsh
 echo "RANGER_LOAD_DEFAULT_RC=false"
