@@ -8,6 +8,7 @@ sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 yay --devel --save
 sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
+yay -Scc
 ./gwml.sh
 chsh -s /usr/bin/zsh
 echo "RANGER_LOAD_DEFAULT_RC=false"
