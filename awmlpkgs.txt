@@ -33,3 +33,4 @@ xscreensaver
 wine
 volumeicon
 sqlitebrowser
+reflector
