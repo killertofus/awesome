@@ -53,3 +53,4 @@ mono
 btop
 wine-mono
 wine-gecko
+ly
