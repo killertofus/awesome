@@ -31,3 +31,4 @@ unzip
 neofetch
 xscreensaver
 wine
+volumeicon
