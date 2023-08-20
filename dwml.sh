@@ -9,7 +9,7 @@ xargs sudo apt install <dwmlpkgs.txt
  sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
  sudo apt-add-repository deb https://dl.winehq.org/wine-builds/ubuntu/ ${linux_release_name} .sources
  sudo apt update
- sudo apt install wine -y
+ sudo apt install winehq-staging -y
  sudo apt install alacritty -y
  curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
