@@ -92,5 +92,10 @@ sudo make install installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
+if [  -n "$(uname -a | grep Ubuntu)" ]; then
+    sudo apt-get update && sudo apt-get upgrade 
+else
+    yum update
+fi  
 sudo ./dwmlrmvpkgs.sh
 chsh -s $(which zsh)
