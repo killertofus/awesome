@@ -37,3 +37,4 @@ sqlitebrowser
 reflector
 p7zip
 openssh
+network manager
