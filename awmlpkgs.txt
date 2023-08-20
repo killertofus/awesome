@@ -22,7 +22,7 @@ neovim
 alacritty 
 xarchiver 
 zsh 
-flameshot 
+flameshot
 timeshift 
 noto-fonts-cjk 
 noto-fonts-emoji 
@@ -34,3 +34,4 @@ wine
 volumeicon
 sqlitebrowser
 reflector
+p7zip
