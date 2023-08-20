@@ -8,7 +8,9 @@ git
 wget 
 awesome 
 w3m 
-vlc 
+vlc
+bluez
+blueman
 caja 
 streamlink 
 python-libtmux 
@@ -38,4 +40,7 @@ sqlitebrowser
 reflector
 p7zip
 openssh
-network manager
+networkmanager
+mono
+btop
+jellyfin-bin
