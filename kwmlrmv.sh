@@ -1,4 +1,4 @@
-pkgToRemoveListFull= " yt-dlp vim-common libreoffice-base-core *$DESKTOP_SESSION* "
+pkgToRemoveListFull= " yt-dlp vim-common libreoffice-base-core *$DESKTOP_SESSION* nano "
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(dpkg --status $pkgToRemove &> /dev/null)
