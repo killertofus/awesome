@@ -35,3 +35,4 @@ volumeicon
 sqlitebrowser
 reflector
 p7zip
+openssh
