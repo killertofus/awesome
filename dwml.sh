@@ -92,10 +92,10 @@ sudo make install installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-if [  -n "$(uname -a | grep Ubuntu)" ]; then
-    sudo apt-get update && sudo apt-get upgrade 
-else
-    yum update
-fi  
+if [  -n "$(uname -a | grep mint)" ]; then
 sudo ./dwmlrmvpkgs.sh
+else
+ sudo apt install emacs
+fi  
+
 chsh -s $(which zsh)
