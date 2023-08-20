@@ -29,3 +29,5 @@ noto-fonts-emoji
 lsd
 unzip
 neofetch
+xscreensaver
+wine
