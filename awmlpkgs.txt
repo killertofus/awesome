@@ -32,3 +32,4 @@ neofetch
 xscreensaver
 wine
 volumeicon
+sqlitebrowser
