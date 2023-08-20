@@ -51,3 +51,5 @@ openssh
 networkmanager
 mono
 btop
+wine-mono
+wine-gecko
