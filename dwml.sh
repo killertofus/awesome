@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+cd /usr/share/xsessions
+sudo rm -rf *
 xargs sudo apt install <dwmlpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
@@ -91,6 +93,4 @@ sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
 sudo ./dwmlrmvpkgs.sh
-cd /usr/share/xsessions
-sudo rm -rf *
 chsh -s $(which zsh)
