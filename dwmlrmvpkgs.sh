@@ -8,6 +8,7 @@ for pkgToRemove in $(echo $pkgToRemoveListFull); do
   fi
 done
 apt --yes --purge remove $pkgToRemoveList
+
 if [  -n "$(uname -a | grep kubuntu)" ]; then
 pkgToRemoveListFull= " yt-dlp vim-common libreoffice-base-core $DESKTOP_SESSION nano "
 pkgToRemoveList=""
