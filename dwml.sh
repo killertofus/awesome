@@ -21,7 +21,7 @@ mkdir -p ~/.themes
 mv dracula.qbtheme ~/.themes
 wget https://github.com/dracula/gtk/archive/master.zip
 unzip master.zip
-mv gtk-master gtk-dracula ~/.themes
+mv gtk-master gtk-dracula | mv gtk-dracula ~/.themes
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
