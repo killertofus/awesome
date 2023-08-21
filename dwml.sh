@@ -73,7 +73,6 @@ wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee 
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
 sudo apt update
 sudo apt install github-desktop
-echo "RANGER_LOAD_DEFAULT_RC=false"
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
 ./gwml.sh
 cd config/debian
