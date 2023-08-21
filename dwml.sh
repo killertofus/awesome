@@ -3,8 +3,7 @@ cd /usr/share/xsessions
 sudo rm -rf *
 cd -
 xargs sudo apt install <dwmlpkgs.txt
- #remove below when alacritty and lsd are in the mint repos
- sudo add-apt-repository ppa:aslatter/ppa -y
+ #remove below when lsd is in the popos repo
  sudo dpkg --add-architecture i386
  sudo mkdir -pm755 /etc/apt/keyrings
  sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
