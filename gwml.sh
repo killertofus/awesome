@@ -1,5 +1,11 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
+mkdir -p ~/.themes
+mv dracula.qbtheme ~/.themes
+wget https://github.com/dracula/gtk/archive/master.zip
+unzip master.zip
+mv gtk-master gtk-dracula | mv gtk-dracula ~/.themes
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
