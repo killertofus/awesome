@@ -11,7 +11,7 @@ cd config
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty
 mv rc.lua theme ~/.config/awesome
-mv rofi.rasi ~/.config/rofi
+mv config1.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 mv tmux.conf ~/.config/tmux
 mv  plugins rc.conf ~/.config/ranger
