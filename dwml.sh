@@ -100,5 +100,9 @@ fi
 if [  -n "$(uname -a | grep kubuntu)" ]; then
 sudo ./kwmlrmvpkgs.sh
 else
+fi
+if [  -n "$(uname -a | grep pop-os)" ]; then
+sudo ./pwmlrmvpkgs.sh
+else
 fi  
 chsh -s $(which zsh)
