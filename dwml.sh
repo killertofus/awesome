@@ -88,14 +88,14 @@ sudo systemctl disable getty@tty2.service
 cd -
 if [  -n "$(uname -a | grep mint)" ]; then
 sudo ./dwmlrmvpkgs.sh
-else 
-
+else
+fi  
 if [  -n "$(uname -a | grep kubuntu)" ]; then
 sudo ./kwmlrmvpkgs.sh
 else
-
-if [  -n "$(uname -a | grep pop-os)" ]; then
+fi 
+if [  -n "$(uname -a | grep kubuntu)" ]; then
 sudo ./pwmlrmvpkgs.sh
 else
-done
+fi 
 chsh -s $(which zsh)
