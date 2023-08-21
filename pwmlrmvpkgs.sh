@@ -1,4 +1,4 @@
-pkgToRemoveListFull= " yelp vim-common vim-tiny libreoffice-base-core $DESKTOP_SESSION *language-pack* nano "
+pkgToRemoveListFull= " yelp vim-common vim-tiny libreoffice-base-core $DESKTOP_SESSION  'language-pack.*$' nano "
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(dpkg --status $pkgToRemove &> /dev/null)
