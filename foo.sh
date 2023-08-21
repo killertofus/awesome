@@ -11,6 +11,6 @@ apt --yes --purge remove $pkgToRemoveList
 
 if [  -n "$(uname -a | grep mint)" ]; then
   a
-  done
+done
 else
 echo hello
