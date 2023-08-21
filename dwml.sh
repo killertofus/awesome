@@ -97,5 +97,5 @@ else
 if [  -n "$(uname -a | grep pop-os)" ]; then
 sudo ./pwmlrmvpkgs.sh
 else
-fi
+done
 chsh -s $(which zsh)
