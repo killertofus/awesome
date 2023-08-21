@@ -97,10 +97,12 @@ if [  -n "$(uname -a | grep mint)" ]; then
 sudo ./dwmlrmvpkgs.sh
 else
 fi  
+
 if [  -n "$(uname -a | grep kubuntu)" ]; then
 sudo ./kwmlrmvpkgs.sh
 else
 fi
+
 if [  -n "$(uname -a | grep pop-os)" ]; then
 sudo ./pwmlrmvpkgs.sh
 else
