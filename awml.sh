@@ -12,5 +12,3 @@ sudo pacman -Qttdq | sudo pacman -Rns -
 yay -Scc 
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 ./gwml.sh
-chsh -s /usr/bin/zsh
-echo "RANGER_LOAD_DEFAULT_RC=false"
