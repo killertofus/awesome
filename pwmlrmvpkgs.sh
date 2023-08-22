@@ -1,4 +1,4 @@
-pkgToRemoveListFull= " yelp vim-common vim-tiny libreoffice-base-core $DESKTOP_SESSION nano "
+pkgToRemoveListFull=" *$DESKTOP_SESSION* gnome-games gnome-terminal orca xterm libreoffice-base-core snapd snap vim-common vim-tiny yelp *gnome*"
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(dpkg --status $pkgToRemove &> /dev/null)
