@@ -86,16 +86,6 @@ sudo make install installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-if [  -n "$(uname -a | grep mint)" ]; then
 sudo ./dwmlrmvpkgs.sh
-else
-fi  
-if [  -n "$(uname -a | grep kubuntu)" ]; then
-sudo ./kwmlrmvpkgs.sh
-else
-fi 
-if [  -n "$(uname -a | grep kubuntu)" ]; then
-sudo ./pwmlrmvpkgs.sh
-else
 fi 
 chsh -s $(which zsh)
