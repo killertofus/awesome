@@ -6,6 +6,7 @@ mkdir -p ~/.themes
 mv dracula.qbtheme ~/.themes
 wget https://github.com/dracula/gtk/archive/master.zip
 unzip master.zip
+rm -rf master.zip
 mv gtk-master gtk-dracula | mv gtk-dracula ~/.themes
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
