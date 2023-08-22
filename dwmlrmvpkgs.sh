@@ -7,4 +7,3 @@ for pkgToRemove in $(echo $pkgToRemoveListFull); do
   fi
 done
 apt --yes --purge remove $pkgToRemoveList
-else
