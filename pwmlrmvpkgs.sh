@@ -1,1 +1,1 @@
-sudo apt purge yelp vim-common vim-tiny libreoffice-base-core $DESKTOP_SESSION  'language-pack.*$' nano
+sudo apt purge yelp vim-common vim-tiny libreoffice-base-core $DESKTOP_SESSION  'language-pack.*$' nano pop-desktop --allow-remove-essential
