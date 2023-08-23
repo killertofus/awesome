@@ -4,6 +4,10 @@ sudo rm -rf *
 cd -
 xargs sudo apt install <dwmlpkgs.txt
  #remove below when lsd is in the popos repo
+ git clone https://github.com/ryanoasis/nerd-fonts
+cd nerd-fonts
+./install.sh Iosevka
+cd -
  sudo dpkg --add-architecture i386
  sudo mkdir -pm755 /etc/apt/keyrings
  sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
