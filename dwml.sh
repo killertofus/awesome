@@ -2,6 +2,10 @@
 cd /usr/share/xsessions
 sudo rm -rf *
 cd -
+ git clone https://github.com/ryanoasis/nerd-fonts
+cd nerd-fonts
+./install.sh Iosevka
+cd -
 xargs sudo apt install <dwmlpkgs.txt
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
