@@ -1,5 +1,7 @@
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
-sudo apt-get install lightdm x11vnc nvim git kodi zsh -y
+sudo apt-get install lightdm x11vnc nvim git zsh -y
+
+
 wget https://installers.privateinternetaccess.com/download/pia-linux-arm64-3.3.1-06924.run
 sh ./pia-linux-arm64-3.3.1-06924.run
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -28,3 +30,17 @@ systemctl enable x11vnc.service
 systemctl start x11vnc.service
 systemctl status x11vnc.service
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
+curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/jellyfin.gpg
+cat <<EOF | sudo tee /etc/apt/sources.list.d/jellyfin.sources
+Types: deb
+URIs: https://repo.jellyfin.org/$( awk -F'=' '/^ID=/{ print $NF }' /etc/os-release )
+Suites: $( awk -F'=' '/^VERSION_CODENAME=/{ print $NF }' /etc/os-release )
+Components: main
+Architectures: $( dpkg --print-architecture )
+Signed-By: /etc/apt/keyrings/jellyfin.gpg
+EOF
+sudo apt update
+sudo apt install jellyfin
+sudo systemctl {action} jellyfin
