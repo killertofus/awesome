@@ -47,7 +47,7 @@ Signed-By: /etc/apt/keyrings/jellyfin.gpg
 EOF
 sudo apt update
 sudo apt install jellyfin
-sudo systemctl enable jellyfin
+sudo systemctl {action} jellyfin
 
 
 
