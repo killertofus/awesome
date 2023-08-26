@@ -99,7 +99,6 @@ mv .zshrc ~/.
 cd ..//..
 ./Jdownloader2.sh
 ./pwmlrmvpkgs.sh
-sudo apt install xorg -y
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
