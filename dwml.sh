@@ -107,4 +107,5 @@ sudo make install installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
+xargs sudo apt install <dwmlpkgs.txt
 chsh -s $(which zsh)
