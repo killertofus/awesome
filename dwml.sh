@@ -36,7 +36,7 @@ curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/jellyfin.gpg
 sudo apt update
-sudo apt install jellyfin
+sudo apt install jellyfin -y
 sudo systemctl {action} jellyfin
 
 
