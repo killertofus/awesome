@@ -3,7 +3,7 @@ cd /usr/share/xsessions
 sudo rm -rf *
 cd -
 xargs sudo apt install <dwmlpkgs.txt
-fc-cache -v
+fc-cache -f -v
  #remove below when lsd is in the popos repo
  git clone https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
