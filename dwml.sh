@@ -9,17 +9,12 @@ sudo mv *.ttf /usr/share/fonts/Iosevka
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when lsd is in the popos repo
- git clone https://github.com/ryanoasis/nerd-fonts
-cd nerd-fonts
-./install.sh Iosevka
-cd -
  sudo dpkg --add-architecture i386
  sudo mkdir -pm755 /etc/apt/keyrings
  sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/${linux_release_name}winehq-${linux_release_name}.sources 
  sudo apt update
  sudo apt install winehq-staging -y
- sudo apt install alacritty -y
  curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
