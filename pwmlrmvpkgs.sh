@@ -1,4 +1,4 @@
-pkgToRemoveListFull=" yelp vim-common vim-tiny language-selector-gnome gnome-shell-common printer-driver-all toilet pop-server libreoffice-common libreoffice-base-core $DESKTOP_SESSION 'language-pack*' nano gedit pop-desktop pop-shell pop-cosmic gnome-terminal hunspell hyphen grim zenity "
+pkgToRemoveListFull=" yelp vim-common vim-tiny geary language-selector-gnome gnome-shell-common printer-driver-all toilet pop-server libreoffice-common libreoffice-base-core $DESKTOP_SESSION 'language-pack*' nano gedit pop-desktop pop-shell pop-cosmic gnome-terminal hunspell hyphen grim zenity "
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(dpkg --status $pkgToRemove &> /dev/null)
