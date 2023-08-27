@@ -14,7 +14,7 @@ steam
 bluez
 blueman
 caja
-gnome-boxes
+virt-manager
 streamlink 
 python-libtmux 
 tmux
