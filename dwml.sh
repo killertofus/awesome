@@ -99,7 +99,7 @@ mv .zshrc ~/.
 cd -
 ./Jdownloader2.sh
 ./pwmlrmvpkgs.sh
-sudo apt purge 'pop*' 'gnome*' --allow-remove-essential
+sudo apt purge 'pop*' 'gnome*' --allow-remove-essential -y
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
