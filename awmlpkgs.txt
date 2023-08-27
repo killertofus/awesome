@@ -54,3 +54,5 @@ btop
 wine-mono
 wine-gecko
 ly
+dnsmasq
+iptables-nft
