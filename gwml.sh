@@ -14,7 +14,7 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
-cd-
+cd -
 cd config
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty
