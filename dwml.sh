@@ -78,7 +78,6 @@ sudo apt update
 sudo apt install github-desktop
 sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
 ./gwml.sh
-cd config/debian
 mv .zshrc ~/.
 cd -
 ./Jdownloader2.sh
