@@ -5,8 +5,7 @@ echo "RANGER_LOAD_DEFAULT_RC=false"
 mkdir -p ~/.themes
 mv dracula.qbtheme ~/.themes
 git clone https://github.com/dracula/gtk
-cd gtk
-mv gtk-4.0 ~/.themes
+mv gtk/gtk-4.0 ~/.themes
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
