@@ -4,9 +4,7 @@ wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
 echo "RANGER_LOAD_DEFAULT_RC=false"
 mkdir -p ~/.themes
 mv dracula.qbtheme ~/.themes
-wget https://github.com/dracula/gtk/archive/master.zip
-unzip master.zip
-rm -rf master.zip
+git clone https://github.com/dracula/gtk
 mv gtk-master gtk-dracula | mv gtk-dracula ~/.themes
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
