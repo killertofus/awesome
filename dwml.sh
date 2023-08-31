@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-cd /usr/share/xsessions
-sudo rm -rf *
-cd -
+sudo rm -rf */usr/share/xsessions
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
