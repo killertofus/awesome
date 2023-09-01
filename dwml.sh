@@ -7,12 +7,12 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when lsd is in the popos repo
- sudo dpkg --add-architecture i386
- sudo mkdir -pm755 /etc/apt/keyrings
- sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo dpkg --add-architecture i386
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/${linux_release_name}winehq-${linux_release_name}.sources 
- sudo apt update
- sudo apt install winehq-staging -y 
+sudo apt update
+sudo apt install winehq-staging -y 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
 rm -rf ~/snap
