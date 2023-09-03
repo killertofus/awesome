@@ -7,6 +7,8 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when lsd is in the popos repo
+curl -sS https://webi.sh/lsd | sh
+
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -20,8 +22,8 @@ main() {
 main
 sudo apt update && sudo apt upgrade -y
 sudo apt install winehq-staging -y 
-curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
+sleep 0.5; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 rm -rf ~/snap
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
