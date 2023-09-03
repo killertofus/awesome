@@ -31,7 +31,7 @@ wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/shar
 
 curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 
- sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
+sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
 Types: deb
 URIs: https://deb.librewolf.net
 Suites: $distro
