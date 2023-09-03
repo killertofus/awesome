@@ -10,8 +10,15 @@ fc-cache -f -v
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/${linux_release_name}winehq-${linux_release_name}.sources 
-sudo apt update
+main() {
+   codename=$(grep "CODENAME" /etc/upstream-release/lsb-release | cut -d'=' -f2)
+    printf "%b" '\033[1;33mDownloading..\n\033[0m'
+    sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$codename/winehq-$codename.sources
+    printf "%b" '\033[1;32mDone! Goodbye!\n\033[0m'
+}
+
+main
+sudo apt update && sudo apt upgrade -y
 sudo apt install winehq-staging -y 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
