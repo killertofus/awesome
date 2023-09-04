@@ -1,5 +1,5 @@
 # please don't run this more then twice :)
-pkgToRemoveListFull="  yelp vim-common vim-tiny baobab gnome-online-miners gnome-bluetooth-common gnome-calculator gnome-terminal gnome-settings-daemon-common geary orca gedit-common language-selector-gnome toilet libreoffice-common libreoffice-base-core $DESKTOP_SESSION 'language-pack*' nano gedit gnome-terminal hunspell hyphen pop-shell grim zenity  "
+pkgToRemoveListFull="  yelp vim-common vim-tiny baobab gnome-online-miners gnome-bluetooth-common gnome-calculator gnome-terminal gnome-settings-daemon-common geary orca gedit-common language-selector-gnome toilet libreoffice-common libreoffice-base-core $DESKTOP_SESSION 'language-pack*' nano gedit gnome-terminal hunspell hyphen pop-desktop grim zenity  "
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(dpkg --status $pkgToRemove &> /dev/null)
