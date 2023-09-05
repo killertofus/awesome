@@ -7,4 +7,4 @@ for pkgToRemove in $(echo $pkgToRemoveListFull); do
     pkgToRemoveList="$pkgToRemoveList $pkgToRemove"
   fi
 done
-sudo dpkg --yes --purge remove --allow-remove-essential $pkgToRemoveList
+sudo dpkg --remove --force-all $pkgToRemoveList
