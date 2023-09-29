@@ -6,8 +6,7 @@ firefox
 ttf-ibmplex-mono-nerd 
 ttf-iosevka-nerd 
 git 
-wget 
-awesome 
+wget
 w3m 
 vlc
 steam
