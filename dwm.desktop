@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Name=Dwm
 Comment=Dynamic window manager
-Exec= ~/.config/dwm/autostart
+Exec=~/.config/dwm/autostart
 Icon=dwm
 Type=XSession
