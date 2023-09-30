@@ -1,4 +1,3 @@
-#include <X11/XF86keysym.h>
 #include "fibonacci.c"
 #include "colorschemes/ashes.h"
 /* See LICENSE file for copyright and license details. */
