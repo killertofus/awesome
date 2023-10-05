@@ -22,7 +22,7 @@ static const char *colors[][3]      = {
 void
 togglealwaysontop(const Arg *arg)
 {
-	Client *c = selws->sel;
+	Client *c = selmon->sel;
 	if (!c)
 		return;
 	c->alwaysontop = !c->alwaysontop;
