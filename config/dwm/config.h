@@ -18,6 +18,17 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
+/* on top */
+void
+togglealwaysontop(const Arg *arg)
+{
+	Client *c = selws->sel;
+	if (!c)
+		return;
+	c->alwaysontop = !c->alwaysontop;
+}
+
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
