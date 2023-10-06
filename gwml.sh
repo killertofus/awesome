@@ -33,3 +33,4 @@ patch -p1 < patch/dwm_systray.diff
 patch -p1 < patch/dwm_ontop.diff
 patch -p1 < patch/dwm_resize.diff
 make clean
+sudo make clean install
