@@ -48,10 +48,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 feh --bg-fill ~/Pictures/wall/wall.png &
+tint2 &
 picom -b & 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-dunst
-xscreensaver -nosplash
-volumeicon
-/opt/piavin/bin/pia-client %u
-dwm
+dunst &
+xscreensaver -nosplash &
+volumeicon &
+/opt/piavin/bin/pia-client %u &
+exec dwm
