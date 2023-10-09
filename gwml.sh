@@ -30,8 +30,5 @@ mv lib dracula.zsh-theme ~/oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 cd ~/.config/dwm
-patch -p1 < patch/dwm_systray.diff
-patch -p1 < patch/dwm_ontop.diff
-patch -p1 < patch/dwm_resize.diff
 make clean
 sudo make clean install
