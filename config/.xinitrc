@@ -47,6 +47,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
+exec dwm &
+xscreensaver -nosplash &
+blueman &
+volumeicon &
+/opt/piavpn/bin/pia-client %u &
 feh --bg-fill ~/Pictures/wall/wall.png &
 tint2 &
 picom -b & 
@@ -55,4 +60,3 @@ dunst &
 xscreensaver -nosplash &
 volumeicon &
 /opt/piavin/bin/pia-client %u &
-exec dwm
