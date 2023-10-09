@@ -52,7 +52,7 @@ xscreensaver -nosplash &
 blueman &
 volumeicon &
 /opt/piavpn/bin/pia-client %u &
-feh --bg-fill ~/Pictures/wall/wall.png &
+feh --bg-fill ~/Pictures/wall/wall.jpg &
 tint2 &
 picom -b & 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
