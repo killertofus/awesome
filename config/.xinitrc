@@ -47,16 +47,18 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
-exec dwm &
+
 xscreensaver -nosplash &
 blueman-manager &
 volumeicon &
 /opt/piavpn/bin/pia-client %u &
 feh --bg-fill ~/Pictures/wall/wall.jpg &
 tint2 &
-picom -b & 
+picom -b &
+flameshot &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
 xscreensaver -nosplash &
 volumeicon &
 /opt/piavin/bin/pia-client %u &
+exec dwm
