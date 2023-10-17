@@ -64,6 +64,7 @@ index 4465af1..8d54b26 100644
 +		for(c = m_search->clients; c; c = c->next){
 +			if(c->isalwaysontop){
 +				XRaiseWindow(dpy, c->win);
++				break;
 +			}
 +		}
 +	}
@@ -91,8 +92,14 @@ index 4465af1..8d54b26 100644
 +	if(selmon->sel->isalwaysontop){
 +		selmon->sel->isalwaysontop = 0;
 +	}else{
++		/* disable others */
++		for(Monitor *m = mons; m; m = m->next)
++			for(Client *c = m->clients; c; c = c->next)
 +				c->isalwaysontop = 0;
 +
++		/* turn on, make it float too */
++		selmon->sel->isfloating = 1;
++		selmon->sel->isalwaysontop = 1;
 +	}
 +
  	arrange(selmon);
