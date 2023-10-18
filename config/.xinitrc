@@ -53,7 +53,6 @@ blueman-manager &
 volumeicon &
 /opt/piavpn/bin/pia-client %u &
 feh --bg-fill ~/Pictures/wall/wall.jpg &
-tint2 &
 picom -b &
 flameshot &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
