@@ -30,5 +30,5 @@ mv lib dracula.zsh-theme ~/oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 cd ~/.config/dwm
-make clean
-sudo make clean install
+make -C ~/.config/dwm clean
+sudo make -C ~/.config/dwm clean install
