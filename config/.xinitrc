@@ -58,7 +58,4 @@ picom -b &
 flameshot &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
-xscreensaver -nosplash &
-volumeicon &
-/opt/piavin/bin/pia-client %u &
 exec dwm
