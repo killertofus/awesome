@@ -15,7 +15,7 @@ mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
 mv config/init.vim ~/.config/nvim/
 mv config/alacritty.yml ~/.config/alacritty
-mv config/dwm/ * ~/.config/dwm
+mv config/dwm/* ~/.config/dwm
 mv config/config1.rasi ~/.config/rofi
 mv config/picom.conf ~/.config/picom
 mv config/tmux.conf ~/.config/tmux
@@ -29,6 +29,5 @@ unzip master.zip
 mv lib dracula.zsh-theme ~/oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-cd ~/.config/dwm
 make -C ~/.config/dwm clean
 sudo make -C ~/.config/dwm clean install
