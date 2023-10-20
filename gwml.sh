@@ -13,6 +13,7 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
+mv .xinitrc ~/
 mv config/init.vim ~/.config/nvim/
 mv config/alacritty.yml ~/.config/alacritty
 mv config/dwm/* ~/.config/dwm
