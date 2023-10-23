@@ -1,4 +1,5 @@
 sudo pacman -S --needed git base-devel
+sudo mv config/awesome.desktop /usr/share/xsessions
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
