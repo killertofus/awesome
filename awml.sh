@@ -11,4 +11,6 @@ sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
 yay -Scc 
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
+chsh -s $(which zsh)
+fc-cache -f -v
 ./gwml.sh
