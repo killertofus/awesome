@@ -22,6 +22,7 @@ mv config/picom.conf ~/.config/picom
 mv config/tmux.conf ~/.config/tmux
 mv config/plugins config/rc.conf ~/.config/ranger
 mv config/.dircolors ~/
+mv config/.zshrc ~/
 mv rc.lua theme ~/.config/awesome
 mv .dircolors ~/
 mv config/plugins config/rc.conf ~/.config/ranger
