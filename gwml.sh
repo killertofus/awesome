@@ -14,6 +14,7 @@ mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
 mv .xinitrc ~/
+mv config/dwm.desktop /usr/share/xsessions
 mv config/init.vim ~/.config/nvim/
 mv config/alacritty.yml ~/.config/alacritty
 mv config/dwm/* ~/.config/dwm
