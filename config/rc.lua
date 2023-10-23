@@ -762,3 +762,12 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn("nm-applet")
 
 -- Autostart
+local r = require("runonce")
+
+r.run("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
+r.run("dunst")
+r.run("urxvtc")
+r.run("volumeicon")
+r.run("/opt/piavpn/bin/pia-client %u")
+r.run("xscreensaver -nosplash")
+r.run("picom -b")
