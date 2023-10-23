@@ -13,15 +13,15 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
-mv .xinitrc ~/
+mv config/.xinitrc ~/
 sudo mv config/dwm.desktop /usr/share/xsessions
 mv config/init.vim ~/.config/nvim/
 mv config/alacritty.yml ~/.config/alacritty
 mv config/dwm/* ~/.config/dwm
-mv config/config1.rasi ~/.config/rofi
+mv config/config.rasi ~/.config/rofi
 mv config/picom.conf ~/.config/picom
 mv config/tmux.conf ~/.config/tmux
-mv  config/plugins rc.conf ~/.config/ranger
+mv config/plugins rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
