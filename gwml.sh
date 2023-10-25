@@ -23,3 +23,4 @@ wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
 mv lib dracula.zsh-theme ~/oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "~/Pictures/wallpaper.jpg"'
