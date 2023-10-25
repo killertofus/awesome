@@ -41,4 +41,5 @@ brew install openssh
 brew install mono
 brew install btop
 pip install --user libtmux
+mv wallpaper.jpg ~/Pictures
 ./gwml.sh
