@@ -11,6 +11,7 @@ sudo systemctl enable ly
 yay --devel --save
 sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
+sudo systemctl enable --now piavpn.service
 yay -Scc 
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 chsh -s $(which zsh)
