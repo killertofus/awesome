@@ -7,6 +7,7 @@ ttf-ibmplex-mono-nerd
 ttf-iosevka-nerd 
 git 
 wget
+nodejs
 w3m 
 vlc
 steam
