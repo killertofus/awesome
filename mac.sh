@@ -32,6 +32,7 @@ brew install ranger
 brew install wget
 brew install w3m
 brew install neofetch
+brew install node
 brew install ripgrep
 brew install lsd
 brew install sqlite
