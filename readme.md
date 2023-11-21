@@ -1,6 +1,6 @@
 # pop-os version
 
-note that lsd is not in the mint repos yet and is a third party install
+note that lsd is not in the pop repos yet and is a third party install
 
 
 git clone  -b pop-os https://github.com/killertofus/awesome/ 
