@@ -1,9 +1,18 @@
 # pop-os version
 
-git clone -b pop-os https://github.com/killertofus/awesome/ cd awesome read dwml script then read pwmlrmvpkgs and remove anything you want to keep in pwmlrmvpkgs and remove any packages you don't want in 
+note that lsd is not in the mint repos yet and is a third party install
 
-dwmlpkgs.txt then ./dwml.sh
 
-don't run pwmlrmvpkgs.sh after you run it the first time it will break
+git clone  -b pop-os https://github.com/killertofus/awesome/ 
 
-then reboot
+cd awesome 
+
+read dwml script 
+
+read dwmlrmvpkgs.sh 
+
+remove anything you want to keep in dwmlrmvpkgs 
+
+remove any packages you don't want in dwmlpkgs.txt then ./dwml.sh
+
+reboot
