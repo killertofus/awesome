@@ -1,5 +1,7 @@
 # arch version
 
+mod key is super and rofi is left alt
+
 git clone https://github.com/killertofus/awesome/ 
 
 cd awesome 
