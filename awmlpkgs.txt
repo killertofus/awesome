@@ -58,3 +58,4 @@ ly
 dnsmasq
 iptables-nft
 jellyfin-server
+dunst
