@@ -11,7 +11,7 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
 mv config/init.vim ~/.config/nvim/
-mv config/alacritty.yml ~/.config/alacritty
+mv config/alacritty.toml ~/.config/alacritty
 mv config/tmux.conf ~/.config/tmux
 mv config/.zshrc ~/
 mv config/plugins config/rc.conf ~/.config/ranger
