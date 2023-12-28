@@ -16,7 +16,7 @@ mkdir -p ~/.config/tmux
 mv config/.xinitrc ~/
 sudo mv config/dwm.desktop /usr/share/xsessions
 mv config/init.vim ~/.config/nvim/
-mv config/alacritty.yml ~/.config/alacritty
+mv config/alacritty.toml ~/.config/alacritty
 mv config/dwm/* ~/.config/dwm
 mv config/config.rasi ~/.config/rofi
 mv config/picom.conf ~/.config/picom
