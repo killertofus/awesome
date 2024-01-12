@@ -4,6 +4,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd -
+sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+sed -i '/color/s/^#//g' /etc/pacman.conf
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 sudo systemctl enable ly
