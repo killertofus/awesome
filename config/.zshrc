@@ -128,3 +128,7 @@ znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
 # `znap function` lets you lazy-load features you don't always need.
 znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX \; split-window -h \;
+fi
