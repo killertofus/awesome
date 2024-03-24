@@ -130,5 +130,5 @@ znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
 if [ -z "$TMUX" ]
 then
-    tmux attach -t TMUX || tmux new -s TMUX \; split-window -h \;
+    tmux attach -t TMUX || tmux new -s TMUX \; new-window \;
 fi
