@@ -1,2 +1,2 @@
 # minimal version
- a mininal version of debian
+ a minimal version of debian
