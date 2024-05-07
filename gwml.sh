@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mkdir -p ~/.themes
-mv dracula.qbtheme ~/.themes
 git clone https://github.com/dracula/gtk
 mv gtk/gtk-4.0 ~/.themes
 mkdir -p ~/.config/nvim
