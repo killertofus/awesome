@@ -16,7 +16,7 @@ mkdir -p ~/.config/tmux
 mv config/init.vim ~/.config/nvim/
 mv config/.xinitrc ~/
 mv config/alacritty.toml ~/.config/alacritty
-mv config/rc.lua theme ~/.config/awesome
+mv config/rc.lua config/theme ~/.config/awesome
 mv config/config.rasi ~/.config/rofi
 mv config/picom.conf ~/.config/picom
 mv config/tmux.conf ~/.config/tmux
