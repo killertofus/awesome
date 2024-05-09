@@ -17,7 +17,7 @@ mv config/init.vim ~/.config/nvim/
 mv config/.xinitrc ~/
 mv config/alacritty.toml ~/.config/alacritty
 mv config/rc.lua theme ~/.config/awesome
-mv config/config1.rasi ~/.config/rofi
+mv config/config.rasi ~/.config/rofi
 mv config/picom.conf ~/.config/picom
 mv config/tmux.conf ~/.config/tmux
 mv config/.zshrc ~/
