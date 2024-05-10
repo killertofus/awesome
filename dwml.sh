@@ -84,7 +84,6 @@ sudo apt install github-desktop
 sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
 ./gwml.sh
 ./Jdownloader2.sh
-./pwmlrmvpkgs.sh
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
@@ -93,3 +92,4 @@ sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
 chsh -s $(which zsh)
+./pwmlrmvpkgs.sh
