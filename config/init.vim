@@ -1,3 +1,6 @@
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
 set number
 set encoding=UTF-8
 call plug#begin()
@@ -37,4 +40,3 @@ let g:airline_deus_bg='dark'
 colorscheme slate
 set list listchars=tab:>\ ,trail:-,eol:$
 hi Normal guibg=NONE ctermbg=NONE
-
