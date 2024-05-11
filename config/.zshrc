@@ -99,10 +99,9 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="lsd"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U colors && colors
-alias update=" sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove"
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 # Download Znap, if it's not there yet.
 [[ -f ~/Git/zsh-snap/znap.zsh ]] ||
@@ -122,9 +121,14 @@ znap source zsh-users/zsh-syntax-highlighting
 znap source marlonrichert/zcolors
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 znap source dracula/zsh
+
 # `znap eval` caches and runs any kind of command output for you.
 znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
 
 # `znap function` lets you lazy-load features you don't always need.
 znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX \; new-window \;
+fi
