@@ -1,4 +1,8 @@
-
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+set number
+set encoding=UTF-8
 call plug#begin()
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
