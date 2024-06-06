@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Icon=/usr/share/icons/streamlink.png
+Name=streamlink-twitch-gui
+Exec=/usr/local/bin/Streamlink_Twitch_GUI
+Terminal=false
+Hidden=false
