@@ -41,3 +41,4 @@ colorscheme slate
 set list listchars=tab:>\ ,trail:-,eol:$
 hi Normal guibg=NONE ctermbg=NONE
 
+#test
