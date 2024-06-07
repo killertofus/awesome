@@ -45,7 +45,6 @@ wine
 volumeicon
 sqlite
 sqlitebrowser
-ntfs-3g
 reflector
 p7zip
 openssh
