@@ -26,7 +26,7 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-z> :NERDTreeFind<CR>
-nnoremap <C-r> :Testsuite<CR>
+nnoremap <C-r> :SnipRun<CR>
 nnoremap / <Cmd>Telescope live_grep<CR>
 function! s:check_back_space() abort
 let col = col('.') - 1
