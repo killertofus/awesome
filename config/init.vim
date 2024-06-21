@@ -3,10 +3,10 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 set number
 set encoding=UTF-8
+
 call plug#begin()
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'lervag/vimtex'
 Plug 'thinca/vim-quickrun'
@@ -21,7 +21,10 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCM
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x'}
 Plug 'michaelb/sniprun', {'do': 'sh install.sh'}
 Plug 'rcarriga/nvim-notify'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 call plug#end()
+
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -32,8 +35,6 @@ function! s:check_back_space() abort
 let col = col('.') - 1
 return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
-\"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 autocmd InsertEnter  :let @/="" | :nohl
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_method = 'latexrun'
@@ -47,7 +48,9 @@ let g:airline_deus_bg='dark'
 colorscheme slate
 set list listchars=tab:>\ ,trail:-,eol:$
 hi Normal guibg=NONE ctermbg=NONE
+
 lua << EOF
+require("noice").setup()
 require'sniprun'.setup({
   display = { "NvimNotify" },
 })
