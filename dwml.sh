@@ -57,6 +57,8 @@ curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
  mv * zig
  cd zig
  mv * zig
+ pwd
+ sleep 12; pwd
  cd zig
  mv zig ..//..
  cd -
