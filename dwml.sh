@@ -54,6 +54,7 @@ curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
 | wget -qi -
  tar xf *.tar.xz
  rm -rf *.tar.xz
+ rm -rf *.minisig
  mv * zig
  cd zig
  mv * zig
