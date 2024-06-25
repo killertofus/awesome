@@ -56,12 +56,9 @@ curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
  rm -rf *.tar.xz
  mv * zig
  cd zig
- mv * zig
- pwd
- sleep 12; pwd
- cd zig
  mv zig ..//..
  cd -
+ pwd
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
