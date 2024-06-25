@@ -45,17 +45,17 @@ sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
-
+ mkdir zig
+ cd zig
 curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
 | grep ".tar.xz" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
-
- tar xf *.tar.xz 
+ tar xf *.tar.xz
  mv * zig
  cd zig
- mv zig ..
+ mv zig ..//..
  
 
 
