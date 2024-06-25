@@ -90,6 +90,7 @@ echo "# ZVM" >> $HOME/.profile
 echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
 echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
 echo export PATH="$PATH:$ZVM_INSTALL/" >> $HOME/.profile
+sleep 5
 source ~/.profile
 zig i master
 git clone --recurse-submodules https://github.com/fairyglade/ly
