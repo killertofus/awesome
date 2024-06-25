@@ -46,6 +46,19 @@ sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
 
+curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
+| grep ".tar.xz" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -
+
+ tar xf *.tar.xz 
+ mv * zig
+ cd zig
+ mv zig ..
+ 
+
+
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
@@ -74,7 +87,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
  
  mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
-sudo mv rustdesk Chatterino Streamlink_Twitch_GUI /usr/local/bin
+sudo mv  zig rustdesk Chatterino Streamlink_Twitch_GUI /usr/local/bin
 
 
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
