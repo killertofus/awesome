@@ -87,8 +87,11 @@ sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean &
 
 curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
 echo "# ZVM" >> $HOME/.profile
+sleep 5
 echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
+sleep 5
 echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
+sleep 5
 echo export PATH="$PATH:$ZVM_INSTALL/" >> $HOME/.profile
 sleep 5
 source ~/.profile
