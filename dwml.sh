@@ -60,7 +60,7 @@ curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
  cd zigs
  mv * ../zig
  cd ..
- mv zig ..//..//..//
+ mv zig ..//..//..
  cd ..//..
  pwd
 
