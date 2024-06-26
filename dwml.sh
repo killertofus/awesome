@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
-echo "# ZVM" >> $HOME/.profile
-echo 'export ZVM_INSTALL="$HOME/.zvm/self"' >> $HOME/.profile
-echo 'export PATH="$PATH:$HOME/.zvm/bin"' >> $HOME/.profile
-echo 'export PATH="$PATH:$ZVM_INSTALL/"' >> $HOME/.profile
-source ~/.profile
-zvm i master
-zig -v
 sudo rm -rf */usr/share/xsessions
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka/
@@ -33,6 +25,13 @@ sudo apt install winehq-staging -y
 source ~/config/envman/PATH.env
 sleep 0.5; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 rm -rf ~/snap
+curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
+echo "# ZVM" >> $HOME/.profile
+echo 'export ZVM_INSTALL="$HOME/.zvm/self"' >> $HOME/.profile
+echo 'export PATH="$PATH:$HOME/.zvm/bin"' >> $HOME/.profile
+echo 'export PATH="$PATH:$ZVM_INSTALL/"' >> $HOME/.profile
+source ~/.profile
+zvm i master
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
