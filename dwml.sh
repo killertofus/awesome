@@ -54,7 +54,7 @@ curl -s https://api.github.com/repos/dryzig/zig-debian/releases/latest \
 | wget -qi -
 sleep 5
 pwd
-sudo dpkg -i .deb
+sudo dpkg -i *.deb
 cd -
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
