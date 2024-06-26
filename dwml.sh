@@ -45,14 +45,14 @@ sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
-
+mkdir zig
 curl -s https://api.github.com/repos/dryzig/zig-debian/releases/latest \
 | grep ".tar.xz" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
 sudo dpkg -i * .deb
-
+cd -
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "x86_64.*AppImage" \
