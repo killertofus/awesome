@@ -56,10 +56,12 @@ curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
  rm -rf *.tar.xz
  rm -rf *.minisig
  mv * zigs
+ mkdir zig
  cd zigs
- mv * zig
+ mv * ../zig
+ cd ..
  mv zig ..//..//..//
- cd ..//..//
+ cd ..//..
  pwd
 
 
