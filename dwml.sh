@@ -47,22 +47,12 @@ sudo mkdir -p /usr/local/bin
 
  mkdir zig
  cd zig
-curl -s https://api.github.com/repos/ziglang/zig/releases/latest \
+curl -s https://api.github.com/repos/dryzig/zig-debian/releases/latest \
 | grep ".tar.xz" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
- tar xf *.tar.xz
- rm -rf *.tar.xz
- rm -rf *.minisig
- mv * zigs
- mkdir zig
- cd zigs
- mv * ../zig
- cd ..
- mv zig ..//..//
- cd ..//..
- pwd
+sudo dpkg -i * deb
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
