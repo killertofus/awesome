@@ -46,6 +46,7 @@ sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
 mkdir zig
+cd zig
 curl -s https://api.github.com/repos/dryzig/zig-debian/releases/latest \
 | grep ".tar.xz" \
 | cut -d : -f 2,3 \
