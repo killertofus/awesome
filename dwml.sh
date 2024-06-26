@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
+echo "# ZVM" >> $HOME/.profile
+echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
+echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
+echo export PATH="$PATH:$ZVM_INSTALL/" >> $HOME/.profile
+zig -v
 sudo rm -rf */usr/share/xsessions
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka/
