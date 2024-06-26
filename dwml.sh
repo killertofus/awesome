@@ -53,6 +53,7 @@ curl -s https://api.github.com/repos/dryzig/zig-debian/releases/latest \
 | tr -d \" \
 | wget -qi -
 sleep 5
+pwd
 sudo dpkg -i * .deb
 cd -
 
