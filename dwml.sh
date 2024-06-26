@@ -48,7 +48,7 @@ sudo mkdir -p /usr/local/bin
 mkdir zig
 cd zig
 curl -s https://api.github.com/repos/dryzig/zig-debian/releases/latest \
-| grep "_amd64.deb " \
+| grep "_amd64.deb" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
