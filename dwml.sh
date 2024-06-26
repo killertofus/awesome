@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
+sleep 5
 echo "# ZVM" >> $HOME/.profile
 echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
 echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
