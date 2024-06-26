@@ -31,7 +31,7 @@ echo 'export ZVM_INSTALL="$HOME/.zvm/self"' >> $HOME/.profile
 echo 'export PATH="$PATH:$HOME/.zvm/bin"' >> $HOME/.profile
 echo 'export PATH="$PATH:$ZVM_INSTALL/"' >> $HOME/.profile
 source ~/.profile
-zvm i master
+zvm i 0.12.1
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
