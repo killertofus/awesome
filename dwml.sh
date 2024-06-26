@@ -5,7 +5,7 @@ echo "# ZVM" >> $HOME/.profile
 echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
 echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
 echo export PATH="$PATH:$ZVM_INSTALL/" >> $HOME/.profile
-echo source ~/.profile
+source ~/.profile
 zig -v
 sudo rm -rf */usr/share/xsessions
 sudo wget -p /usr/share/fonts/Iosevka
