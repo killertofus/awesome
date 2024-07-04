@@ -130,6 +130,7 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,     spawn,          {.v = termcmd} },
 	{ 0,                         XKB_KEY_Print,      spawn,          {.v = prtscrcmd } },
 	{ 0,                         XKB_KEY_Super_L,    spawn,          {.v = roficmd } },
+	{ MODKEY,                    XKB_KEY_s,          togglealwaysontop, {0} },
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
 	{ MODKEY,                    XKB_KEY_i,          incnmaster,     {.i = +1} },

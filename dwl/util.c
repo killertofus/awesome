@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
 
 #include "util.h"
 
@@ -32,4 +33,19 @@ ecalloc(size_t nmemb, size_t size)
 	if (!(p = calloc(nmemb, size)))
 		die("calloc:");
 	return p;
+}
+
+int
+fd_set_nonblock(int fd) {
+	int flags = fcntl(fd, F_GETFL);
+    if (flags < 0) {
+		perror("fcntl(F_GETFL):");
+        return -1;
+    }
+    if (fcntl(fd, F_SETFL, flags | O_NONBLOCK) < 0) {
+		perror("fcntl(F_SETFL):");
+		return -1;
+    }
+
+	return 0;
 }
