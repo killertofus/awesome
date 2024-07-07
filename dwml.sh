@@ -25,13 +25,6 @@ sudo apt install winehq-staging -y
 source ~/config/envman/PATH.env
 sleep 0.5; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 rm -rf ~/snap
-curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
-echo "# ZVM" >> $HOME/.profile
-echo 'export ZVM_INSTALL="$HOME/.zvm/self"' >> $HOME/.profile
-echo 'export PATH="$PATH:$HOME/.zvm/bin"' >> $HOME/.profile
-echo 'export PATH="$PATH:$ZVM_INSTALL/"' >> $HOME/.profile
-source ~/.profile
-zvm i 0.12.1
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
@@ -51,6 +44,17 @@ sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
+
+
+mkdir zig
+cd zig
+wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
+ tar xf *
+ rm -rf *.tar.xz
+ mv * zig
+ sudo mv zig/lib zig/zig /usr/local/bin
+ cd -
+
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
