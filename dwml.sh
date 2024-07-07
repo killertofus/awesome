@@ -8,7 +8,7 @@ xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when lsd is in the popos repo
 curl -sS https://webi.sh/lsd | sh
-
+echo source ~/.config/envman/PATH.env
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
