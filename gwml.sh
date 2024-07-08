@@ -3,8 +3,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "RANGER_LOAD_DEFAULT_RC=false"
 mkdir -p ~/.themes
 mv .themes ~/
-mv .config ~/
+cp -r .config ~/
 mv .zshrc ~/
+mv .xinitrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
