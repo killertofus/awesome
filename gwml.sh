@@ -5,6 +5,7 @@ mkdir -p ~/.themes
 mv .themes ~/
 cp -r .config ~/
 mv .zshrc ~/
+sudo mv awesome.desktop /usr/share/xsessions/
 mv .xinitrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
