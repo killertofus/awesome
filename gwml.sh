@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "RANGER_LOAD_DEFAULT_RC=false"
-mkdir -p ~/.themes
 mv .themes ~/
 cp -r .config ~/
 mv .zshrc ~/
