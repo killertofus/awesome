@@ -4,6 +4,7 @@ wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
 echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
 mv .config ~/
+mv .zshrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
