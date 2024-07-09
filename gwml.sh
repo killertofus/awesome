@@ -3,7 +3,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
 echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
-mv .config ~/
+cp -r .config ~/
 mv .zshrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
