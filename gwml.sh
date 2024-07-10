@@ -2,6 +2,7 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
+mv .icons ~/
 sudo mv awesome.desktop /usr/share/xsessions/
 cp -r .config ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
