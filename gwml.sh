@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv .themes ~/
+mv .icons ~/
 git clone https://github.com/dracula/gtk
 mv .config ~/
 mv .zshrc ~/
