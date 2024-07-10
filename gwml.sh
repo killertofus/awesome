@@ -4,6 +4,8 @@ echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
 mv .icons ~/
 mv .cursors ~/
+mv .zshrc ~/
+mv .xinitrc ~/
 sudo mv awesome.desktop /usr/share/xsessions/
 cp -r .config ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
