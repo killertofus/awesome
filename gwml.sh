@@ -3,6 +3,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
 cp -r .config ~/
+mv .icons ~/
 mv .zshrc ~/
 sudo mv dwm.desktop /usr/share/xsessions/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
