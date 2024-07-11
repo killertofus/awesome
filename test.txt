@@ -3,3 +3,4 @@ libwayland-cursor++1
 libwayland-bin
 libinput-dev
 libwayland-dev
+libwlroots-dev
