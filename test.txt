@@ -4,3 +4,14 @@ libwayland-bin
 libinput-dev
 libwayland-dev
 libwlroots-dev
+#!/bin/bash
+echo " dwl or dwm"
+echo "  1)dwl"
+echo "  2)dwm"
+
+read n
+case $n in
+  1) echo "dwl";;
+  2) echo "dwm";;
+  *) echo "invalid option";;
+esac
