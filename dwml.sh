@@ -92,10 +92,9 @@ wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee 
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
 sudo apt update
 sudo apt install github-desktop -y
-sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
+sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
 ./Jdownloader2.sh
-
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 zig build
