@@ -10,6 +10,8 @@ do
             sed -i 's/picom/wdisplays/g' dwml.sh
             sed -i 's/feh//g' dwml.sh
             sed -i 's/volumeicon-alsa/waybar/g' dwml.sh 
+            sed -i 's/72/git clone https://github.com/LGFae/swww/g' dwml.sh
+            sed -i 's/73/cd sww && cargo build --release/g' dwml.sh 
             cat gwml.sh
             break
             ;;
