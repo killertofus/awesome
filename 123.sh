@@ -7,6 +7,9 @@ do
             sudo apt install wayland-protocols libwayland-cursor++1 libwayland-bin libinput-dev libwayland-dev libwlroots-dev
             sed -i 's/dwm/dwl/g' gwml.sh
             sed -i '21d;20d' gwml.sh
+            sed -i 's/picom/wdisplays/g' dwml.sh
+            sed -i 's/feh//g' dwml.sh
+            sed -i 's/volumeicon-alsa/waybar/g' dwml.sh 
             cat gwml.sh
             break
             ;;
