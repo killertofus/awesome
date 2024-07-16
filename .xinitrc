@@ -55,7 +55,6 @@ volumeicon &
 feh --bg-fill ~/.config/dwm/wallpaper.jpg &
 picom -b &
 nm-applet &
-exec slstatus &
 flameshot &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
