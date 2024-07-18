@@ -52,7 +52,6 @@ xscreensaver -nosplash &
 blueman-manager &
 volumeicon &
 /opt/piavpn/bin/pia-client %u &
-feh --bg-fill ~/.config/dwm/wallpaper.jpg &
 picom -b &
 nm-applet &
 flameshot &
