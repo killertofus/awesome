@@ -15,7 +15,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'xiyaowong/transparent.nvim'
-Plug 'vim-scripts/dbext.vim'
 Plug 'davidgranstrom/nvim-markdown-preview'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x'}
@@ -23,8 +22,11 @@ Plug 'michaelb/sniprun', {'do': 'sh install.sh'}
 Plug 'rcarriga/nvim-notify'
 Plug 'folke/noice.nvim'
 Plug 'MunifTanjim/nui.nvim'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-completion'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -48,6 +50,18 @@ let g:airline_deus_bg='dark'
 colorscheme slate
 set list listchars=tab:>\ ,trail:-,eol:$
 hi Normal guibg=NONE ctermbg=NONE
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+
 
 lua << EOF
 require("noice").setup()
