@@ -5,7 +5,9 @@ cd yay
 makepkg -si
 cd -
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
-sudo sed -i '/color/s/^#//g' /etc/pacman.conf
+sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
+sudo sed -i '32 a IloveCandy' /etc/pacman.conf
+sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 sudo systemctl enable ly
