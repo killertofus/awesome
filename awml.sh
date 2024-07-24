@@ -12,8 +12,8 @@ sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
-sudo systemctl enable ly
 yay --devel --save
+sudo systemctl enable ly
 sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
 sudo systemctl enable --now piavpn.service
