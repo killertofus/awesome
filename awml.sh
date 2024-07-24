@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -18,7 +19,6 @@ sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
 sudo systemctl enable --now piavpn.service
 yay -Scc 
-sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 chsh -s $(which zsh)
 fc-cache -f -v
 ./gwml.sh
