@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 sudo pacman -S --needed git base-devel reflector
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
+sudo -v
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
