@@ -12,7 +12,7 @@ cd yay
 makepkg -si --noconfirm
 cd -
 sudo -v
-sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
+sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns -
