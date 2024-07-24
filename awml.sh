@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 sudo pacman -S --needed git base-devel reflector
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
+sudo pacman -Syu
 sudo -v
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -14,7 +15,6 @@ sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
-sudo pacman -Syu
 sudo pacman -Qttdq | sudo pacman -Rns -
 sudo systemctl enable ly
 sudo systemctl enable --now piavpn.service
