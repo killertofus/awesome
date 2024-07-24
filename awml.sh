@@ -5,11 +5,11 @@ sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo pacman -S --needed git base-devel reflector
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -Syu -y
+sudo pacman -Syu --noconfirm
 sudo -v
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd -
 sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
