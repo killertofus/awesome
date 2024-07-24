@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
+sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
+sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo pacman -S --needed git base-devel reflector
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syu
@@ -7,10 +11,6 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd -
-sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
-sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
-sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
-sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1)
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
