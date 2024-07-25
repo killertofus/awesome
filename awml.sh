@@ -15,7 +15,7 @@ sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
-sudo pacman -Qttdq | sudo pacman -Rns -
+sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly
 sudo systemctl enable --now piavpn.service
 yay -Scc 
