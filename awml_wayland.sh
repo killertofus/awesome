@@ -6,7 +6,7 @@ sed -i '22d;23d' gwml.sh
 sed -i 's/feh/wayland/g' awmlpkgs.txt
 sed -i 's/xscreensaver/wlroots/g' awmlpkgs.txt
 sed -i 's/picom/swww/g' awmlpkgs.txt
-sed -i 's/volumeicon/waybar/g' awmlpkgs.txt
+sed -i 's/volumeicon/waybar wayland-protocols/g' awmlpkgs.txt
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
