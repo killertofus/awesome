@@ -55,6 +55,5 @@ wine-mono
 wine-gecko
 ly
 dnsmasq
-iptables-nft
 dunst
 jellyfin-server
