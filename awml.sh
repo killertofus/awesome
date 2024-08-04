@@ -2,6 +2,7 @@
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
+sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo pacman -S --needed git base-devel reflector --noconfirm
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
