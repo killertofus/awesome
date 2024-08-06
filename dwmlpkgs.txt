@@ -62,4 +62,3 @@ xarchiver
 xdotool
 xscreensaver
 zsh
--y
