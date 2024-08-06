@@ -19,6 +19,7 @@ yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly
 sudo systemctl enable --now piavpn.service
+sudo systemctl enable --now bluetooth.service
 yay -Scc 
 chsh -s $(which zsh)
 fc-cache -f -v
