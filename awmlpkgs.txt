@@ -13,6 +13,7 @@ vlc
 steam
 nodejs
 bluez
+bluez-utils
 blueman
 caja
 virt-manager
