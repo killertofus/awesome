@@ -4,7 +4,7 @@ sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka/
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
-xargs sudo apt install <dwmlpkgs.txt
+xargs sudo apt install <dwmlpkgs.txt -y
 fc-cache -f -v
  #remove below when lsd is in the popos repo
 curl -sS https://webi.sh/lsd | sh
