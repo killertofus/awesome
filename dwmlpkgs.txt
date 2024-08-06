@@ -42,6 +42,7 @@ ttf-bitstream-vera
 unzip
 vlc
 wget
+-y
 xarchiver
 xscreensaver
 zsh
