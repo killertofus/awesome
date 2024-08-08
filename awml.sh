@@ -18,7 +18,9 @@ for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $wor
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly
-sudo systemctl enable --now piavpn.service
+sudo systemctl enable piavpn.service
+sudo systemctl enable libvirtd.service
+sudo systemctl enable libvirtd.socket
 yay -Scc 
 chsh -s $(which zsh)
 fc-cache -f -v
