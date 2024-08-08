@@ -6,6 +6,9 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 xargs sudo apt install <dwmlpkgs.txt -y
 fc-cache -f -v
+sudo systemctl enable libvirtd
+sudo adduser $USER libvirt
+sudo adduser $USER kvm
  #remove below when lsd is in the popos repo
 curl -sS https://webi.sh/lsd | sh
 echo source ~/.config/envman/PATH.env
