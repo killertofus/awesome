@@ -22,7 +22,6 @@ main() {
 main
 sudo apt update && sudo apt upgrade -y
 sudo apt install winehq-staging -y 
-source ~/config/envman/PATH.env
 sleep 0.5; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 rm -rf ~/snap
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
