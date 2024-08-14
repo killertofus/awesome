@@ -98,7 +98,7 @@ git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 zig build
 sudo zig build installsystemd
-sudo systemctl enable ly.service -f
+sudo systemctl enable ly.service
 sudo systemctl disable getty@tty2.service
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
 chsh -s $(which zsh)
