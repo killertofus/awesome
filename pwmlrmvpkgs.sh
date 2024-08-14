@@ -7,4 +7,4 @@ for pkgToRemove in $(echo $pkgToRemoveListFull); do
     pkgToRemoveList="$pkgToRemoveList $pkgToRemove"
   fi
 done
-sudo apt purge $pkgToRemoveList
+sudo apt purge $pkgToRemoveList --allow-remove-essential
