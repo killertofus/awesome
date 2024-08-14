@@ -7,4 +7,4 @@ for pkgToRemove in $(echo $pkgToRemoveListFull); do
     pkgToRemoveList="$pkgToRemoveList $pkgToRemove"
   fi
 done
-sudo apt purge $pkgToRemoveList --allow-remove-essential -y && sudo apt install gnome-disk-utility -y
+sudo apt purge $pkgToRemoveList --allow-remove-essential -y && sudo apt install policykit-1-gnome gnome-disk-utility -y
