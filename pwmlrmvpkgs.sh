@@ -1,5 +1,5 @@
 # please don't run this more then twice :)
-pkgToRemoveListFull="nano *printer-driver* *thunderbird* *libreoffice* *cosmic-* **libreoffice-* man-db manpages *language-pack* *hunspell* cups-common xterm""
+pkgToRemoveListFull="nano *printer-driver* *thunderbird* *libreoffice* *cosmic-* **libreoffice-* man-db manpages *language-pack* *hunspell* cups-common xterm"
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(apt --status $pkgToRemove &> /dev/null)
