@@ -62,4 +62,5 @@ wget
 xarchiver
 xdotool
 xscreensaver
+xinit
 zsh
