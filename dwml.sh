@@ -104,3 +104,4 @@ sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoc
 chsh -s $(which zsh)
 cd -
 ./pwmlrmvpkgs.sh
+sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
