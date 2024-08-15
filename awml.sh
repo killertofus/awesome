@@ -23,6 +23,7 @@ sudo systemctl enable ly
 sudo systemctl enable piavpn.service
 sudo systemctl enable libvirtd.service
 sudo systemctl enable libvirtd.socket
+nvim > /dev/null 2>&1 &
 yay -Scc 
 chsh -s $(which zsh)
 fc-cache -f -v
