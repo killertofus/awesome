@@ -1,6 +1,6 @@
 # please don't run this more then twice :)
 pkgToRemoveListFull=""
-pkgToRemoveList="nano popsicle *pop-* *printer-driver* *thunderbird* *cosmic-* *libreoffice-* man-db manpages *gnome* *language-pack* *hunspell* cups-common xterm"
+pkgToRemoveList="fwupd nano popsicle *pop-* *printer-driver* *thunderbird* *cosmic-* *libreoffice-* man-db manpages *gnome* *language-pack* *hunspell* cups-common xterm"
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(apt --status $pkgToRemove &> /dev/null)
   if [[ $? -eq 0 ]]; then
