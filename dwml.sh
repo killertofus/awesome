@@ -22,5 +22,5 @@ sudo mv rustdesk /usr/local/bin
 
 sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
 ./gwml.sh
-mv config/.zshrc ~/
+nvim > /dev/null 2>&1 &
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
