@@ -100,9 +100,8 @@ cd ly
 zig build
 sudo zig build installsystemd
 sudo systemctl disable getty@tty2.service
-sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
 chsh -s $(which zsh)
 cd -
 ./pwmlrmvpkgs.sh
-sleep 5; sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
+sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo systemctl enable ly.service
