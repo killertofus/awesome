@@ -41,6 +41,7 @@ let maplocalleader = ","
 :set autoindent
 :syntax on
 :set spell
+:set termguicolors
 syntax enable
 let g:airline_deus_bg='dark'
 colorscheme slate
