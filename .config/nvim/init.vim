@@ -41,9 +41,9 @@ let g:vimtex_compiler_method = 'latexrun'
 let maplocalleader = ","
 :set clipboard=unnamed
 :set autoindent
+:set termguicolors
 :syntax on
 :set spell
-:set termguicolors
 syntax enable
 let g:airline_deus_bg='dark'
 colorscheme slate
