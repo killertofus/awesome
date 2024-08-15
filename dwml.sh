@@ -95,6 +95,7 @@ sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && s
 ./gwml.sh
 ./Jdownloader2.sh
 sudo systemctl disable display-manager.service
+nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 zig build
@@ -102,6 +103,5 @@ sudo zig build installsystemd
 sudo systemctl disable getty@tty2.service
 chsh -s $(which zsh)
 cd -
-./pwmlrmvpkgs.sh
-sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
+./pwmlrmvpkgs.sh && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo systemctl enable ly.service
