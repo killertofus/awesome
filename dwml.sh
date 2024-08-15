@@ -94,6 +94,7 @@ sudo apt install github-desktop -y
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
 ./Jdownloader2.sh
+sudo systemctl disable display-manager.service
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 zig build
