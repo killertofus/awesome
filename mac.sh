@@ -43,5 +43,6 @@ brew install mono
 brew install btop
 pip install --user libtmux
 mv .zshrc ~/
+nvim > /dev/null 2>&1 &
 mv wallpaper.jpg ~/Pictures
 ./gwml.sh
