@@ -9,7 +9,7 @@ sudo -v
 sudo pacman -S --needed git base-devel reflector --noconfirm
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syu --noconfirm
-sudo --validate
+sudo -v
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
