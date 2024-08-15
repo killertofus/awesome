@@ -21,7 +21,8 @@ sudo systemctl enable ly
 sudo systemctl enable piavpn.service
 sudo systemctl enable libvirtd.service
 sudo systemctl enable libvirtd.socket
-yay -Scc 
+yay -Scc
+nvim > /dev/null 2>&1 &
 chsh -s $(which zsh)
 fc-cache -f -v
 ./gwml.sh
