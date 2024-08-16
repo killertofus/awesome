@@ -23,7 +23,6 @@ git
 gnome-disk-utility
 gnupg
 hicolor-icon-theme
-kde-plasma-desktop
 libpam0g-dev
 libxcb-xkb-dev
 lsb-release
@@ -35,6 +34,7 @@ nodejs
 obs-studio
 openssh-client
 pavucontrol
+plasma-desktop
 ripgrep
 rust-all
 timeshift
