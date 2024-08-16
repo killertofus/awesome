@@ -15,7 +15,6 @@ firefox
 flameshot
 fonts-dejavu
 fonts-hack
-fonts-ibm-plex
 fonts-liberation
 fonts-noto-core
 fonts-symbola
