@@ -25,4 +25,4 @@ sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean &
 ./gwml.sh
 nvim > /dev/null 2>&1 &
 sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
-sudo apt purge discover kdeconnect -y
+sudo apt purge plasma-discover kdeconnect -y
