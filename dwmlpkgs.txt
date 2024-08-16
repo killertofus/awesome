@@ -30,7 +30,6 @@ lxappearance
 neofetch
 neovim
 nodejs
-obs-studio
 openssh-client
 pavucontrol
 plasma-desktop
