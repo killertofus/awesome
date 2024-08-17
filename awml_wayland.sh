@@ -29,8 +29,10 @@ for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $wor
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly
-sudo systemctl enable --now piavpn.service
-swww-daemon
+sudo systemctl enable piavpn.service
+sudo systemctl enable libvirtd.service
+sudo systemctl enable libvirtd.socket
+nvim > /dev/null 2>&1 &
 swww img ~/.config/dwl/wallpaper.jpg
 yay -Scc 
 chsh -s $(which zsh)

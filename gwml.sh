@@ -5,6 +5,7 @@ mv .themes ~/
 cp -r .config ~/
 mv .icons ~/
 mv .zshrc ~/
+mv .dircolors ~/
 sudo mv dwm.desktop /usr/share/xsessions/
 mv .xinitrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

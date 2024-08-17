@@ -1,1 +1,7 @@
-ttf-dejavu-ib piavpn-bin librewolf-bin streamlink-twitch-gui-bin jdownloader2 rustdesk-bin github-desktop-bin chatterino2-git noto-color-emoji-fontconfig
+chatterino2-git
+github-desktop-bin
+jdownloader2
+librewolf-bin
+piavpn-bin
+rustdesk-bin
+streamlink-twitch-gui-bin
