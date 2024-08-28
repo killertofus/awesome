@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-#
+brew install < macpackages.txt
 brew cask install alacritty
 brew install tmux
 brew install -cask -private-internet-access
