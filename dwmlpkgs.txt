@@ -60,7 +60,6 @@ volumeicon-alsa
 w3m
 wget
 xarchiver
-xdotool
 xscreensaver
 xinit
 zsh
