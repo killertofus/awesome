@@ -5,6 +5,7 @@ sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iose
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 xargs sudo apt install <dwmlpkgs.txt -y
+chsh -s $(which zsh)
 fc-cache -f -v
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
@@ -70,7 +71,6 @@ cd ly
 zig build
 sudo zig build installsystemd
 sudo systemctl disable getty@tty2.service
-chsh -s $(which zsh)
 cd -
 ./pwmlrmvpkgs.sh && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo systemctl enable ly.service
