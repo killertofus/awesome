@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Icon=/usr/share/icons/chatterino.png
-Name=chatterino
-Exec=/usr/local/bin/Chatterino
-Terminal=false
-Hidden=false
