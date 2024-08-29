@@ -16,6 +16,7 @@ dunst
 feh
 firefox
 flameshot
+flatpak
 fonts-dejavu
 fonts-hack
 fonts-ibm-plex
