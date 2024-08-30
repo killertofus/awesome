@@ -15,6 +15,7 @@ makepkg -si --noconfirm
 cd -
 sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
+chsh -s $(which zsh)
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
@@ -24,6 +25,5 @@ sudo systemctl enable libvirtd.service
 sudo systemctl enable libvirtd.socket
 yay -Scc
 nvim > /dev/null 2>&1 &
-chsh -s $(which zsh)
 fc-cache -f -v
 ./gwml.sh
