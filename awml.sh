@@ -11,6 +11,7 @@ sudo -v
 sudo pacman -Syu --noconfirm
 sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
+fc-cache -f -v
 chsh -s $(which zsh)
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -23,7 +24,6 @@ sudo systemctl enable ly
 sudo systemctl enable piavpn.service
 sudo systemctl enable libvirtd.service
 sudo systemctl enable libvirtd.socket
-yay -Scc
+yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
-fc-cache -f -v
 ./gwml.sh
