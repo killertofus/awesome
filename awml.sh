@@ -9,13 +9,13 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --needed git base-devel reflector --noconfirm
 sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
 sudo -v
+sudo -v
+sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
+chsh -s $(which zsh)
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd -
-sudo -v
-sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
-chsh -s $(which zsh)
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
