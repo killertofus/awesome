@@ -5,7 +5,9 @@ sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iose
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 xargs sudo apt install <dwmlpkgs.txt -y
+(crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
+sudo mv update.sh /usr/local/bin
 chsh -s $(which zsh)
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
