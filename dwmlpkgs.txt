@@ -9,6 +9,7 @@ caja
 caja-extensions-common
 caja-open-terminal
 curl
+cronie
 default-jdk
 feh
 firefox
