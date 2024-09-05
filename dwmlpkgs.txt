@@ -10,6 +10,7 @@ caja
 caja-extensions-common
 caja-open-terminal
 curl
+cronie
 default-jdk
 dunst
 feh
