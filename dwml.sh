@@ -5,6 +5,7 @@ sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iose
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 xargs sudo apt install <dwmlpkgs.txt -y
+sudo mv update.sh /usr/local/bin
 chsh -s $(which zsh)
 fc-cache -f -v
 sudo systemctl enable libvirtd
@@ -59,7 +60,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
  
  mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
-sudo mv  rustdesk  Streamlink_Twitch_GUI /usr/local/bin
+sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
 
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
