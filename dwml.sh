@@ -7,6 +7,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 xargs sudo apt install <dwmlpkgs.txt -y
 sudo mv update.sh /usr/local/bin
 chsh -s $(which zsh)
+(crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
