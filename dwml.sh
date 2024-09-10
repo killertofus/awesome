@@ -26,7 +26,7 @@ main
 sudo apt update && sudo apt upgrade -y
 sudo apt install winehq-staging -y 
 rm -rf ~/snap
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable librewolf io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
