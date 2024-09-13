@@ -3,4 +3,3 @@ choco install packages.config -y
 move wallpaper.jpg %USERPROFILE%/Pictures
 irm https://christitus.com/win | iex
 wget -r -l 1 --span-hosts --accept-regex=.*bmrf.org/repos/tron//.*.exe -erobots=off -nH https://bmrf.org/repos/tron/
-irm https://get.activated.win | iex
