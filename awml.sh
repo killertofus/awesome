@@ -5,12 +5,12 @@ sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
+sudo pacman -S --needed git base-devel reflector --noconfirm
+sudo reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd -
-sudo pacman -S --needed git base-devel reflector --noconfirm
-sudo reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 sudo -v
 sudo pacman -Syu --noconfirm
 sudo -v
