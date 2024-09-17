@@ -7,9 +7,7 @@ sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
 sudo pacman -S --needed git base-devel reflector --noconfirm
 git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd -
+makepkg -siD yay --noconfirm
 sudo -v
 sudo pacman -Syu --noconfirm
 sudo -v
