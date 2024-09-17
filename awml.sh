@@ -8,9 +8,7 @@ sudo -v
 sudo pacman -S --needed git base-devel reflector --noconfirm
 git clone https://aur.archlinux.org/yay.git
 makepkg -siD yay --noconfirm
-sudo -v
 sudo pacman -Syu --noconfirm
-sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
 fc-cache -f -v
 chsh -s $(which zsh)
