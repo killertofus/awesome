@@ -6,7 +6,6 @@ sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
 sudo pacman -S --needed git base-devel reflector --noconfirm
-sudo reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
@@ -27,3 +26,4 @@ sudo systemctl enable libvirtd.socket
 yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
 ./gwml.sh
+sudo reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
