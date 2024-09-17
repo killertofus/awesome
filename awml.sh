@@ -10,7 +10,7 @@ cd yay
 makepkg -si --noconfirm
 cd -
 sudo pacman -S --needed git base-devel reflector --noconfirm
-sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 sudo -v
 sudo pacman -Syu --noconfirm
 sudo -v
