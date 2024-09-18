@@ -5,19 +5,15 @@ sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
+git clone https://aur.archlinux.org/yay.git
+makepkg -siD yay --noconfirm
 sudo mkdir -p /usr/share/xsessions/
-sudo pacman -S --needed git base-devel reflector --noconfirm
-sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
-sudo -v
+sudo pacman -S --needed git base-devel --noconfirm
 sudo pacman -Syu --noconfirm
 sudo -v
 sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
 fc-cache -f -v
 chsh -s $(which zsh)
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd -
 for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
