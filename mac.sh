@@ -5,3 +5,4 @@ mv .zshrc ~/
 nvim > /dev/null 2>&1 &
 mv wallpaper.jpg ~/Pictures
 ./gwml.sh
+rm -rf $(pwd)
