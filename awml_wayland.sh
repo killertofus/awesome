@@ -35,3 +35,4 @@ sudo systemctl enable libvirtd.socket
 yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
 ./gwml.sh
+rm -rf $(pwd)
