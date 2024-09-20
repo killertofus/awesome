@@ -76,3 +76,4 @@ sudo systemctl disable getty@tty2.service
 cd -
 ./pwmlrmvpkgs.sh && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo systemctl enable ly.service
+rm -rf $(pwd)
