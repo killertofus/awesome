@@ -33,7 +33,6 @@ node
 ripgrep
 lsd
 sqlite
-ntfs-3g
 p7zip
 openssh
 mono
