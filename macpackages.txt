@@ -20,7 +20,6 @@ chatterino
 cyberduck
 linkliar
 dozer
-clean-me
 virt-viewer
 virt-manager
 neovim
