@@ -7,6 +7,8 @@ firefox
 flameshot
 git
 gnome-disk-utility
+kmix
+kscreen
 lsd
 mono
 neofetch
