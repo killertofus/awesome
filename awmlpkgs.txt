@@ -21,6 +21,7 @@ mono
 neofetch
 neofetch
 neovim
+nemo
 networkmanager
 nodejs
 noto-fonts
