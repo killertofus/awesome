@@ -1,15 +1,9 @@
-# arch version
+# arch minimal version
 
-mod key is super and rofi is left alt
+a minimal version of arch 
 
-git clone https://github.com/killertofus/awesome/ 
+read awml script
 
-cd awesome 
-
-read awml script 
-
-please remove the other de/wm if using one after installing awesome
- 
-remove any packages you don't want in awmlpkgs.txt and ywmlpkgs.txt then ./awml.sh
+please remove the other de/wm if using one that's not kde remove any packages you don't want in awmlpkgs.txt/ywmlpkgs.txt and then ./dwml.sh
 
 reboot
