@@ -20,6 +20,8 @@ git
 gnome-disk-utility
 gnupg
 hicolor-icon-theme
+kmix
+kscreen
 libpam0g-dev
 libxcb-xkb-dev
 lsb-release
