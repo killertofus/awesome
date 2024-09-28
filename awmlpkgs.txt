@@ -3,9 +3,6 @@ blueman
 bluez
 bluez-utils
 btop
-caja
-caja-extensions-common
-caja-open-terminal
 dnsmasq
 dunst
 feh
