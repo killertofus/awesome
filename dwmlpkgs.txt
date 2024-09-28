@@ -6,9 +6,6 @@ bluez
 btop
 build-essential
 ca-certificates
-caja
-caja-extensions-common
-caja-open-terminal
 curl
 cronie
 default-jdk
@@ -35,6 +32,7 @@ lsb-release
 lsd
 lxappearance
 neofetch
+nemo
 neovim
 nodejs
 obs-studio
