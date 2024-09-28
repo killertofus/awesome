@@ -4,9 +4,6 @@ blueman
 bluez
 bluez-utils
 btop
-caja
-caja-extensions-common
-caja-open-terminal
 dnsmasq
 dunst
 feh
@@ -23,6 +20,7 @@ neofetch
 neovim
 networkmanager
 nodejs
+nemo
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
