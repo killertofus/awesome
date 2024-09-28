@@ -8,6 +8,7 @@ mv .zshrc ~/
 mv .dircolors ~/
 sudo mkdir -p /usr/share/xsessions
 sudo mv dwm.desktop /usr/share/xsessions/
+gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 mv .xinitrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
