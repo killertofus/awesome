@@ -1,0 +1,3 @@
+jdownloader2
+piavpn-bin
+rustdesk-bin
