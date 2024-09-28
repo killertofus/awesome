@@ -1,4 +1,4 @@
-# minimal version
+# debian minimal version
 a minimal version of debian
 
 read dwml script
