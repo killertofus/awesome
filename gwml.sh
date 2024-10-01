@@ -21,3 +21,6 @@ export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export ZDOTDIR="$HOME"/.config/zsh
+export ZDOTDIR="$HOME"/.config/zsh
