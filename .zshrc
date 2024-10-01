@@ -108,7 +108,7 @@ PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_c
         https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/zsh-snap
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-source ~/.confog/zsh/zsh-snap/znap.zsh  # Start Znap
+source ~/.config/zsh/zsh-snap/znap.zsh  # Start Znap
 
 # `znap prompt` makes your prompt visible in just 15-40ms!
 znap prompt sindresorhus/pure
