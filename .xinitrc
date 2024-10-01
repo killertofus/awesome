@@ -50,9 +50,9 @@ fi
 
 xscreensaver -nosplash &
 blueman-manager &
-volumeicon &
+volumeiceon &
 /opt/piavpn/bin/pia-client %u &
-feh --bg-fill ~/.config/dwm/wallpaper.jpg &
+feh --bg-fill --no-fehbg ~/.config/dwm/wallpaper.jpg &
 picom -b &
 exec slstatus &
 flameshot &
