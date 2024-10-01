@@ -103,12 +103,12 @@ alias ls="lsd"
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 # Download Znap, if it's not there yet.
-[[ -f ~/Git/zsh-snap/znap.zsh ]] ||
+[[ -f ~/.config/zsh/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/Git/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/zsh-snap
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-source ~/Git/zsh-snap/znap.zsh  # Start Znap
+source ~/.confog/zsh/zsh-snap/znap.zsh  # Start Znap
 
 # `znap prompt` makes your prompt visible in just 15-40ms!
 znap prompt sindresorhus/pure
