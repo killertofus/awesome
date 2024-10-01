@@ -23,5 +23,4 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export ZDOTDIR="$HOME"/.config/zsh
-export ZDOTDIR="$HOME"/.config/zsh
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
