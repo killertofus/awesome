@@ -7,8 +7,7 @@ mv .zshrc ~/
 mv icons ~/.local/share
 mv .dircolors ~/
 sudo mv awesome.desktop /usr/share/xsessions/
-mkdir ~/.local/share/X11
-mv .xinitrc ~/.local/share/X11/
+mv .xinitrc ~/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -20,7 +19,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 export WINEPREFIX="$XDG_DATA_HOME"/wine
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
-export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
