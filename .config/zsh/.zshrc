@@ -126,6 +126,7 @@ znap source dracula/zsh
 # `znap function` lets you lazy-load features you don't always need.
 znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 if [ -z "$TMUX" ]
 then
     tmux attach -t TMUX || tmux new -s TMUX \; new-window \;
