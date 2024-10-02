@@ -131,7 +131,7 @@ if [ -z "$TMUX" ]
 then
     tmux attach -t TMUX || tmux new -s TMUX \; new-window \;
 fi
-yazi
+y
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
