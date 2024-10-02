@@ -9,6 +9,7 @@ dunst
 feh
 firefox
 flameshot
+fzf
 git
 gnome-disk-utility
 jellyfin-server
