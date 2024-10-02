@@ -31,7 +31,6 @@ picom
 python-libtmux
 qbittorrent
 qemu-base
-ranger
 reflector
 ripgrep
 rofi
@@ -56,4 +55,7 @@ wine-gecko
 wine-mono
 xarchiver
 xscreensaver
+yazi
 zsh
+zathura
+zathura-pdf-mupdf
