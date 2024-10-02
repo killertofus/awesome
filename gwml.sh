@@ -6,9 +6,13 @@ mv .zshrc ~/
 mv .icons ~/
 mv .dircolors ~/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
+gsettings set org.nemo.preferences show-hidden-files-true
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
 mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+export ZSH="$XDG_DATA_HOME"/oh-my-zsh
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
