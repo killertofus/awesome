@@ -23,3 +23,7 @@ make -C ~/.config/dwm/ clean
 sudo make -C ~/.config/dwm/ clean install
 make -C ~/.config/dwm/slstatus/ clean
 sudo make -C ~/.config/dwm/slstatus/ clean install
+export ZSH="$XDG_DATA_HOME"/oh-my-zsh
+export WINEPREFIX="$XDG_DATA_HOME"/wine
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
