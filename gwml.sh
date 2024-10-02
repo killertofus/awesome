@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-mv .themes ~/.local/share
+mv themes ~/.local/share
 cp -r .config ~/
 mv .zshrc ~/
-mv .icons ~/.local/share
+mv icons ~/.local/share
 mv .dircolors ~/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.nemo.preferences show-hidden-files-true
