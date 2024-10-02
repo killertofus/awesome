@@ -129,9 +129,8 @@ compctl -K    _pyenv pyenv
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 if [ -z "$TMUX" ]
 then
-    tmux attach -t TMUX || tmux new -s TMUX \; new-window \;
+    tmux attach -t TMUX || tmux new -s TMUX \; new-window \ y;
 fi
-y
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
