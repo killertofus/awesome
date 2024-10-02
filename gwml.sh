@@ -6,9 +6,10 @@ cp -r config ~/
 mv icons ~/.local/share
 mv .zshrc ~/
 mv .dircolors ~/
-sudo mkdir -p /usr/share/xsessions
+sudo mkdir -p /usr/share/xsessionse
 sudo mv dwm.desktop /usr/share/xsessions/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
+gsettings set org.nemo.preferences show-hidden-files-true
 mv .xinitrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
