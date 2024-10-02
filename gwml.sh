@@ -12,3 +12,6 @@ wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
 mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+export ZSH="$XDG_DATA_HOME"/oh-my-zsh
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
