@@ -20,12 +20,12 @@ github
 chatterino
 cyberduck
 linkliar
+lazygit
 dozer
 virt-viewer
 virt-manager
 neovim
 tmux
-ranger
 wget
 w3m
 neofetch
