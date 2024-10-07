@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-echo "RANGER_LOAD_DEFAULT_RC=false"
 mv themes ~/.local/share
 cp -r config ~/
 mv icons ~/.local/share
@@ -9,7 +8,7 @@ mv .dircolors ~/
 sudo mkdir -p /usr/share/xsessionse
 sudo mv dwm.desktop /usr/share/xsessions/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
-gsettings set org.nemo.preferences show-hidden-files-true
+gsettings set org.nemo.preferences show-hidden-files true
 mv .xinitrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -17,7 +16,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
 mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.oh-my-zsh/themes
-rm -rf master.zip
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
 make -C ~/.config/dwm/ clean
