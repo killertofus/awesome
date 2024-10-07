@@ -1,5 +1,4 @@
 chatterino2-git
-github-desktop-bin
 jdownloader2
 librewolf-bin
 piavpn-bin

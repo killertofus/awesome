@@ -1,3 +1,4 @@
+mod key is alt, super is rofi
 # arch version
 
 git clone https://github.com/killertofus/awesome/ 
