@@ -10,6 +10,7 @@ the-unarchiver
 qbittorrent
 obs
 flameshot
+fzf
 wine-stable
 xscreensaver
 streamlink-twitch-gui
@@ -36,3 +37,6 @@ p7zip
 openssh
 mono
 btop
+yazi
+zathura
+zathura-pdf-poppler
