@@ -1,7 +1,6 @@
 # pop-os version
 
-note that lsd is not in the pop repos yet and is a third party install
-
+modkey is super and rofi is left alt
 
 git clone  -b pop-os https://github.com/killertofus/awesome/ 
 
