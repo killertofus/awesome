@@ -1,0 +1,15 @@
+*cosmic-*
+cups-common
+fwupd
+*gnome*
+*hunspell*
+*language-pack*
+*libreoffice-*
+man-db
+manpages
+nano
+*pop-*
+popsicle
+*printer-driver*
+*thunderbird*
+xterm
