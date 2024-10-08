@@ -4,7 +4,7 @@ sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka/
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
-xargs sudo apt install <dwmlpkgs.txt -y
+xargs sudo apt install < dwmlpkgs.txt -y
 sudo mv update.sh /usr/local/bin
 chsh -s $(which zsh)
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
@@ -23,10 +23,9 @@ main() {
 }
 
 main
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install winehq-staging -y 
-rm -rf ~/snap
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
@@ -42,6 +41,16 @@ wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
  sudo mv zig/lib zig/zig /usr/local/bin
  cd -
 
+sudo -v
+
+git clone https://github.com/sxyazi/yazi.git
+cargo build --release --locked --manifest-path=yazi/Cargo.toml
+
+
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
 
 
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
@@ -63,8 +72,6 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
-
-sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
 sudo systemctl disable display-manager.service
 nvim > /dev/null 2>&1 &
@@ -73,7 +80,7 @@ cd ly
 zig build
 sudo zig build installsystemd
 sudo systemctl disable getty@tty2.service
-cd -
-./pwmlrmvpkgs.sh && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo systemctl enable ly.service
+cd -
+xargs sudo apt purge < remove_packages.txt -y && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 rm -rf $(pwd)
