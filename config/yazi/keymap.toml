@@ -13,7 +13,8 @@ desc = "Open"
 on   = "/"
 run  = 'plugin fzf'
 desc = "Open"
+
 [[manager.prepend_keymap]]
-on   = "2"
-run  = 'vlc "$@"'
-desc = "vlc xd"
+on = ":"
+run = "plugin zsh"
+desc = "Open"
