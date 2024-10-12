@@ -93,7 +93,6 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 #exports here
-
 export EDITOR=nvim
 export BAT_THEME=Dracula
 
