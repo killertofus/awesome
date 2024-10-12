@@ -1,6 +1,7 @@
 alacritty
 apt-transport-https
 blueman
+bat
 bluez
 btop
 build-essential
