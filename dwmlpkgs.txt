@@ -2,6 +2,7 @@ alacritty
 apt-transport-https
 awesome
 blueman
+bat
 bluez
 btop
 build-essential
