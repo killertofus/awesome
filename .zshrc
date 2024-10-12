@@ -70,6 +70,7 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+export DRACULA_ARROW_ICON="❯"
 plugins=(git
 zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
@@ -91,6 +92,12 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+#exports here
+
+export EDITOR=nvim
+
+
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -99,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ls="lsd -a"
-alias update="brew update && brew upgrade && brew upgrade --cask && brew cleanup"
+alias lz="lazygit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
@@ -130,5 +137,13 @@ compctl -K    _pyenv pyenv
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 if [ -z "$TMUX" ]
 then
-    tmux attach -t TMUX || tmux new -s TMUX \; new-window \;
+    tmux attach -t TMUX || tmux new -s TMUX \; new-window \ yazi;
 fi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
