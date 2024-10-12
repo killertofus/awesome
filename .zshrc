@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 #exports here
 
 export EDITOR=nvim
-
+export BAT_THEME=Dracula
 
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -105,6 +105,7 @@ export EDITOR=nvim
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
+alias cat="bat"
 alias ls="lsd -a"
 alias lz="lazygit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

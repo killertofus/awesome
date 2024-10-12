@@ -1,5 +1,6 @@
 alacritty
 awesome
+bat
 blueman
 bluez
 bluez-utils
