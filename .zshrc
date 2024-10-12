@@ -91,6 +91,12 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+#exports here
+export DRACULA_ARROW_ICON="❯"
+export EDITOR=nvim
+
+
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -99,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ls="lsd -a"
+alias cat="bat"
+alias lz="lazygit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
@@ -127,3 +135,15 @@ znap source dracula/zsh
 znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX \; new-window \ yazi;
+fi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
