@@ -94,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
 #exports here
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
+export BAT_THEME=Dracula
 
 
 
