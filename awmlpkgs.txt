@@ -1,5 +1,6 @@
 alacritty
 blueman
+bat
 bluez
 bluez-utils
 btop
