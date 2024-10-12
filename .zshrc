@@ -108,6 +108,7 @@ export BAT_THEME=Dracula
 alias cat="bat"
 alias ls="lsd -a"
 alias lz="lazygit"
+alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
