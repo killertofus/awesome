@@ -106,6 +106,7 @@ export EDITOR=nvim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ls="lsd -a"
+cat="bat"
 alias lz="lazygit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U colors && colors
