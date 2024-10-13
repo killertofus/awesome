@@ -11,10 +11,10 @@ sudo mkdir -p /usr/share/xsessions/
 sudo pacman -S --needed git base-devel --noconfirm
 sudo pacman -Syu --noconfirm
 sudo -v
-sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
+sudo pacman -S $(cat packages.txt | cut -d' ' -f1) --noconfirm
 fc-cache -f -v
 chsh -s $(which zsh)
-for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
+for word in $(cat aurpackages.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly
@@ -24,5 +24,5 @@ sudo systemctl enable libvirtd.socket
 sudo systemctl enable --now rustdesk
 yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
-./gwml.sh
+./configs.sh
 rm -rf $(pwd)

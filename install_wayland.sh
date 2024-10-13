@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-sed -i 's/dwm/dwl/g' gwml.sh
-sed -i 's/xsessions/wayland-sessions/g' gwml.sh
-sed -i 's/.xinitrc/startup.sh/g' gwml.sh
-sed -i '23d;24d' gwml.sh
-sed -i 's/feh/wayland/g' awmlpkgs.txt
-sed -i 's/xscreensaver/wlroots/g' awmlpkgs.txt
-sed -i 's/picom/swww/g' awmlpkgs.txt
-sed -i 's/lxappearance/nwg-look/g' awmlpkgs.txt
-sed -i '1 a wlroots0.17' awmlpkgs.txt
-sed -i '2 a wayland-protocols' awmlpkgs.txt
-sed -i 's/volumeicon/waybar/g' awmlpkgs.txt
+sed -i 's/dwm/dwl/g' configs.sh
+sed -i 's/xsessions/wayland-sessions/g' configs.sh
+sed -i 's/.xinitrc/startup.sh/g' configs.sh
+sed -i '23d;24d' configs.sh
+sed -i 's/feh/wayland/g' packages.txt
+sed -i 's/xscreensaver/wlroots/g' packages.txt
+sed -i 's/picom/swww/g' packages.txt
+sed -i 's/lxappearance/nwg-look/g' packages.txt
+sed -i '1 a wlroots0.17' packages.txt
+sed -i '2 a wayland-protocols' packages.txt
+sed -i 's/volumeicon/waybar/g' packages.txt
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
@@ -22,10 +22,10 @@ sudo -v
 sudo pacman -S --needed git base-devel --noconfirm
 sudo pacman -Syu --noconfirm
 sudo -v
-sudo pacman -S $(cat awmlpkgs.txt | cut -d' ' -f1) --noconfirm
+sudo pacman -S $(cat packages.txt | cut -d' ' -f1) --noconfirm
 fc-cache -f -v
 chsh -s $(which zsh)
-for word in $(cat ywmlpkgs.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
+for word in $(cat aurpackages.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly
@@ -34,5 +34,5 @@ sudo systemctl enable libvirtd.service
 sudo systemctl enable libvirtd.socket
 yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
-./gwml.sh
+./configs.sh
 rm -rf $(pwd)
