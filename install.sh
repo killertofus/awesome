@@ -19,5 +19,5 @@ sudo systemctl enable piavpn.service
 sudo systemctl enable --now rustdesk
 yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
-./gwml.sh
+./configs.sh
 rm -rf $(pwd)
