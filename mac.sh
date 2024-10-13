@@ -8,5 +8,5 @@ ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix 
 mv .zshrc ~/
 nvim > /dev/null 2>&1 &
 mv wallpaper.jpg ~/Pictures
-./gwml.sh
+./configs.sh
 rm -rf $(pwd)
