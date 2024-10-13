@@ -106,7 +106,7 @@ export BAT_THEME=Dracula
 # alias zshconfig="mate ~/.zshrc"
 alias ls="lsd -a"
 alias update="sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove"
-alias cat="bat"
+alias cat="batcat"
 alias lz="lazygit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U colors && colors
