@@ -5,7 +5,7 @@ sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iose
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
-xargs sudo apt install < dwmlpkgs.txt -y
+xargs sudo apt install < packages.txt -y
 sudo mv update.sh /usr/local/bin
 chsh -s $(which zsh)
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
@@ -73,7 +73,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
-./gwml.sh
+./configs.sh
 sudo systemctl disable display-manager.service
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
