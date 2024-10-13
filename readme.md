@@ -8,7 +8,7 @@ cd awesome
 
 read install script 
 
-read removepackages.sh 
+read remove_packages.txt 
 
 remove anything you want to keep in remove_packages.txt
 
