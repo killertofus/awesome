@@ -5,7 +5,7 @@ sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iose
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
-xargs sudo apt install <packages.txt -y
+xargs sudo apt install < packages.txt -y
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
 sudo mv update.sh /usr/local/bin
@@ -23,10 +23,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 sudo mv rustdesk /usr/local/bin
 
-
-sudo apt update -y && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove
-./configs.sh
 nvim > /dev/null 2>&1 &
-sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
+./configs && sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y
 sudo apt purge plasma-discover kdeconnect -y
 rm -rf $(pwd)
