@@ -7,7 +7,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 xargs sudo apt install < packages.txt -y
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
-fc-cache -f -v
+fc-cache -fv
 sudo mv update.sh /usr/local/bin
 chsh -s $(which zsh)
 sudo mv rustdesk.desktop /usr/share/applications
