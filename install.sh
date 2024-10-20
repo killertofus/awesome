@@ -13,6 +13,9 @@ fc-cache -fv
 chsh -s $(which zsh)
 for word in $(cat aurpackages.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
+balooctl6 suspend
+balooctl6 disable
+balooctl6 purge
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable sddm
 sudo systemctl enable piavpn.service
