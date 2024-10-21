@@ -6,6 +6,7 @@ cyberduck
 db-browser-for-sqlite
 dozer
 flameshot
+font-jetbrains-mono-nerd-font
 fzf
 github
 iglance
@@ -29,7 +30,6 @@ sqlite
 steam
 streamlink-twitch-gui
 the-unarchiver
-tmux
 tmux
 virt-manager
 virt-viewer
