@@ -29,8 +29,6 @@ noto-fonts-emoji
 obs-studio
 openssh
 p7zip
-powerline
-powerline-fonts
 picom
 python-libtmux
 qbittorrent
