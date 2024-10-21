@@ -12,11 +12,9 @@ default-jdk
 feh
 firefox
 flameshot
-fonts-dejavu
+fonts-jetbrains-mono
 fonts-hack
-fonts-liberation
 fonts-noto-core
-fonts-symbola
 git
 gnome-disk-utility
 gnupg
