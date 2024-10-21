@@ -30,6 +30,7 @@ rofi
 sddm
 timeshift
 ttf-hack
+ttf-jetbrains-mono-nerd
 ttf-ibmplex-mono-nerd
 ttf-iosevka-nerd
 ttf-nerd-fonts-symbols
