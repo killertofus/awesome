@@ -27,6 +27,6 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 sudo mv rustdesk /usr/local/bin
 
 nvim > /dev/null 2>&1 &
-./configs && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
+./configs.sh && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo apt purge plasma-discover kdeconnect -y
 rm -rf $(pwd)
