@@ -12,7 +12,7 @@ sudo apt update
 xargs sudo apt install < packages.txt -y
 fc-cache -fv
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y --noninteractive rustdesk
+sudo flatpak install -y --noninteractive rustdesk
 balooctl6 suspend
 balooctl6 disable
 balooctl6 purge
