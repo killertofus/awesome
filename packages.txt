@@ -57,6 +57,7 @@ volumeicon-alsa
 w3m
 wget
 xarchiver
+xinit
 xscreensaver
 zsh
 zathura
