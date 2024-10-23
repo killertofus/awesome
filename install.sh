@@ -74,7 +74,6 @@ sudo systemctl disable display-manager.service
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
-zig build
 sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
