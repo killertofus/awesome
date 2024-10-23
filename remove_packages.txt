@@ -12,6 +12,7 @@ man-db
 manpages
 nano
 popsicle-gtk
+pop-de-cosmic
 *printer-driver*
 repoman
 simple-scan
