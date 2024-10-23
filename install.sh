@@ -75,7 +75,7 @@ nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 sudo zig build installsystemd
-sudo systemctl enable ly.service -f
+sudo systemctl enable ly
 sudo systemctl disable getty@tty2.service
 cd -
 xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
