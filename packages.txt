@@ -10,6 +10,7 @@ curl
 cronie
 default-jdk
 feh
+flatpak
 firefox
 flameshot
 fonts-jetbrains-mono

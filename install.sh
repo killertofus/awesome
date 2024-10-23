@@ -12,6 +12,7 @@ sudo apt update
 xargs sudo apt install < packages.txt -y
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -fv
+flatpak install -y --noninteractive rustdesk
 balooctl6 suspend
 balooctl6 disable
 balooctl6 purge
