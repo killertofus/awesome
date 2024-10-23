@@ -7,7 +7,6 @@ btop
 build-essential
 ca-certificates
 curl
-cronie
 default-jdk
 feh
 flatpak
