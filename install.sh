@@ -31,7 +31,6 @@ sudo apt update
 sudo apt install winehq-staging -y 
 flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader rustdesk
 sudo mv streamlink.desktop /usr/share/applications
-sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
@@ -77,8 +76,8 @@ git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 zig build
 sudo zig build installsystemd
+sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
-sudo systemctl enable ly.service
 cd -
 xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 rm -rf $(pwd)
