@@ -1,5 +1,4 @@
 baobab
-*cosmic-*
 cups-common
 fwupd
 *gnome*
@@ -12,8 +11,6 @@ man-db
 manpages
 nano
 popsicle-gtk
-pop-de-cosmic
-pop-container-interactive
 *printer-driver*
 repoman
 simple-scan
