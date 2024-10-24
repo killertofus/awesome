@@ -77,6 +77,7 @@ cd ly
 sudo zig build installsystemd
 sudo systemctl disable getty@tty2.service
 cd -
-xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
+xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo systemctl enable ly
+sudo apt install pop-default-settings -y
 rm -rf $(pwd)
