@@ -1,12 +1,11 @@
 baobab
-cups-common
+
 fwupd
 gucharmap
 *hunspell*
 im-config
 *language-pack*
 *libreoffice-*
-man-db
 manpages
 nano
 popsicle-gtk
