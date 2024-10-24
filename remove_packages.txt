@@ -20,5 +20,6 @@ repoman
 simple-scan
 system-config-printer
 *thunderbird*
+virt-viewer
 xterm
 xviewer
