@@ -1,7 +1,6 @@
 baobab
 cups-common
 fwupd
-*gnome*
 gucharmap
 *hunspell*
 im-config
