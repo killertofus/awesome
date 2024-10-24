@@ -1,4 +1,8 @@
 baobab
+*cups*
+*cosmic*
+fwupd
+*gnome*
 gucharmap
 *hunspell*
 im-config
@@ -7,6 +11,10 @@ im-config
 man-db
 manpages
 nano
+pop-desktop
+pop-default-settings
+pop-container-interactive
+pop-server
 popsicle-gtk
 *printer-driver*
 repoman
