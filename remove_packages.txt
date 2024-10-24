@@ -1,8 +1,4 @@
 baobab
-*cosmic-*
-cups-common
-fwupd
-*gnome*
 gucharmap
 *hunspell*
 im-config
