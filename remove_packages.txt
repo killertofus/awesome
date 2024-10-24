@@ -1,5 +1,4 @@
 baobab
-fwupd
 gucharmap
 *hunspell*
 im-config
@@ -8,7 +7,6 @@ im-config
 manpages
 nano
 popsicle-gtk
-*printer-driver*
 repoman
 simple-scan
 system-config-printer
