@@ -7,7 +7,6 @@ gucharmap
 im-config
 *language-pack*
 *libreoffice-*
-libcups2t64
 man-db
 manpages
 nano
