@@ -1,5 +1,4 @@
 baobab
-*cups*
 *cosmic*
 fwupd
 *gnome*
