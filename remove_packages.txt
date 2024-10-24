@@ -21,5 +21,6 @@ simple-scan
 system-config-printer
 *thunderbird*
 virt-viewer
+vim-tiny
 xterm
 xviewer
