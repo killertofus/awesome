@@ -9,7 +9,7 @@ git clone https://aur.archlinux.org/yay.git
 makepkg -siD yay --noconfirm
 sudo pacman -Syu --noconfirm
 sudo pacman -S $(cat packages.txt | cut -d' ' -f1) --noconfirm
-fc-cache -fv
+fc-cache -f
 chsh -s $(which zsh)
 for word in $(cat aurpackages.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
