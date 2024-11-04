@@ -16,7 +16,6 @@ neofetch
 neovim
 nemo
 networkmanager
-nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -26,7 +25,6 @@ plasma-desktop
 qbittorrent
 reflector
 ripgrep
-rofi
 sddm
 timeshift
 ttf-hack
