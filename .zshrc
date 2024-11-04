@@ -13,10 +13,9 @@ source $ZSH/oh-my-zsh.sh
 export BAT_THEME=Dracula
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
-
 #alias here
 alias ls="lsd -a"
-alias cat="bat"
+alias cat="batcat"
 alias update="sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove"
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
