@@ -4,7 +4,6 @@ mv themes ~/.local/share
 cp -r .config ~/
 mv .zshrc ~/
 mv icons ~/.local/share
-mv .dircolors ~/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.nemo.preferences show-hidden-files-true
 wget https://github.com/dracula/zsh/archive/master.zip
