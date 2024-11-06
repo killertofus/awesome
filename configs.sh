@@ -4,7 +4,6 @@ echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
 cp -r .config ~/
 mv .zshrc ~/
-mv .dircolors ~/
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
 wget https://github.com/dracula/zsh/archive/master.zip
