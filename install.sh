@@ -17,9 +17,7 @@ balooctl6 suspend
 balooctl6 disable
 balooctl6 purge
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
-sudo systemctl enable sddm
-sudo systemctl enable piavpn.service
-sudo systemctl enable --now rustdesk
+sudo systemctl enable sddm piavpn rustdesk
 yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
 ./configs.sh
