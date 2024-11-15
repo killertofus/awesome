@@ -14,7 +14,7 @@ chsh -s $(which zsh)
 for word in $(cat aurpackages.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
-sudo systemctl enable ly piavpn libvirtd rustdesk
+sudo systemctl enable ly piavpn libvirtd.socket libvirtd.service rustdesk
 yay -Scc --noconfirm
 nvim > /dev/null 2>&1 &
 ./configs.sh
