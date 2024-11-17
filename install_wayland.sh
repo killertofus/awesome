@@ -7,7 +7,6 @@ sed -i 's/feh/wayland/g' packages.txt
 sed -i 's/xscreensaver/wlroots/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
-sed -i '1 a wlroots0.17' packages.txt
 sed -i '2 a wayland-protocols' packages.txt
 sed -i 's/volumeicon/waybar/g' packages.txt
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
