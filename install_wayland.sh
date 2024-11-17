@@ -14,7 +14,6 @@ sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
-EXPORT PKG_CONFIG_PATH=/usr/lib/wlroots0.17/pkgconfig
 sudo mkdir -p /usr/share/wayland-sessions
 git clone https://aur.archlinux.org/yay.git
 makepkg -siD yay --noconfirm
