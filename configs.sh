@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-mv themes ~/.local/share
-cp -r config ~/
-mv icons ~/.local/share
+cp -r themes ~/.local/share
+cp -r .config ~/
+cp -r icons ~/.local/share
 mv .zshrc ~/
 sudo mkdir -p /usr/share/xsessionse
 sudo mv dwm.desktop /usr/share/xsessions/
