@@ -501,7 +501,6 @@ arrange(Monitor *m)
 	/* We move all clients (except fullscreen and unmanaged) to LyrTile while
 	 * in floating layout to avoid "real" floating clients be always on top */
 	wl_list_for_each(c, &clients, link) {
-		if (c->mon != m || c->scene->node.parent == layers[LyrFS])
 		if (c->mon != m || c->isfullscreen || c->isalwaysontop)
 			continue;
 
