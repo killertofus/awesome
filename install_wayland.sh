@@ -4,6 +4,7 @@ sed -i 's/xsessions/wayland-sessions/g' configs.sh
 sed -i 's/.xinitrc/startup.sh/g' configs.sh
 sed -i '20d;21d' configs.sh
 sed -i 's/feh/wayland/g' packages.txt
+sed -i 's/rofi/rofi-wayland/g' packages.txt
 sed -i 's/xscreensaver/wlroots/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
