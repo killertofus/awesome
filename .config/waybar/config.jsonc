@@ -7,7 +7,7 @@
    "modules-left": ["custom/logo", "group/r-logo", 
                     "group/l-tags", "dwl/tags", "group/r-tags"],
 
-   "modules-center": ["clock"],
+   "modules-center": ["clock", "dwl/window"],
 
    "modules-right": ["pulseaudio", "network", "battery", "idle_inhibitor", "group/r-system",
                      "group/l-tray", "tray", "group/power-menu"], 
