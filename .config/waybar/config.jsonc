@@ -9,7 +9,7 @@
 
    "modules-center": ["clock"],
 
-   "modules-right": ["pulseaudio", "network", "bluetooth", "battery", "idle_inhibitor", "group/r-system",
+   "modules-right": ["pulseaudio", "network", "battery", "idle_inhibitor", "group/r-system",
                      "group/l-tray", "tray", "group/power-menu"], 
 
    "include": "~/.config/waybar/modules.json"
