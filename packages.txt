@@ -1,3 +1,4 @@
+7zip
 alacritty
 awesome
 bat
@@ -29,7 +30,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 obs-studio
 openssh
-p7zip
 picom
 python-libtmux
 qbittorrent
