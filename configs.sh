@@ -6,6 +6,7 @@ mv .zshrc ~/
 mv icons ~/.local/share
 sudo mv awesome.desktop /usr/share/xsessions/
 mv .xinitrc ~/
+mv .oh-my-zsh ~/.local/share
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.nemo.preferences show-hidden-files true
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
