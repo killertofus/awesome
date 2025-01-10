@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --ouput ~/.local/share
+ZSH="XDG_CONFIG_HOME" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv themes ~/.local/share
 cp -r .config ~/
 mv .zshrc ~/
