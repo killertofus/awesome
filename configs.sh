@@ -11,7 +11,7 @@ gsettings set org.nemo.preferences show-hidden-files true
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
-mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.config/.oh-my-zsh/themes
+mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.config/oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.config/oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh
