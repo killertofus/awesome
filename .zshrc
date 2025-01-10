@@ -1,4 +1,4 @@
-export ZSH="$XDG_DATA_HOME/.oh-my-zsh"
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 
 
 ZSH_THEME="dracula"
