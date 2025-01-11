@@ -1,3 +1,4 @@
+7zip
 alacritty
 blueman
 bat
@@ -20,7 +21,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
-p7zip
 plasma-desktop
 qbittorrent
 reflector
