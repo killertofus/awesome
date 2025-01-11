@@ -1,22 +1,23 @@
-export ZSH="$HOME/.oh-my-zsh"
-
+export ZSH="$XDG_CONFIG_HOME/.oh-my-zsh"
 
 ZSH_THEME="dracula"
 
 
 plugins=(git
 zsh-autosuggestions)
+
 source $ZSH/oh-my-zsh.sh
 
-
 #exports here
-export BAT_THEME=Dracula
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
+export BAT_THEME=Dracula
 
 #alias here
-alias ls="lsd -a"
 alias cat="bat"
+alias ls="lsd -a"
+alias lz="lazygit"
+alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 
@@ -24,6 +25,7 @@ PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_c
 [[ -f ~/.config/zsh/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/zsh-snap
+
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 source ~/.config/zsh/zsh-snap/znap.zsh
@@ -44,3 +46,4 @@ compctl -K    _pyenv pyenv
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 #startups here
+
