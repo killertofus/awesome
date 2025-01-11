@@ -1,11 +1,11 @@
-export ZSH="$HOME/.oh-my-zsh"
-
+export ZSH="$XDG_CONFIG_HOME/.oh-my-zsh"
 
 ZSH_THEME="dracula"
 
 
 plugins=(git
 zsh-autosuggestions)
+
 source $ZSH/oh-my-zsh.sh
 
 #exports here
@@ -18,6 +18,7 @@ alias cat="bat"
 alias ls="lsd -a"
 alias lz="lazygit"
 alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
+alias update="brew update && brew upgrade && brew upgrade --cask && brew cleanup"
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 

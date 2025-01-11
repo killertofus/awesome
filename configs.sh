@@ -1,15 +1,13 @@
 #!/usr/bin/env sh
-wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
-echo "RANGER_LOAD_DEFAULT_RC=false"
-mv .themes ~/
+mv .themes ~/.local/share
 cp -r .config ~/
 mv .zshrc ~/
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
 wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
-mv lib dracula.zsh-theme ~/oh-my-zsh/themes
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.config/oh-my-zsh/themes
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.config/oh-my-zsh/custom}/plugins/zsh-autosuggestions
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "~/Pictures/wallpaper.jpg"'
 # Disable personalized advertisements and identifier tracking
 echo '--- Disable personalized advertisements and identifier tracking'
