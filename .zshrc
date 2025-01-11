@@ -12,7 +12,7 @@ source $ZSH/oh-my-zsh.sh
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 export BAT_THEME=Dracula
-export XDG_CURRENT_DESKTOP=wlroots
+
 #alias here
 alias cat="bat"
 alias ls="lsd -a"
