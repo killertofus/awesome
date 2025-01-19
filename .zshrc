@@ -24,11 +24,11 @@ PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_c
 
 [[ -f ~/.config/zsh/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/zsh/zsh-snap
 
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-source ~/.config/zsh/zsh-snap/znap.zsh
+source "$HOME"/.local/share/zsh/zsh-snap/znap.zsh
 
 
 znap prompt sindresorhus/pure
