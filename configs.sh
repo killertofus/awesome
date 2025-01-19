@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
-export XDG_DATA_HOME=""$HOME"/.local/share"
-export ZSH="$XDG_DATA_HOME""/oh-my-zsh"
+export XDG_DATA_HOME=~/.local/share
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv themes "$XDG_DATA_HOME"
 cp -r .config ~/
