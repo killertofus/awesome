@@ -24,7 +24,7 @@ PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_c
 
 [[ -r "$HOME"/.local/share/zsh/znap.zsh ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/zsh/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/zsh/
 
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
