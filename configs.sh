@@ -16,7 +16,6 @@ unzip master.zip
 mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.config/oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.config/oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
-export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
