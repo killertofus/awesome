@@ -22,7 +22,7 @@ autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 
 
-[[ -r "$HOME"/.local/share/marlonrichert/znap.zsh ]] ||
+[[ -r "$HOME"/.local/share/marlonrichert/zsh-znap ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/marlonrichert/zsh-snap
 
