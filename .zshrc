@@ -1,4 +1,4 @@
-export ZSH="$XDG_CONFIG_HOME/.oh-my-zsh"
+export ZSH="$HOME/.local/share/oh-my-zsh"
 
 ZSH_THEME="dracula"
 
@@ -21,14 +21,13 @@ autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 
 
-[[ -f ~/.config/zsh/zsh-snap/znap.zsh ]] ||
+[[ -r "$HOME"/.local/share/marlonrichert/zsh-snap ]] ||
     git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/zsh-snap
+        https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/marlonrichert/zsh-snap
 
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-source ~/.config/zsh/zsh-snap/znap.zsh
-
+source "$HOME"/.local/share/marlonrichert/zsh-snap/znap.zsh
 
 znap prompt sindresorhus/pure
 
