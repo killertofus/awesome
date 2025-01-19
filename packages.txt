@@ -6,7 +6,6 @@ blueman
 bluez
 bluez-utils
 btop
-dnsmasq
 dunst
 feh
 firefox
@@ -19,11 +18,9 @@ lsd
 lazygit
 lxappearance
 ly
-mono
 neofetch
 neovim
 networkmanager
-nodejs
 nemo
 noto-fonts
 noto-fonts-cjk
