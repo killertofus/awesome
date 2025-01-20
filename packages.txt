@@ -35,7 +35,6 @@ lxappearance
 neofetch
 nemo
 neovim
-nodejs
 obs-studio
 openssh-client
 pavucontrol
