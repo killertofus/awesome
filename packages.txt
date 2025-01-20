@@ -1,3 +1,4 @@
+7zip
 alacritty
 bat
 btop
@@ -15,12 +16,10 @@ lazygit
 librewolf
 linkliar
 lsd
-mono
 neofetch
 neovim
 obs
 openssh
-p7zip
 private-internet-access
 qbittorrent
 ripgrep
