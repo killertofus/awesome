@@ -17,13 +17,11 @@ jellyfin-server
 lsd
 lxappearance
 ly
-mono
 neofetch
 neofetch
 neovim
 nemo
 networkmanager
-nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
