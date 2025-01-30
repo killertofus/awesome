@@ -5,7 +5,6 @@ export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv themes "$XDG_DATA_HOME"
 cp -r .config ~/
-mv .zshrc ~/
 mv icons "$XDG_DATA_HOME"
 sudo mv awesome.desktop /usr/share/xsessions/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
