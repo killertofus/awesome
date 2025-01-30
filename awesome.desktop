@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=awesome
+Name=Awesome
 Comment=Dynamic window manager
 Exec=~/.config/x11/.xinitrc
 Icon=awesome
