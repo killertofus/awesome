@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Name=awesome
 Comment=Dynamic window manager
-Exec=~/.xinitrc
+Exec=~/.config/x11/.xinitrc
 Icon=awesome
 Type=XSession
