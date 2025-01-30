@@ -4,11 +4,6 @@ export ZSH="$HOME/.local/share/oh-my-zsh"
 ZSH_THEME="dracula"
 
 
-HISTFILE="$XDG_STATE_HOME"/zsh/history
-[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
-zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
-
-
 plugins=(git
 zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
