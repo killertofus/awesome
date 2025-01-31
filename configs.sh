@@ -7,7 +7,6 @@ cp -r .config ~/
 mv .zshrc ~/
 mv icons "$XDG_DATA_HOME"
 sudo mv awesome.desktop /usr/share/xsessions/
-mv .xinitrc ~/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.nemo.preferences show-hidden-files true
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
