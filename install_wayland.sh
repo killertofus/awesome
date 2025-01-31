@@ -2,7 +2,6 @@
 sed -i 's/dwm/dwl/g' configs.sh
 sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
 sed -i 's/xsessions/wayland-sessions/g' configs.sh
-sed -i 's/.xinitrc/startup.sh/g' configs.sh
 sed -i '21d;22d' configs.sh
 sed -i 's/feh/wayland/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
