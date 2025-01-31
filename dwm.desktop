@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Name=DWM
 Comment=Dynamic window manager
-Exec=~/.config/x11
+Exec=~/.config/x11/.xinitrc
 Icon=dwm
 Type=XSession
