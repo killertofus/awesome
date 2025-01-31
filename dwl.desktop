@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Name=dwl
 Comment=Dynamic window manager (wayland)
-Exec=~/startup.sh
+Exec=~/.config/wayland/startup.sh
 Icon=dwl
 Type=application
