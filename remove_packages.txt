@@ -1,7 +1,8 @@
 *cinnamon-* 
 *libreoffice-* 
 *rhythmbox-* 
-baobab 
+baobab
+bulky
 celluloid 
 dictionaries-common 
 drawing 
