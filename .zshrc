@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 export BAT_THEME=Dracula
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 #alias here
 alias cat="bat"
@@ -43,7 +44,6 @@ znap source dracula/zsh
 
 znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 #startups here
 if [ -z "$TMUX" ]
