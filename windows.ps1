@@ -3,6 +3,7 @@ choco install packages.config -y
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 wsl --set-default-version 2
+wsl --install ArchLinux
 move wallpaper.jpg %USERPROFILE%/Pictures
 move config/nvim ~/AppData/Local/nvim
 move config/vlc ~/%appdata%/ 
