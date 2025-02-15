@@ -24,6 +24,7 @@ git
 gnome-disk-utility
 gnupg
 hicolor-icon-theme
+jellyfin
 libpam0g-dev
 libxcb-xkb-dev
 libxft-dev
