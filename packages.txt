@@ -58,5 +58,6 @@ wget
 xarchiver
 xscreensaver
 zsh
+zig0.13
 zathura
 zathura-pdf-poppler
