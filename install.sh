@@ -43,15 +43,6 @@ sudo -v
 git clone https://github.com/sxyazi/yazi.git
 cargo build --release --locked --manifest-path=yazi/Cargo.toml
 sudo mv yazi/target/release/yazi yazi/target/release/ya /usr/local/bin
-mkdir zig
-cd zig
-wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
- tar xf *
- rm -rf *.tar.xz
- mv * zig
- sudo mv zig/lib zig/zig /usr/local/bin
- cd -
-
 
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
