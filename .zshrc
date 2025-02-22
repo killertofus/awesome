@@ -1,8 +1,5 @@
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-export ZSH="$XDG_CONFIG_HOME/.oh-my-zsh"
 
 ZSH_THEME="dracula"
-
 
 plugins=(git
 zsh-autosuggestions)
@@ -13,6 +10,8 @@ source $ZSH/oh-my-zsh.sh
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 export BAT_THEME=Dracula
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH="$XDG_CONFIG_HOME/.oh-my-zsh"
 
 #alias here
 alias cat="bat"
@@ -31,9 +30,7 @@ LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 source "$HOME"/.local/share/marlonrichert/zsh-snap/znap.zsh
 
-
 znap prompt sindresorhus/pure
-
 
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
