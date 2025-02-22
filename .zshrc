@@ -1,6 +1,3 @@
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-export ZSH="$HOME/.local/share/oh-my-zsh"
-
 
 ZSH_THEME="dracula"
 
@@ -13,6 +10,8 @@ source $ZSH/oh-my-zsh.sh
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 export BAT_THEME=Dracula
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH="$HOME/.local/share/oh-my-zsh"
 
 #alias here
 alias cat="bat"
