@@ -1,7 +1,6 @@
 
 ZSH_THEME="dracula"
 
-
 plugins=(git
 zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
@@ -21,7 +20,6 @@ alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 
-
 [[ -r "$HOME"/.local/share/marlonrichert/zsh-snap ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/marlonrichert/zsh-snap
@@ -32,7 +30,6 @@ source "$HOME"/.local/share/marlonrichert/zsh-snap/znap.zsh
 
 
 znap prompt sindresorhus/pure
-
 
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
