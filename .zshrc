@@ -1,19 +1,16 @@
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-export ZSH="$HOME/.oh-my-zsh"
-
 ZSH_THEME="dracula"
-
 
 plugins=(git
 zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-
 #exports here
 export BAT_THEME=Dracula
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH="$HOME/.oh-my-zsh"
 
 #alias here
 alias ls="lsd -a"
@@ -23,7 +20,6 @@ alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 
-
 [[ -f ~/.config/zsh/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/zsh-snap
@@ -31,9 +27,7 @@ LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 source ~/.config/zsh/zsh-snap/znap.zsh
 
-
 znap prompt sindresorhus/pure
-
 
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
