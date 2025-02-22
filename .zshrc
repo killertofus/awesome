@@ -18,7 +18,6 @@ alias ls="lsd -a"
 autoload -U colors && colors
 PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 
-
 [[ -r "$HOME"/.local/share/marlonrichert/zsh-snap ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/marlonrichert/zsh-snap
@@ -27,9 +26,7 @@ LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 source "$HOME"/.local/share/marlonrichert/zsh-snap/znap.zsh
 
-
 znap prompt sindresorhus/pure
-
 
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
