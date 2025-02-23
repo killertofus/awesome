@@ -29,7 +29,6 @@ LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 source "$HOME"/.local/share/marlonrichert/zsh-snap/znap.zsh
 
-
 znap prompt sindresorhus/pure
 
 znap source marlonrichert/zsh-autocomplete
