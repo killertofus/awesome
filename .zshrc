@@ -40,6 +40,7 @@ znap source dracula/zsh
 
 znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 #startups here
 if [ -z "$TMUX" ]
