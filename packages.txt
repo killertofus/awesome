@@ -24,6 +24,7 @@ git
 gnome-disk-utility
 gnupg
 hicolor-icon-theme
+lazygit
 libpam0g-dev
 librewolf
 libxcb-xkb-dev
