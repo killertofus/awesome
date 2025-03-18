@@ -13,6 +13,8 @@ export BAT_THEME=Dracula
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export ZSH="$XDG_CONFIG_HOME/.oh-my-zsh"
 
+source $ZSH/oh-my-zsh.sh 
+
 #alias here
 alias cat="bat"
 alias ls="lsd -a"
