@@ -1,3 +1,4 @@
+
 ZSH_THEME="dracula"
 
 plugins=(git
@@ -12,7 +13,10 @@ export EDITOR=nvim
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export ZSH="$HOME/.oh-my-zsh"
 
+source $ZSH/oh-my-zsh.sh 
+
 #alias here
+
 alias ls="lsd -a"
 alias cat="bat"
 alias lz="lazygit"
