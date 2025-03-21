@@ -15,7 +15,6 @@ export ZSH="$HOME/.local/share/oh-my-zsh"
 source $ZSH/oh-my-zsh.sh 
 
 #alias here
-
 alias cat="batcat"
 alias ls="lsd -a"
 alias lz="lazygit"
