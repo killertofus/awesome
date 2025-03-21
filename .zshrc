@@ -10,13 +10,13 @@ export BAT_THEME=Dracula
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-export ZSH="$HOME/.local/share/.oh-my-zsh"
+export ZSH="$HOME/.local/share/oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh 
 
 #alias here
-alias ls="lsd -a"
 alias cat="bat"
+alias ls="lsd -a"
 alias lz="lazygit"
 alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 autoload -U colors && colors
