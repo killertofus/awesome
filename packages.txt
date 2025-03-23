@@ -59,6 +59,8 @@ volumeicon-alsa
 w3m
 wget
 xarchiver
+xserver-xorg
+xauth
 xinit
 xscreensaver
 zsh
