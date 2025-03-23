@@ -10,7 +10,8 @@ sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
 sed -i '2 a wayland-protocols' packages.txt
 sed -i 's/volumeicon/waybar/g' packages.txt
-sed -i '13 a export XDG_CURRENT_DESKTOP=wlroots' .zshrc
+sed -i 's/picom/xdg-desktop-portal-wlr'
+sed -i '3 a xdg-desktop-portal-gtk'
 sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
