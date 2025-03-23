@@ -58,6 +58,8 @@ w3m
 wget
 xarchiver
 xscreensaver
+xserver-xorg
+xauth
 zsh
 zig-default
 zathura
