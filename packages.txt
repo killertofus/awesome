@@ -54,6 +54,8 @@ wine
 wine-gecko
 wine-mono
 xarchiver
+xorg-xauth
+xorg-server
 xscreensaver
 yazi
 zathura
