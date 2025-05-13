@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=dwl
 Comment=dwm for Wayland
-Exec=dwl
+Exec=~/.config/wayland/startup.sh
 Type=Application
