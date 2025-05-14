@@ -7,8 +7,6 @@ sed -i 's/feh/wayland-protocols/g' packages.txt
 sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev xdg-desktop-portal-wlr xdg-desktop-portal-gtk/g' packages.txt
 sed -i 's/volumeicon-alsa/waybar/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
-sudo mkdir -p /usr/share/wayland-sessions
-sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/JetBrains

@@ -56,6 +56,6 @@ feh --bg-fill --no-fehbg ~/.config/dwm/wallpaper.jpg &
 picom -b &
 exec slstatus &
 flameshot &
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
 exec dwm
