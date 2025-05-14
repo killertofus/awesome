@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sed -i 's/dwm/dwl/g' configs.sh
 sed -i 's/xsessions/wayland-sessions/g' configs.sh
-sed -i '21d;22d' configs.sh
+sed -i '19d;20d' configs.sh
 sed -i 's/picom/wdisplays/g' packages.txt
 sed -i 's/feh/wayland-protocols/g' packages.txt
 sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev xdg-desktop-portal-wlr xdg-desktop-portal-gtk/g' packages.txt
