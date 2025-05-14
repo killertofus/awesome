@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sed -i 's/dwm/dwl/g' configs.sh
 sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
-sed -i '21d;22d' configs.sh
+sed -i '19d;20d' configs.sh
 sed -i 's/feh/wayland/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
 sed -i 's/xscreensaver/wlroots/g' packages.txt
