@@ -35,7 +35,7 @@ install: all
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	mkdir -p /usr/share/xsessions
-	cp -f dwm.desktop usr/share/xsessions/
+	cp -f dwm.desktop /usr/share/xsessions/
 	chmod 644 /usr/share/xsessions/dwm.desktop
 
 
