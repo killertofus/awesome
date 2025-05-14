@@ -6,8 +6,6 @@ mv themes "$XDG_DATA_HOME"
 cp -r .config ~/
 mv .zshrc ~/
 mv icons "$XDG_DATA_HOME"
-sudo mkdir -p /usr/share/xsessions
-sudo mv dwm.desktop /usr/share/xsessions/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.nemo.preferences show-hidden-files true
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm

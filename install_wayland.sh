@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 sed -i 's/dwm/dwl/g' configs.sh
 sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
-sed -i 's/xsessions/wayland-sessions/g' configs.sh
 sed -i '21d;22d' configs.sh
 sed -i 's/feh/wayland/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
@@ -15,7 +14,6 @@ sed -i '3 a xdg-desktop-portal-gtk' packages.txt
 sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
-sudo mkdir -p /usr/share/wayland-sessions
 git clone https://aur.archlinux.org/yay.git
 makepkg -siD yay --noconfirm
 sudo -v
