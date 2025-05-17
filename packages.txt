@@ -40,7 +40,6 @@ openssh-client
 pavucontrol
 picom
 policykit-1-gnome
-powerline
 python3-libtmux
 qbittorrent
 ripgrep
