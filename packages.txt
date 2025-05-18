@@ -9,6 +9,7 @@ btop
 dnsmasq
 dunst
 feh
+fastfetch
 firefox
 flameshot
 fzf
@@ -19,7 +20,6 @@ lsd
 lazygit
 lxappearance
 ly
-neofetch
 neovim
 networkmanager
 nemo
