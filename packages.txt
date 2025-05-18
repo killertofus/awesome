@@ -24,7 +24,7 @@ plasma-desktop
 qbittorrent
 reflector
 ripgrep
-sddm
+plasma-login
 timeshift
 ttf-hack
 ttf-jetbrains-mono-nerd
