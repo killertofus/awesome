@@ -8,6 +8,7 @@ btop
 dnsmasq
 dunst
 feh
+fastfetch
 firefox
 fzf
 flameshot
@@ -17,7 +18,6 @@ jellyfin-server
 lsd
 lxappearance
 ly
-neofetch
 neovim
 nemo
 networkmanager
