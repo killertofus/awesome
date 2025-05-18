@@ -10,6 +10,7 @@ ca-certificates
 curl
 default-jdk
 feh
+fastfetch
 flatpak
 firefox
 flameshot
@@ -27,7 +28,6 @@ libxcb-xkb-dev
 lsb-release
 lsd
 lxappearance
-neofetch
 nemo
 neovim
 nodejs
