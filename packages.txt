@@ -12,6 +12,7 @@ curl
 default-jdk
 dunst
 feh
+fastfetch
 firefox
 flatpak
 fzf
@@ -33,7 +34,6 @@ lsb-release
 lsd
 librewolf
 lxappearance
-neofetch
 nemo
 neovim
 obs-studio
