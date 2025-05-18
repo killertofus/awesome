@@ -9,6 +9,7 @@ dozer
 flameshot
 font-jetbrains-mono-nerd-font
 fzf
+fastfetch
 github
 iglance
 jdownloader
@@ -16,7 +17,6 @@ lazygit
 librewolf
 linkliar
 lsd
-neofetch
 neovim
 obs
 openssh
