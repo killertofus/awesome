@@ -6,13 +6,13 @@ bluez
 bluez-utils
 btop
 firefox
+fastfetch
 flameshot
 git
 gnome-disk-utility
 kmix
 kscreen
 lsd
-neofetch
 neovim
 nemo
 networkmanager
