@@ -6,10 +6,10 @@ chatterino
 cyberduck
 db-browser-for-sqlite
 dozer
+fastfetch
 flameshot
 font-jetbrains-mono-nerd-font
 fzf
-fastfetch
 github
 iglance
 jdownloader
