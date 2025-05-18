@@ -36,7 +36,7 @@ pavucontrol
 plasma-desktop
 ripgrep
 rust-all
-sddm
+plasma-login
 timeshift
 ttf-bitstream-vera
 unzip
