@@ -13,9 +13,6 @@ sudo mv update.sh /usr/local/bin
 chsh -s $(which zsh)
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f
-sudo systemctl enable libvirtd
-sudo adduser $USER libvirt
-sudo adduser $USER kvm
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -55,6 +52,6 @@ sudo mv Streamlink_Twitch_GUI /usr/local/bin
 sudo systemctl disable display-manager.service
 nvim > /dev/null 2>&1 &
 xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
-sudo systemctl enable ly
+sudo systemctl enable ly libvirtd.socket libvirtd.service rustdesk
 sudo apt install pop-default-settings -y
 rm -rf $(pwd)
