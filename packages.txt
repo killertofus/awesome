@@ -32,6 +32,7 @@ libxcb-xkb-dev
 lsb-release
 lsd
 lxappearance
+ly-dm
 nemo
 neovim
 nodejs
