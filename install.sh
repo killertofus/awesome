@@ -54,11 +54,6 @@ sudo mv Streamlink_Twitch_GUI /usr/local/bin
 ./configs.sh
 sudo systemctl disable display-manager.service
 nvim > /dev/null 2>&1 &
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-sudo zig build installsystemd
-sudo systemctl disable getty@tty2.service
-cd -
 xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 sudo systemctl enable ly
 sudo apt install pop-default-settings -y
