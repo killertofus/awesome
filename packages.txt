@@ -17,7 +17,6 @@ flatpak
 fonts-hack
 fonts-jetbrains-mono
 fzf
-gnome-disk-utility
 lazygit
 libpam0g-dev
 librewolf
