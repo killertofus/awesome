@@ -11,7 +11,6 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled
 sudo apt update
 sudo -v
-sudo apt purge '*language-*' -y
 xargs sudo apt install < packages.txt -y
 sudo mv update.sh /usr/local/bin
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
@@ -43,10 +42,6 @@ git clone https://github.com/sxyazi/yazi.git
 cargo build --release --locked --manifest-path=yazi/Cargo.toml
 sudo mv yazi/target/release/yazi yazi/target/release/ya /usr/local/bin
 
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
 
 
 
@@ -64,11 +59,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 
 ./configs.sh
 nvim > /dev/null 2>&1 &
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-sudo zig build installsystemd
-sudo systemctl enable ly.service -f
-sudo systemctl disable getty@tty2.service
 cd -
+sudo systemctl enable ly libvirtd.socket libvirtd.service rustdesk
 xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y && sudo apt install nemo -y
 rm -rf $(pwd)
