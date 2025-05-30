@@ -47,4 +47,5 @@ xscreensaver
 xserver-xorg
 zathura
 zathura-pdf-poppler
+zig-default
 zsh
