@@ -4,7 +4,6 @@ apt-transport-https
 awesome
 bat
 blueman
-bluez
 btop
 cronie
 default-jdk
@@ -13,7 +12,6 @@ fastfetch
 feh
 firefox
 flameshot
-flatpak
 fonts-hack
 fonts-jetbrains-mono
 fzf
