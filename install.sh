@@ -59,7 +59,6 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 
 ./configs.sh
 nvim > /dev/null 2>&1 &
-cd -
 sudo systemctl enable ly libvirtd.socket libvirtd.service rustdesk
 xargs sudo apt purge --allow-remove-essential < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y && sudo apt install nemo -y
 rm -rf $(pwd)
