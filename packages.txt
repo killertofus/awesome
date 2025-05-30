@@ -6,7 +6,6 @@ blueman
 bluez
 btop
 build-essential
-ca-certificates
 curl
 default-jdk
 fastfetch
@@ -25,13 +24,11 @@ kmix
 kscreen
 libpam0g-dev
 libxcb-xkb-dev
-lsb-release
 lsd
 lxappearance
 nemo
 neovim
 nodejs
-openssh-client
 pavucontrol
 plasma-desktop
 plasma-login
