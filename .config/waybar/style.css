@@ -11,23 +11,23 @@
 }
 
 #tags button {
-padding: 0 0px;
-margin: 0 0px;
-color: #fff;
+    padding: 0 0px;
+    margin: 0 0px;
+    color: #fff;
 }
 
 #tags button:hover {
-color: #fff;
-box-shadow:#fff;
+    color: #fff;
+    box-shadow:#fff;
 }
 
 #tags button.focused {
-box-shadow:#c50ed2;
-color: #c50ed2;
+    box-shadow:#c50ed2;
+    color: #c50ed2;
 }
 
 #tags button.urgent {
-background-color: #eb4d4b;
+    background-color: #eb4d4b;
 }
 
 #custom-pipewire,
