@@ -89,15 +89,9 @@ local plugins =
 
 
 
-
-
 {'tpope/vim-sleuth'},
 {'ap/vim-css-color'},
 {'HiPhish/rainbow-delimiters.nvim'},
-
-
-
-
 
 
 
@@ -143,7 +137,6 @@ local plugins =
     end
   end
 },
-
 
 
 
@@ -196,7 +189,6 @@ local plugins =
 
 
 
-
 {
     "OXY2DEV/markview.nvim",
     lazy = false,
@@ -207,7 +199,6 @@ local plugins =
         "nvim-tree/nvim-web-devicons"
     }
 },
-
 
 
 
@@ -228,10 +219,6 @@ local plugins =
 
 
 
-
-
-
-
 {"folke/noice.nvim",
 	event = "VeryLazy",
   opts = {
@@ -243,16 +230,11 @@ local plugins =
 
 
 
-
-
 }
 
 
 
-
     }
-
-
 
 
 
@@ -264,12 +246,10 @@ vim.o.inccommand = "split"
 
 
 
-
 require('lualine').setup { 
 options = { theme = 'dracula' 
 }
 }
-
 
 
 
