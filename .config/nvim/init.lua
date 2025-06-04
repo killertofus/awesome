@@ -147,14 +147,6 @@ local plugins =
 
 
 
-
-
-
-
-
-
-
-
 {
   "roobert/tailwindcss-colorizer-cmp.nvim",
 
@@ -240,9 +232,6 @@ local plugins =
 
 
 
-
-
-
 {"folke/noice.nvim",
 	event = "VeryLazy",
   opts = {
@@ -251,8 +240,6 @@ local plugins =
        "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
     },
-
-
 
 
 
@@ -269,9 +256,6 @@ local plugins =
 
 
 
-
-
-
 local opts ={ }
 require("lazy").setup(plugins, opts)
 
@@ -281,12 +265,10 @@ vim.o.inccommand = "split"
 
 
 
-
 require('lualine').setup { 
 options = { theme = 'dracula' 
 }
 }
-
 
 
 
