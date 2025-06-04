@@ -32,7 +32,7 @@ main
 sudo apt update -y
 sudo apt install winehq-staging -y
 chsh -s $(which zsh)
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable JDownloader rustdesk
+flatpak install -y --noninteractive flathub JDownloader rustdesk
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
