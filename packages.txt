@@ -5,6 +5,7 @@ awesome
 bat
 blueman
 btop
+chatterino
 cronie
 default-jdk
 dunst

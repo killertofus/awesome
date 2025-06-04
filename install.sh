@@ -26,7 +26,7 @@ main() {
 main
 sudo apt update
 sudo apt install winehq-staging -y 
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader rustdesk
+flatpak install -y --noninteractive flathub JDownloader rustdesk
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
