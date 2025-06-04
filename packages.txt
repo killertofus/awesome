@@ -3,6 +3,7 @@ apt-transport-https
 awesome
 bat
 btop
+chatterino
 cronie
 curl
 default-jdk
