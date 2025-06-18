@@ -2,7 +2,7 @@
 sed -i 's/feh/wayland/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
 sed -i '3d' packages.txt
-sed -i 's/xscreensaver/wlroots/g' packages.txt
+sed -i 's/xscreensaver/wlroots0.18/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
 sed -i '2 a wayland-protocols' packages.txt
