@@ -434,7 +434,7 @@ end, { description = "open a terminal", group = "launcher" })
 kbd.bind({ MODKEY }, "F1", function()
     cwc.spawn_with_shell("firefox")
 end, { description = "open a web browser", group = "launcher" })
-kbd.bind(MODKEY, "p", function()
+kbd.bind({}, "ALT_L", function()
     cwc.spawn_with_shell(
         'rofi -show drun -show-icons')
 end, { description = "application launcher", group = "launcher" })
