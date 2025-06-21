@@ -1,34 +1,34 @@
-[manager]
-[[manager.prepend_keymap]]
+[mgr]
+[[mgr.prepend_keymap]]
 on   = "<right>"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "!"
 run  = 'shell "$SHELL" --block --confirm'
 desc = "Open"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "Q"
 run  = ".."
 desc = "do nothing"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "q"
 run  = "."
 desc = "do nothing"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "<F2>"
 run  = "quit"
 desc = "quit"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "/"
 run  = 'plugin fzf'
 desc = "Open"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ":"
 run = "plugin zsh"
 desc = "Open"
