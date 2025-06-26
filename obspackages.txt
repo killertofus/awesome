@@ -1,0 +1,9 @@
+jdownloader2
+jellyfin
+librewolf
+ly
+nerdfonts-IBMPlexMono
+nerdfonts-JetBrainsMono
+nerd-iosevka-fonts
+rustdesk-bin
+volumeicon
