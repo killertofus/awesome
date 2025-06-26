@@ -3,7 +3,6 @@ alacritty
 bat
 blueman
 bluez
-bluez-utils
 btop
 dnsmasq
 dunst
@@ -32,6 +31,7 @@ qbittorrent
 qemu
 ripgrep
 rofi
+sbc
 sqlite3
 sqlitebrowser
 steam
