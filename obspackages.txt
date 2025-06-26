@@ -5,5 +5,7 @@ ly
 nerdfonts-IBMPlexMono
 nerdfonts-JetBrainsMono
 nerd-iosevka-fonts
+obs-studio
 rustdesk-bin
 volumeicon
+xarchiver

@@ -21,15 +21,14 @@ lxappearance
 ly
 nemo
 neovim
-networkmanager
+NetworkManager
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
-obs-studio
 openssh
 opi
 picom
-python-libtmux
+python313-libtmux
 qbittorrent
 qemu
 ripgrep
@@ -49,7 +48,6 @@ wget
 wine
 wine-gecko
 wine-mono
-xarchiver
 xorg-x11-server
 xorgx11-xauth
 xscreensaver
