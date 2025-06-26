@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sudo sed -i 's/#download.max_concurrent_connections/download.max_concurrent_connections/g' /etc/zypp/zypp.conf
 sudo env ZYPP_CURL2=1 zypper ref
-sudo env ZYPP_PCK_PRELOAD=1 zypper dup
+sudo env ZYPP_PCK_PRELOAD=1 zypper dup -y
 sudo zypper up -y
 sudo zypper in -y $(cat packages.txt)
 sudo opi in -y < $(cat obspackages.txt)
