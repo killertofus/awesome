@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 sudo zypper up
-sudo zypper addrepo > obslinks.txt
 sudo sed -i 's/#download.max_concurrent_connections/download.max_concurrent_connections/g' /etc/zypp/zypp.conf
 sudo env ZYPP_CURL2=1 zypper ref
 sudo env ZYPP_PCK_PRELOAD=1 zypper dup
@@ -19,8 +18,8 @@ sed -i '2 a wayland-protocols' packages.txt
 sed -i 's/volumeicon/waybar/g' packages.txt
 sed -i '4 a xdg-desktop-portal-wlr' packages.txt
 sed -i '3 a xdg-desktop-portal-gtk' packages.txt
-sudo zypper install < packages.txt
-sudo zypper install < obs_packages.txt
+sudo zypper install -y < packages.txt
+sudo opi install -y < obs_packages.txt
 sudo -v
 fc-cache -f
 chsh -s $(which zsh)

@@ -27,6 +27,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 obs-studio
 openssh
+opi
 picom
 python-libtmux
 qbittorrent
