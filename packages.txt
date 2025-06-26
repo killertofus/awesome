@@ -53,5 +53,5 @@ xorgx11-xauth
 xscreensaver
 yazi
 zathura
-zathura-pdf-mupdf
+zathura-plugin-pdf-mupdf
 zsh
