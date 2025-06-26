@@ -18,7 +18,6 @@ google-noto-sans-cjk-fonts
 hack-fonts
 lsd
 lxappearance
-ly
 MozillaFirefox
 nemo
 neovim
@@ -41,14 +40,13 @@ tmux
 unzip
 virt-manager
 vlc
-volumeicon
 w3m
 wget
 wine
 wine-gecko
 wine-mono
 xorg-x11-server
-xorgx11-xauth
+xorg-x11-xauth
 xscreensaver
 yazi
 zathura
