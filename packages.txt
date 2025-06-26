@@ -13,6 +13,9 @@ flameshot
 fzf
 git
 gnome-disk-utility
+google-noto-coloremoji-fonts
+google-noto-fonts
+google-noto-sans-cjk-fonts
 hack-fonts
 lsd
 lxappearance
@@ -21,9 +24,6 @@ MozillaFirefox
 nemo
 neovim
 NetworkManager
-google-noto-fonts
-google-noto-sans-fonts-cjk
-google-noto-coloremoji-fonts
 openssh
 opi
 picom
