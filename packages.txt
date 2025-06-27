@@ -25,6 +25,7 @@ NetworkManager
 openssh
 opi
 picom
+polkit-gnome
 python313-libtmux
 qbittorrent
 qemu
