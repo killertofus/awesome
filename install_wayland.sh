@@ -7,7 +7,6 @@ sudo zypper refresh
 sudo systemctl set-default graphical.target
 sed -i 's/dwm/dwl/g' configs.sh
 sed -i '2 a cwc' obspackages.txt
-sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
 sed -i '19d;20d' configs.sh
 sed -i 's/feh/wayland/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
@@ -18,8 +17,8 @@ sed -i '2 a wayland-protocols' packages.txt
 sed -i 's/volumeicon/waybar/g' packages.txt
 sed -i '4 a xdg-desktop-portal-wlr' packages.txt
 sed -i '3 a xdg-desktop-portal-gtk' packages.txt
-sudo zypper install -y < packages.txt
-sudo opi install -y < obs_packages.txt
+sudo zypper in -y $(cat packages.txt)
+sudo opi -n -m $(cat obspackages.txt)
 sudo -v
 fc-cache -f
 chsh -s $(which zsh)
