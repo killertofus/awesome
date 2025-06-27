@@ -4,7 +4,7 @@ sudo env ZYPP_CURL2=1 zypper ref
 sudo env ZYPP_PCK_PRELOAD=1 zypper dup -y
 sudo zypper up -y
 sudo zypper in -y $(cat packages.txt)
-sudo opi in -n $(cat obspackages.txt)
+sudo opi -n $(cat obspackages.txt)
 sudo systemctl set-default graphical.target
 sudo mkdir -p /usr/share/xsessions/
 sudo -v
