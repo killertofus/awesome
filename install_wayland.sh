@@ -8,12 +8,12 @@ sudo systemctl set-default graphical.target
 sed -i 's/dwm/dwl/g' configs.sh
 sed -i '2 a cwc' obspackages.txt
 sed -i '19d;20d' configs.sh
-sed -i 's/feh/wayland/g' packages.txt
+sed -i 's/feh/wayland-devel/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
-sed -i 's/xscreensaver/wlroots/g' packages.txt
+sed -i 's/xscreensaver/wlroots-devel/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
-sed -i '2 a wayland-protocols' packages.txt
+sed -i '2 a wayland-protocols-devel' packages.txt
 sed -i 's/volumeicon/waybar/g' packages.txt
 sed -i '4 a xdg-desktop-portal-wlr' packages.txt
 sed -i '3 a xdg-desktop-portal-gtk' packages.txt
