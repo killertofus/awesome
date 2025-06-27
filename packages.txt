@@ -29,6 +29,7 @@ noto-fonts-emoji
 obs-studio
 openssh
 picom
+polkit-gnome
 python-libtmux
 qbittorrent
 qemu-base
