@@ -17,6 +17,7 @@ google-noto-fonts
 google-noto-sans-cjk-fonts
 hack-fonts
 libX11-devel
+libXft-devel
 lsd
 lxappearance
 MozillaFirefox
