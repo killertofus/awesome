@@ -29,6 +29,7 @@ obs-studio
 pavucontrol
 picom
 policykit-1-gnome
+polkit-gnome
 python3-libtmux
 qbittorrent
 ripgrep
