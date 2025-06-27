@@ -14,6 +14,7 @@ flameshot
 fzf
 git
 gnome-disk-utility
+hack-fonts
 jellyfin-server
 lsd
 lxappearance
@@ -27,6 +28,7 @@ noto-fonts-emoji
 obs-studio
 openssh
 picom
+polkit-gnome
 python-libtmux
 qbittorrent
 qemu
@@ -38,7 +40,6 @@ steam
 streamlink
 timeshift
 tmux
-hack-fonts
 unzip
 virt-manager
 vlc
