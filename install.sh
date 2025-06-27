@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
-sudo zypper up
-sudo zypper addrepo > obslinks.txt
 sudo sed -i 's/#download.max_concurrent_connections/download.max_concurrent_connections/g' /etc/zypp/zypp.conf
 sudo env ZYPP_CURL2=1 zypper ref
-sudo env ZYPP_PCK_PRELOAD=1 zypper dup
-sudo zypper refresh
-sudo zypper install -y < packages.txt
-sudo zypper install -y < obs_packages.txt
+sudo env ZYPP_PCK_PRELOAD=1 zypper dup -y
+sudo zypper up -y
+sudo zypper in -y $(cat packages.txt)
+sudo opi -n -m $(cat obspackages.txt)
 sudo systemctl set-default graphical.target
 sudo mkdir -p /usr/share/xsessions/
 sudo -v

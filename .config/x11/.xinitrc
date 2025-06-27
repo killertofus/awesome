@@ -52,9 +52,10 @@ xscreensaver -nosplash &
 blueman-manager &
 volumeicon &
 /opt/piavpn/bin/pia-client %u &
+feh --bg-fill --no-fehbg ~/.config/dwm/wallpaper.jpg &
 picom -b &
-nm-applet &
+exec slstatus &
 flameshot &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
-exec awesome
+exec dwm
