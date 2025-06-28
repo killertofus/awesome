@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-sudo zypper up
+sudo zypper up -y
 sudo sed -i 's/#download.max_concurrent_connections/download.max_concurrent_connections/g' /etc/zypp/zypp.conf
 sudo env ZYPP_CURL2=1 zypper ref
 sudo env ZYPP_PCK_PRELOAD=1 zypper dup
 sudo zypper refresh
-sudo systemctl set-default graphical.target
 sed -i 's/dwm/dwl/g' configs.sh
 sed -i '19d;20d' configs.sh
 sed -i 's/feh/wayland-devel/g' packages.txt
@@ -18,6 +17,7 @@ sed -i '4 a xdg-desktop-portal-wlr' packages.txt
 sed -i '3 a xdg-desktop-portal-gtk' packages.txt
 sudo zypper in -y $(cat packages.txt)
 sudo opi -n -m $(cat obspackages.txt)
+sudo systemctl set-default graphical.target
 sudo -v
 fc-cache -f
 chsh -s $(which zsh)
