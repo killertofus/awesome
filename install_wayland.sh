@@ -8,7 +8,7 @@ sed -i 's/dwm/dwl/g' configs.sh
 sed -i '19d;20d' configs.sh
 sed -i 's/feh/wayland-devel/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
-sed -i 's/xscreensaver/wlroots-devel/g' packages.txt
+sed -i 's/xscreensaver/wlroots-0_18-devel/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
 sed -i '2 a libinput-devel' packages.txt
