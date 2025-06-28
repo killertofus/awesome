@@ -11,6 +11,7 @@ sed -i 's/rofi/rofi-wayland/g' packages.txt
 sed -i 's/xscreensaver/wlroots-devel/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
+sed -i '2 a libinput-devel' packages.txt
 sed -i '2 a wayland-protocols-devel' packages.txt
 sed -i 's/volumeicon/waybar/g' packages.txt
 sed -i '4 a xdg-desktop-portal-wlr' packages.txt
