@@ -1,4 +1,5 @@
 7zip
+awesome
 alacritty
 bat
 blueman
