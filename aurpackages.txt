@@ -1,4 +1,4 @@
-chatterino2-git
+chatterino2-bin
 jdownloader2
 librewolf-bin
 piavpn-bin
