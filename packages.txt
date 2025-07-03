@@ -1,6 +1,6 @@
 7zip
-awesome
 alacritty
+awesome
 bat
 blueman
 bluez
@@ -17,8 +17,8 @@ google-noto-coloremoji-fonts
 google-noto-fonts
 google-noto-sans-cjk-fonts
 hack-fonts
-lsd
 libvirt-daemon
+lsd
 lxappearance
 MozillaFirefox
 nemo
