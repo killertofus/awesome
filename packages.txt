@@ -54,8 +54,6 @@ volumeicon
 w3m
 wget
 wine
-wine-gecko
-wine-mono
 xarchiver
 xorg-server
 xorg-xauth
