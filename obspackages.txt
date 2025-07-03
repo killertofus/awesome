@@ -5,6 +5,6 @@ nerdfonts-IBMPlexMono
 nerdfonts-JetBrainsMono
 nerd-iosevka-fonts
 obs-studio
-rustdesk-bin
+rustdesk
 volumeicon
 xarchiver
