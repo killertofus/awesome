@@ -18,6 +18,7 @@ google-noto-fonts
 google-noto-sans-cjk-fonts
 hack-fonts
 lsd
+libvirt-daemon
 lxappearance
 MozillaFirefox
 nemo
