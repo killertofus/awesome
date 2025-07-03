@@ -55,6 +55,6 @@ volumeicon &
 picom -b &
 nm-applet &
 flameshot &
-/usr/lib/exec/polkit-gnome-authentication-agent-1 &
+/usr/libexec/polkit-gnome-authentication-agent-1 &
 dunst &
 exec awesome
