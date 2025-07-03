@@ -16,6 +16,7 @@ google-noto-coloremoji-fonts
 google-noto-fonts
 google-noto-sans-cjk-fonts
 hack-fonts
+libvirt-daemon
 libX11-devel
 libXft-devel
 libXinerama-devel
