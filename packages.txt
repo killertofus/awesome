@@ -47,8 +47,6 @@ vlc
 w3m
 wget
 wine
-wine-gecko
-wine-mono
 xorg-x11-server
 xorg-x11-xauth
 xscreensaver
