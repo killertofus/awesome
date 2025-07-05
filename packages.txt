@@ -17,6 +17,7 @@ gnome-disk-utility
 jellyfin-server
 lsd
 lxappearance
+lxqt-archiver
 ly
 nemo
 neovim
@@ -52,7 +53,6 @@ volumeicon
 w3m
 wget
 wine
-xarchiver
 xorg-server
 xorg-xauth
 xscreensaver
