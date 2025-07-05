@@ -13,6 +13,7 @@ gnome-disk-utility
 kmix
 kscreen
 lsd
+lxqt-archiver
 nemo
 neovim
 networkmanager
@@ -35,6 +36,5 @@ unzip
 vlc
 w3m
 wget
-xarchiver
 xscreensaver
 zsh
