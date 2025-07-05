@@ -1,1 +1,9 @@
-volumeicon jellyfin ly nerd-iosevka-fonts nerdfonts-IBMPlexMono nerdfonts-JetBrainsMono jdownloader2 librewolf rustdesk-bin
+jellyfin
+librewolf
+ly
+nerdfonts-IBMPlexMono
+nerdfonts-JetBrainsMono
+nerd-iosevka-fonts
+obs-studio
+rustdesk
+volumeicon
