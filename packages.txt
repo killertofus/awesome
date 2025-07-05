@@ -22,6 +22,7 @@ librewolf
 libxcb-xkb-dev
 lsd
 lxappearance
+lxqt-archiver
 ly-dm
 nemo
 neovim
@@ -45,7 +46,6 @@ virt-manager
 vlc
 volumeicon-alsa
 w3m
-xarchiver
 xscreensaver
 zathura
 zathura-pdf-poppler
