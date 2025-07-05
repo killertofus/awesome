@@ -26,6 +26,7 @@ libpam0g-dev
 libxcb-xkb-dev
 lsd
 lxappearance
+lxqt-archiver
 nemo
 neovim
 nodejs
@@ -39,6 +40,5 @@ ttf-bitstream-vera
 unzip
 vlc
 wget
-xarchiver
 xscreensaver
 zsh
