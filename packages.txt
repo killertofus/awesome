@@ -20,6 +20,7 @@ hack-fonts
 libvirt-daemon
 lsd
 lxappearance
+lxqt-archiver
 MozillaFirefox
 nemo
 neovim

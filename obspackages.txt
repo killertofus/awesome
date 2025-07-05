@@ -7,4 +7,3 @@ nerd-iosevka-fonts
 obs-studio
 rustdesk
 volumeicon
-xarchiver
