@@ -4,7 +4,7 @@ sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
 sed -i '19d;20d' configs.sh
 sed -i 's/feh/wayland/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
-sed -i 's/xscreensaver/wlroots/g' packages.txt
+sed -i 's/xscreensaver/wlroots0.18/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
 sed -i '2 a wayland-protocols' packages.txt
