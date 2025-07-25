@@ -1,34 +1,42 @@
-set_prompt_vars() {
-  psvar=( )
+autoload -Uz compinit && compinit
 
-  git_branch=$(git branch --show-current 2>/dev/null)
-
-  if [[ -n $git_branch ]]; then
-    psvar+=( $git_branch )
-  else
-    psvar+=( $(git rev-parse --short 2>/dev/null) )
+###
+# ADD GIT INFO TO PROMPT
+###
+parse_git_branch() {
+  local branch=""
+  branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+  local git_status=$(git status --porcelain 2>/dev/null)
+  local color=green
+  if echo "$git_status" | grep -q "^ M"; then
+    color=yellow
+    branch="${branch}*"
+  fi
+  if echo "$git_status" | grep -qE "^ A|^\?\?"; then
+    color=yellow
+    branch="${branch}+"
+  fi
+  if echo "$git_status" | grep -q "^ D"; then
+    color=yellow
+    branch="${branch}-"
   fi
 
-  if [[ $(git status --porcelain 2>/dev/null) ]]; then
-    psvar+=( magenta )
+  if [[ -n "$branch" ]]; then
+    branch=[%F{${color}}${branch}%F{reset}]
   fi
+  echo "$branch"
 }
+update_prompt() {
+     PS1="❯ %n %1~$(parse_git_branch) "
 
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd set_prompt_vars
+}
+precmd_functions+=(update_prompt)
+update_prompt
 
-# directory
-PROMPT='%F{blue}%2~%f '
 
-# Git HEAD
-PROMPT+="%(2V.%F{%2v}.)%1v%f%(1V. .)"
 
-# prompt char
-PROMPT+='%F{%(?.green.red)}%#%f'
-
-local TERM_STRING='%(!.#.❯)'
-PROMPT="$TERM_STRING"
 
 autoload -U colors && colors
 # Custom bash prompt via kirsle.net/wizards/ps1.html
-export PS1="$(tput setaf 5)❯$(tput sgr0) %d "
+#PROMPT='%B%m%~%b$(git_super_status) %# '
+#export PS1="$(tput setaf 5)❯$(tput sgr0) %d $(git_super_status) "
