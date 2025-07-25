@@ -27,7 +27,7 @@ parse_git_branch() {
   echo "$branch"
 }
 update_prompt() {
-     PS1="❯ %n %1~$(parse_git_branch) "
+     PS1="$(tput setaf 5)❯$(tput sgr0) %~ $(parse_git_branch) "
 
 }
 precmd_functions+=(update_prompt)
