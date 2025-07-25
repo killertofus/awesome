@@ -9,15 +9,15 @@ parse_git_branch() {
   local git_status=$(git status --porcelain 2>/dev/null)
   local color=green
   if echo "$git_status" | grep -q "^ M"; then
-    color=yellow
+    color=#DA70D6
     branch="${branch}*"
   fi
   if echo "$git_status" | grep -qE "^ A|^\?\?"; then
-    color=yellow
+    color=cyan
     branch="${branch}+"
   fi
   if echo "$git_status" | grep -q "^ D"; then
-    color=yellow
+    color=red
     branch="${branch}-"
   fi
 
