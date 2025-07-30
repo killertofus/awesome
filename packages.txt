@@ -39,3 +39,6 @@ xscreensaver
 yazi
 zathura
 zathura-pdf-poppler
+zsh-autocomplete
+zsh-autosuggestions
+zsh-syntax-highlighting
