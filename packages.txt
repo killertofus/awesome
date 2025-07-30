@@ -21,6 +21,7 @@ lsd
 lxappearance
 lxqt-archiver
 ly
+mpv
 nemo
 neovim
 networkmanager
@@ -50,7 +51,6 @@ ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
 unzip
 virt-manager
-vlc
 volumeicon
 w3m
 wget
@@ -62,3 +62,6 @@ yazi
 zathura
 zathura-pdf-mupdf
 zsh
+zsh-autocomplete
+zsh-autosuggestions
+zsh-syntax-highlighting
