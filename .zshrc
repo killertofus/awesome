@@ -48,8 +48,6 @@ autoload -U colors && colors
 #alias here
 alias cat="bat"
 alias ls="lsd -a"
-alias lz="lazygit"
-alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 
 
 LS_COLORS+=':ow=01;33'
@@ -61,15 +59,3 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 
 #startups here
-if [ -z "$TMUX" ]
-then
-    tmux attach -t TMUX || tmux new -s TMUX \; new-window \ yazi;
-fi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
