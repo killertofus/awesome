@@ -7,3 +7,6 @@ nerd-iosevka-fonts
 obs-studio
 rustdesk
 volumeicon
+zsh-autocomplete
+zsh-autosuggestions
+zsh-syntax-highlighting
