@@ -1,8 +1,4 @@
-autoload -Uz compinit && compinit
-
-###
 # ADD GIT INFO TO PROMPT
-###
 parse_git_branch() {
   local branch=""
   branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
@@ -30,13 +26,57 @@ update_prompt() {
      PS1="$(tput setaf 5)❯$(tput sgr0) %~ $(parse_git_branch) "
 
 }
-precmd_functions+=(update_prompt)
-update_prompt
+#precmd_functions+=(update_prompt)
+#update_prompt
+
+
+#exports here
+export EDITOR=nvim
+export BAT_THEME=Dracula
+#export HISTFILE=~/.zsh_history
+#HISTSIZE=8000
+#SAVEHIST=8000
 
 
 
 
+
+#sources here
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+
+#autoload
+autoload -Uz compinit && compinit
 autoload -U colors && colors
-# Custom bash prompt via kirsle.net/wizards/ps1.html
-#PROMPT='%B%m%~%b$(git_super_status) %# '
-#export PS1="$(tput setaf 5)❯$(tput sgr0) %d $(git_super_status) "
+
+
+#alias here
+alias cat="bat"
+alias ls="lsd -a"
+alias lz="lazygit"
+alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
+
+
+LS_COLORS+=':ow=01;33'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+
+
+
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+
+
+#startups here
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX \; new-window \ yazi;
+fi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
