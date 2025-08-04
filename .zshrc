@@ -7,8 +7,7 @@ export HISTFILE=~/.zsh_history
 HISTSIZE=8000
 SAVEHIST=8000
 
-
-PS1="%~ ❯ "
+PS1="%F{green}%~ %F{magenta}❯ "
 
 
 
@@ -21,7 +20,7 @@ source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 #autoload
 autoload -Uz compinit && compinit
 autoload -U colors && colors
-
+autoload -U promptinit && promptinit
 
 #alias here
 alias cat="bat"
@@ -32,7 +31,6 @@ alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {
 
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-
 
 
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
