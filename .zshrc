@@ -1,3 +1,42 @@
+# ADD GIT INFO TO PROMPT
+parse_git_branch() {
+  local branch=""
+  branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+  local git_status=$(git status --porcelain 2>/dev/null)
+  local color=green
+  if echo "$git_status" | grep -q "^ M"; then
+    color=#DA70D6
+    branch="${branch}*"
+  fi
+  if echo "$git_status" | grep -qE "^ A|^\?\?"; then
+    color=cyan
+    branch="${branch}+"
+  fi
+  if echo "$git_status" | grep -q "^ D"; then
+    color=red
+    branch="${branch}-"
+  fi
+
+  if [[ -n "$branch" ]]; then
+    branch=[%F{${color}}${branch}%F{reset}]
+  fi
+  echo "$branch"
+}
+update_prompt() {
+PS1="%F{cyan}%~
+%F{green}%1~ %F{magenta}❯%{$reset_color%}$(parse_git_branch) "
+
+}
+precmd_functions+=(update_prompt)
+update_prompt
+
+
+
+
+
+
+
+
 
 
 #exports here
@@ -9,18 +48,22 @@ SAVEHIST=8000
 
 PS1="%F{green}%~ %F{magenta}❯ "
 
-
+#PROMPT='%B%m%~%b$(git_super_status) %# '
 
 #sources here
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
+#source ~/v/zsh-git-prompt-0.6/zshrc.sh
 
 #autoload
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 autoload -U promptinit && promptinit
+
+
+
+
 
 #alias here
 alias cat="bat"
@@ -28,8 +71,7 @@ alias ls="lsd -a"
 alias lz="lazygit"
 alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 
-
-LS_COLORS+=':ow=01;33'
+#LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 
