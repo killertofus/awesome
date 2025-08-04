@@ -1,43 +1,14 @@
-# ADD GIT INFO TO PROMPT
-parse_git_branch() {
-  local branch=""
-  branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-  local git_status=$(git status --porcelain 2>/dev/null)
-  local color=green
-  if echo "$git_status" | grep -q "^ M"; then
-    color=#DA70D6
-    branch="${branch}*"
-  fi
-  if echo "$git_status" | grep -qE "^ A|^\?\?"; then
-    color=cyan
-    branch="${branch}+"
-  fi
-  if echo "$git_status" | grep -q "^ D"; then
-    color=red
-    branch="${branch}-"
-  fi
-
-  if [[ -n "$branch" ]]; then
-    branch=[%F{${color}}${branch}%F{reset}]
-  fi
-  echo "$branch"
-}
-update_prompt() {
-     PS1="$(tput setaf 5)❯$(tput sgr0) %~ $(parse_git_branch) "
-
-}
-#precmd_functions+=(update_prompt)
-#update_prompt
 
 
 #exports here
 export EDITOR=nvim
 export BAT_THEME=Dracula
-#export HISTFILE=~/.zsh_history
-#HISTSIZE=8000
-#SAVEHIST=8000
+export HISTFILE=~/.zsh_history
+HISTSIZE=8000
+SAVEHIST=8000
 
 
+PS1="%~ ❯ "
 
 
 
