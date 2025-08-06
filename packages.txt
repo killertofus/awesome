@@ -14,6 +14,7 @@ kmix
 kscreen
 lsd
 lxqt-archiver
+mpv
 nemo
 neovim
 networkmanager
@@ -33,7 +34,6 @@ ttf-iosevka-nerd
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
 unzip
-vlc
 w3m
 wget
 xscreensaver
