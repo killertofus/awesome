@@ -1,47 +1,81 @@
+# ADD GIT INFO TO PROMPT
+parse_git_branch() {
+  local branch=""
+  branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+  local git_status=$(git status --porcelain 2>/dev/null)
+  local color=green
+  if echo "$git_status" | grep -q "^ M"; then
+    color=#DA70D6
+    branch="${branch}*"
+  fi
+  if echo "$git_status" | grep -qE "^ A|^\?\?"; then
+    color=cyan
+    branch="${branch}+"
+  fi
+  if echo "$git_status" | grep -q "^ D"; then
+    color=red
+    branch="${branch}-"
+  fi
 
-ZSH_THEME="dracula"
+  if [[ -n "$branch" ]]; then
+    branch=[%F{${color}}${branch}%F{reset}]
+  fi
+  echo "$branch"
+}
+update_prompt() {
+PS1="%F{cyan}%~
+%F{green}%1~ %F{magenta}❯%{$reset_color%}$(parse_git_branch) "
 
-plugins=(git
-zsh-autosuggestions)
+}
+precmd_functions+=(update_prompt)
+update_prompt
+
+
+
+
+
+
+
+
 
 
 #exports here
-export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 export BAT_THEME=Dracula
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-export ZSH="$HOME/.local/share/oh-my-zsh"
+export HISTFILE=~/.zsh_history
+HISTSIZE=8000
+SAVEHIST=8000
 
-source $ZSH/oh-my-zsh.sh 
+PS1="%F{green}%~ %F{magenta}❯ "
+
+#PROMPT='%B%m%~%b$(git_super_status) %# '
+
+#sources here
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source ~/v/zsh-git-prompt-0.6/zshrc.sh
+
+#autoload
+autoload -Uz compinit && compinit
+autoload -U colors && colors
+autoload -U promptinit && promptinit
+
+
+
+
 
 #alias here
 alias cat="bat"
 alias ls="lsd -a"
 alias lz="lazygit"
 alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
-autoload -U colors && colors
-PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% " 
 
-[[ -r "$HOME"/.local/share/marlonrichert/zsh-snap ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git "$HOME"/.local/share/marlonrichert/zsh-snap
-
-LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-source "$HOME"/.local/share/marlonrichert/zsh-snap/znap.zsh
 
-znap prompt sindresorhus/pure
 
-znap source marlonrichert/zsh-autocomplete
-znap source zsh-users/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting
-znap source marlonrichert/zcolors
-znap eval zcolors "zcolors ${(q)LS_COLORS}"
-znap source dracula/zsh
-
-znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
-compctl -K    _pyenv pyenv
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+
 
 #startups here
 if [ -z "$TMUX" ]

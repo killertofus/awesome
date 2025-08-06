@@ -5,7 +5,7 @@ sudo env ZYPP_CURL2=1 zypper ref
 sudo env ZYPP_PCK_PRELOAD=1 zypper dup
 sudo zypper refresh
 sed -i 's/dwm/dwl/g' configs.sh
-sed -i '19d;20d' configs.sh
+sed -i '13d;14d' configs.sh
 sed -i 's/feh/wayland-devel/g' packages.txt
 sed -i 's/rofi/rofi-wayland/g' packages.txt
 sed -i 's/xscreensaver/wlroots-0_18-devel/g' packages.txt
