@@ -23,26 +23,43 @@ parse_git_branch() {
   echo "$branch"
 }
 update_prompt() {
-     PS1="$(tput setaf 5)❯$(tput sgr0) %~ $(parse_git_branch) "
+PS1="%F{cyan}%~
+%F{green}%1~ %F{magenta}❯%{$reset_color%}$(parse_git_branch) "
 
 }
 precmd_functions+=(update_prompt)
 update_prompt
 
 
+
+
+
+
+
+
+
+
 #exports here
 export EDITOR=nvim
 export BAT_THEME=Dracula
- export HISTFILE="$XDG_STATE_HOME"/zsh/history
-#sources here
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
- source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
- source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+export HISTFILE=~/.zsh_history
+HISTSIZE=8000
+SAVEHIST=8000
 
+
+#sources here
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source ~/v/zsh-git-prompt-0.6/zshrc.sh
 
 #autoload
 autoload -Uz compinit && compinit
 autoload -U colors && colors
+autoload -U promptinit && promptinit
+
+
+
 
 
 #alias here
@@ -51,10 +68,8 @@ alias ls="lsd -a"
 alias lz="lazygit"
 alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 
-
-LS_COLORS+=':ow=01;33'
+#LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-
 
 
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
