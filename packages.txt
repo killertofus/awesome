@@ -42,3 +42,6 @@ vlc
 wget
 xscreensaver
 zsh
+zsh-autocomplete
+zsh-autosuggestions
+zsh-syntax-highlighting
