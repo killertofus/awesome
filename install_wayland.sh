@@ -3,7 +3,6 @@ sed -i 's/dwm/dwl/g' configs.sh
 sudo sed -i 's/debug/!debug/g' /etc/makepkg.conf
 sed -i '13d;14d' configs.sh
 sed -i 's/feh/wayland/g' packages.txt
-sed -i 's/rofi/rofi-wayland/g' packages.txt
 sed -i 's/xscreensaver/wlroots0.18/g' packages.txt
 sed -i 's/picom/swww/g' packages.txt
 sed -i 's/lxappearance/nwg-look/g' packages.txt
