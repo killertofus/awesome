@@ -20,4 +20,3 @@ app-text/zathura-meta cb djvu epub postscript
 dev-vcs/subversion perl
 app-emulation/libvirt script
 x11-libs/xapp introspection
-gnome-extra/nemo introspection

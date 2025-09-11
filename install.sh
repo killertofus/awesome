@@ -2,9 +2,9 @@
 doas sed -i '11 a ILoveCandy' /etc/pacman.conf
 doas sed -i '12 a ILoveCandy' /etc/pacman.conf
 doas emerge mirrorselect
-doas eselect repository enable librewolf zugaina guru
 doas mirrorselect -s3 -b10 -D
 doas emerge --avtDUu @world
+doas mv portage/* /etc/portage
 doas emerge $(cat packages.txt)
 fc-cache -f
 doas chsh -s $(which zsh)
