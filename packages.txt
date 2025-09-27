@@ -36,7 +36,6 @@ ttf-nerd-fonts-symbols
 unzip
 w3m
 wget
-xscreensaver
 zsh
 zsh-autocomplete
 zsh-autosuggestions

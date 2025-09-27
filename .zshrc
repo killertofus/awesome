@@ -23,7 +23,8 @@ parse_git_branch() {
   echo "$branch"
 }
 update_prompt() {
-     PS1="$(tput setaf 5)❯$(tput sgr0) %~ $(parse_git_branch) "
+PS1="%F{cyan}%~
+%F{green}%1~ %F{magenta}❯%{$reset_color%}$(parse_git_branch)"
 
 }
 precmd_functions+=(update_prompt)
