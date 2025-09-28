@@ -5,7 +5,7 @@ doas emerge mirrorselect
 doas mirrorselect -s3 -b10 -D
 doas emerge --avtDUu @world
 doas mv portage/* /etc/portage
-doas emerge $(cat packages.txt)
+doas emerge $(< packages.txt)
 fc-cache -f
 doas chsh -s $(which zsh)
 doas emerge --depclean
