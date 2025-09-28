@@ -17,7 +17,7 @@ hack
 jdownloader
 jellyfin-bin
 lazygit
-librewolf
+librewolf-bin
 libtmux
 lsd
 lxqt-archiver
