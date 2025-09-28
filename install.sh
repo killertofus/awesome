@@ -8,10 +8,10 @@ sudo pacman -S --needed git base-devel --noconfirm
 git clone https://aur.archlinux.org/yay.git
 makepkg -siD yay --noconfirm
 sudo pacman -Syu --noconfirm
-sudo pacman -S $(cat packages.txt | cut -d' ' -f1) --noconfirm
+sudo pacman -S - < packages.txt --noconfirm
 fc-cache -f
 chsh -s $(which zsh)
-for word in $(cat aurpackages.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
+yay -S - < aurpackages.txt --noconfirm --mflags --skipinteg
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly piavpn libvirtd.socket libvirtd.service rustdesk
