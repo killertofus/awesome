@@ -11,12 +11,12 @@ local mod = enum.modifier
 local button = enum.mouse_btn
 local direction = enum.direction
 
-local MODKEY = mod.LOGO
+local MODKEY = mod.ALT
 local TERMINAL = "alacritty"
 
 -- prevent hotkey conflict on nested session
 if cwc.is_nested() then
-    MODKEY = mod.ALT
+    MODKEY = mod.Caps_lock
 end
 
 ------------------- pointer/mouse binding ---------------------
@@ -113,7 +113,8 @@ kbd.bind({ MODKEY, mod.CTRL }, "0", function()
 end, { description = "toggle client always visible", group = "client" })
 
 --------------------- stack based
-kbd.bind({ MODKEY, mod.CTRL }, "j", function()
+
+kbd.bind(MODKEY, "j", function()
     cful.client.focusidx(1)
 end, { description = "focus next client relative by index", group = "client" })
 
@@ -149,7 +150,7 @@ kbd.bind({ MODKEY }, "bracketright", function()
 end, { description = "cycle move focused client to next screen", group = "client" })
 
 --------------------- direction based
-kbd.bind(MODKEY, "j", function()
+kbd.bind({ MODKEY, mod.CTRL }, "j", function()
     local c = cwc.client.focused()
     if c then
         local near = c:get_nearest(direction.DOWN)
