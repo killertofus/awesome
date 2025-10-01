@@ -6,3 +6,4 @@ app-misc/nwg-look ~amd64
 app-misc/yazi ~amd64
 x11-apps/xcur2png
 media-fonts/nerdfonts ~amd64
+dev-vcs-lazygit ~amd64
