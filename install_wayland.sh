@@ -19,10 +19,10 @@ sudo -v
 sudo pacman -S --needed git base-devel --noconfirm
 sudo pacman -Syu --noconfirm
 sudo -v
-sudo pacman -S $(cat packages.txt | cut -d' ' -f1) --noconfirm
+sudo pacman -S - < packages.txt --noconfirm
 fc-cache -f
 chsh -s $(which zsh)
-for word in $(cat aurpackages.txt); do yay -S --noconfirm --mflags --skipinteg $word || true; done
+yay -S - < aurpackages.txt --noconfirm --mflags --skipinteg
 yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly piavpn rustdesk libvirtd.service libvirtd.socket
