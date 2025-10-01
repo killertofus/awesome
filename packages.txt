@@ -40,7 +40,6 @@ ttf-bitstream-vera
 unzip
 vlc
 wget
-xscreensaver
 zsh
 zsh-autocomplete
 zsh-autosuggestions
