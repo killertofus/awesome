@@ -17,8 +17,8 @@ sed -i '2 a wayland-protocols-devel' packages.txt
 sed -i 's/volumeicon/waybar/g' packages.txt
 sed -i '4 a xdg-desktop-portal-wlr' packages.txt
 sed -i '3 a xdg-desktop-portal-gtk' packages.txt
-sudo zypper in -y $(cat packages.txt)
-sudo opi -n -m $(cat obspackages.txt)
+sudo zypper in -y - < packages.txt
+sudo opi -n -m $(< obspackages.txt)
 sudo -v
 fc-cache -f
 chsh -s $(which zsh)
