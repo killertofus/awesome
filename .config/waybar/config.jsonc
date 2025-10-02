@@ -4,10 +4,10 @@
    "spacing": 0,
 
    "_Modules_": "Choose the order of the modules",
-   "modules-left": ["custom/logo", "group/r-logo", 
+   "modules-left": ["custom/workspaces", "group/r-logo", 
                     "group/l-tags", "dwl/tags", "group/r-tags"],
 
-   "modules-center": ["clock", "dwl/window"],
+   "modules-center": ["clock"],
 
    "modules-right": ["pulseaudio", "network", "battery", "idle_inhibitor", "group/r-system",
                      "group/l-tray", "tray", "group/power-menu"], 

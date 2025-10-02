@@ -72,9 +72,9 @@
       "on-click": "simplewc-msg --action quit"
       
    },
-   "custom/lock": {
-      "format": " \uf023 ",
+   "custom/workspaces": {
+      "format": "2",
       "tooltip": false,
-      "on-click": "simplewc-msg --action lock"
+      "on-click": "wtype -M alt 2 -m alt "
    }
 }
