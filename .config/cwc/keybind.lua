@@ -313,7 +313,7 @@ kbd.bind({ mod.LOGO, mod.ALT }, "k", function()
 end, { description = "focus the previous screen", group = "screen" })
 
 ----------------- tag
-for i = 1, 9 do
+for i = 1, 2 do
     local i_str = tostring(i)
     kbd.bind(MODKEY, i_str, function()
         local t = cwc.screen.focused():get_tag(i)

@@ -11,7 +11,6 @@ cwc.spawn_with_shell("/opt/piavpn/bin/pia-client %u")
 cwc.spawn_with_shell("nm-applet")
 cwc.spawn_with_shell("dunst")
 cwc.spawn_with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
-
 --local idle_cmd = "playerctl pause; cwctl screen --filter '*' set dpms false"
 --local resume_cmd = "playerctl play; cwctl screen --filter='*' set dpms true"
 --local swayidle_cmd = string.format('swayidle -w timeout 3600 "%s" resume "%s"', idle_cmd, resume_cmd)

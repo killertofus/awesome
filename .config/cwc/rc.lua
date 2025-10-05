@@ -81,24 +81,24 @@ cwc.connect_signal("screen::new", function(screen)
     if screen.name == "DP-2" then
         screen:set_position(1920, 0)
     end
-
     -- don't apply if restored since it will reset whats manually changed
     if screen.restored then return end
 
     -- set all "general" tags to master/stack mode by default
-    for i = 1, 9 do
+    for i = 1, 2 do
         tag.layout_mode(i, enum.layout_mode.FLOATING, screen)
     end
 
+    return cwc.client.focused().title
     -- set workspace 2, 8, and 9 to floating mode
     tag.layout_mode(2, enum.layout_mode.FLOATING, screen)
-    tag.layout_mode(8, enum.layout_mode.FLOATING, screen)
-    tag.layout_mode(9, enum.layout_mode.FLOATING, screen)
+    --tag.layout_mode(8, enum.layout_mode.FLOATING, screen)
+    --tag.layout_mode(9, enum.layout_mode.FLOATING, screen)
 
     -- set workspace 4, 5, 6 to bsp mode
-    tag.layout_mode(4, enum.layout_mode.BSP, screen)
-    tag.layout_mode(5, enum.layout_mode.BSP, screen)
-    tag.layout_mode(6, enum.layout_mode.BSP, screen)
+   -- tag.layout_mode(4, enum.layout_mode.BSP, screen)
+   -- tag.layout_mode(5, enum.layout_mode.BSP, screen)
+   -- tag.layout_mode(6, enum.layout_mode.BSP, screen)
 end)
 
 -- cwc.connect_signal("screen::destroy", function(screen)
