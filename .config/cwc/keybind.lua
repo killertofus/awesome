@@ -49,7 +49,7 @@ end
 ----------------- CLIENT COMMANDS ------------------------
 
 ------------------ general
-kbd.bind({ MODKEY, mod.SHIFT }, "q", function()
+kbd.bind({ MODKEY, mod.SHIFT }, "c", function()
     local c = cwc.client.focused()
     if c then c:close() end
 end, { description = "close client respectfully", group = "client" })
@@ -92,7 +92,7 @@ kbd.bind({ MODKEY, mod.CTRL }, "n", function()
     if c then c:focus() end
 end, { description = "restore minimized client", group = "client" })
 
-kbd.bind({ MODKEY }, "o", function()
+kbd.bind({ MODKEY }, "s", function()
     local c = cwc.client.focused()
     if c then c.ontop = not c.ontop end
 end, { description = "toggle client always on top", group = "client" })
