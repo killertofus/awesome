@@ -1,9 +1,10 @@
 media-video/obs-studio ~amd64
 app-shells/zsh-autocomplete ~amd64
 app-shells/zsh-autosuggestions ~amd64
-gui-apps/swww ~amd64
-app-misc/nwg-look ~amd64
 app-misc/yazi ~amd64
-x11-apps/xcur2png
 media-fonts/nerdfonts ~amd64
-dev-vcs-lazygit ~amd64
+gui-wm/cwcwm ~amd64
+x11-apps/ly ~amd64
+gui-apps/swww ~amd64
+gui-apps/wdisplays ~amd64
+dev-vcs/lazygit ~amd64
