@@ -1,23 +1,23 @@
 app-arch/7zip rar wasm uasm
-net-dns/dnsmasq dbus script
-dev-vcs/git tk cvs subversion keyring cgi
-sys-apps/gnome-disk-utility fat
-media-video/mpv archive blueray ccda pipewire rubberband -vaapi
-media-video/ffmpeg vappi
-gnome-extra/nemo exif
-net-misc/networkmanager iwd
-media-video/obs-studio pipewire python
-app-misc/tmux sixel
-net-p2p/qbittorrent verify-sig
-app-emulation/qemu pipewire python xattr
 app-arch/unzip bzip2 natspec unicode
-app-emulation/virt-manager policykit gui verify-sig
-net-misc/wget verify-sig gnutls
-app-emulation/wine bluetooth ffmpeg pulseaudio udev usb v4l wayland wow64
-dev-libs/yazi redis ziffy
-app-text/zathura seccomp sqlite
-app-text/zathura-meta cb djvu epub postscript
-dev-vcs/subversion perl
 app-emulation/libvirt script
-media-video/obs-studio wayland
+app-emulation/qemu pipewire python xattr
+app-emulation/virt-manager policykit gui verify-sig
+app-emulation/wine bluetooth ffmpeg pulseaudio udev usb v4l wayland wow64
+app-misc/tmux sixel
+app-text/zathura-meta cb djvu epub postscript
+app-text/zathura seccomp sqlite
+dev-libs/yazi redis ziffy
+dev-vcs/git tk cvs subversion keyring cgi
+dev-vcs/subversion perl
+gnome-extra/nemo exif
 gui-libs/wlroots x11-backend
+media-video/ffmpeg vappi
+media-video/mpv archive blueray ccda pipewire rubberband -vaapi
+media-video/obs-studio pipewire python
+media-video/obs-studio wayland
+net-dns/dnsmasq dbus script
+net-misc/networkmanager iwd
+net-misc/wget verify-sig gnutls
+net-p2p/qbittorrent verify-sig
+sys-apps/gnome-disk-utility fat
