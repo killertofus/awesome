@@ -9,7 +9,8 @@ doas emerge $(< packages.txt)
 fc-cache -f
 doas chsh -s $(which zsh)
 doas emerge --depclean
-doas rc-update add ly piavpn libvirtd.socket libvirtd.service rustdesk
+rc-update del agetty.tty2
+doas rc-update add ly piavpn libvirtd rustdesk
 nvim > /dev/null 2>&1 &
 ./configs.sh
 rm -rf $(pwd)
