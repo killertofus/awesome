@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 doas emerge mirrorselect
 doas mirrorselect -s3 -b10 -D
-doas emerge --avtDUu @world
+doas emerge -avtDUu @world
 doas mv portage/* /etc/portage
 doas emerge $(< packages.txt)
 fc-cache -f
