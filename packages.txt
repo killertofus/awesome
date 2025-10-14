@@ -12,7 +12,7 @@ fastfetch
 firefox-bin
 flameshot
 fzf
-git
+dev-vcs/git
 gnome-disk-utility
 hack
 jellyfin-bin
