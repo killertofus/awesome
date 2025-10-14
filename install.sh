@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 doas emerge mirrorselect
-doas mirrorselect -s3 -b10 -D
+doas mirrorselect -i -c USA
 doas emerge -avtDUu @world
 doas mv portage/* /etc/portage
 doas emerge $(< packages.txt)
