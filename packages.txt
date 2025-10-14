@@ -5,6 +5,7 @@ blueman
 bluez
 btop
 chatterino
+cwcwm
 dnsmasq
 dunst
 fastfetch
@@ -14,7 +15,6 @@ fzf
 git
 gnome-disk-utility
 hack
-jdownloader
 jellyfin-bin
 lazygit
 librewolf-bin
