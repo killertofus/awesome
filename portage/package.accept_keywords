@@ -1,5 +1,6 @@
 net-im/chatterino ~amd64
 gui-wm/cwcwm ~amd64
+www-apps/jellyfin-bin ~amd64
 dev-vcs/lazygit ~amd64
 x11-apps/ly ~amd64
 media-fonts/nerdfonts ~amd64
