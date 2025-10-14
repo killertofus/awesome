@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 doas emerge mirrorselect
+doas emaint sync
 doas mirrorselect -i -c USA
 doas emerge -avtDUu @world
-doas mv portage/* /etc/portage
+doas cp -r portage/* /etc/portage
+doas emaint sync
 doas emerge $(< packages.txt)
 fc-cache -f
 doas chsh -s $(which zsh)
