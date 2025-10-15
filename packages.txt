@@ -34,6 +34,7 @@ noto-emoji
 nwg-look
 obs-studio
 openssh
+pika-backup
 polkit-gnome
 qbittorrent
 qemu
@@ -44,7 +45,6 @@ sqlite
 sqlitebrowser
 steam-launcher
 streamlink
-timeshift
 tmux
 unzip
 virt-manager
