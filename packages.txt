@@ -29,6 +29,7 @@ noto-fonts-emoji
 obs-studio
 openssh
 picom
+pika-backup
 polkit-gnome
 python-libtmux
 qbittorrent
@@ -40,7 +41,6 @@ sqlite
 sqlitebrowser
 steam
 streamlink
-timeshift
 tmux
 ttf-hack
 ttf-ibmplex-mono-nerd
