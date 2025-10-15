@@ -22,12 +22,12 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 openssh
+pika-backup
 plasma-desktop
 plasma-login
 qbittorrent
 reflector
 ripgrep
-timeshift
 ttf-hack
 ttf-ibmplex-mono-nerd
 ttf-iosevka-nerd
