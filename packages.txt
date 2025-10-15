@@ -30,6 +30,7 @@ NetworkManager
 openssh
 opi
 picom
+pika-backup
 polkit-gnome
 python313-libtmux
 qbittorrent
@@ -41,7 +42,6 @@ sqlite3
 sqlitebrowser
 steam
 streamlink
-timeshift
 tmux
 unzip
 virt-manager
