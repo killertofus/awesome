@@ -4,6 +4,7 @@ www-apps/jellyfin-bin ~amd64
 dev-vcs/lazygit ~amd64
 x11-misc/ly ~amd64
 media-fonts/nerdfonts ~amd64
+app-misc/nwg-look ~amd64
 media-video/obs-studio ~amd64
 gui-apps/swww ~amd64
 gui-apps/wdisplays ~amd64
