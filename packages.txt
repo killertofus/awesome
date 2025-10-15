@@ -31,11 +31,11 @@ nemo
 neovim
 nodejs
 pavucontrol
+pika-backup
 plasma-desktop
 plasma-login
 ripgrep
 rust-all
-timeshift
 ttf-bitstream-vera
 unzip
 vlc
