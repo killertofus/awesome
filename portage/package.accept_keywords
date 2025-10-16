@@ -6,6 +6,7 @@ x11-misc/ly ~amd64
 media-fonts/nerdfonts ~amd64
 app-misc/nwg-look ~amd64
 media-video/obs-studio ~amd64
+app-backup/pika-backup ~amd64
 games-util/steam-launcher ~amd64
 gui-apps/swww ~amd64
 gui-apps/wdisplays ~amd64
