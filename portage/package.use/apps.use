@@ -3,6 +3,7 @@ net-dns/dnsmasq dbus script
 media-video/ffmpeg vappi
 dev-vcs/git tk cvs subversion keyring cgi
 sys-apps/gnome-disk-utility fat
+media-libs/gst-plugins-good -abi_x86_32
 app-emulation/libvirt script
 media-video/mpv archive blueray ccda pipewire rubberband -vaapi
 gnome-extra/nemo exif
