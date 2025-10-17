@@ -1,6 +1,5 @@
 net-im/chatterino ~amd64
 gui-wm/cwcwm ~amd64
-games-util/game-device-udev-rules
 www-apps/jellyfin-bin ~amd64
 dev-vcs/lazygit ~amd64
 sys-libs/libudev-compat
