@@ -2,15 +2,32 @@ app-arch/7zip rar wasm uasm
 net-dns/dnsmasq dbus script
 media-video/ffmpeg vappi
 dev-vcs/git tk cvs subversion keyring cgi
+net-libs/gnutls pkcs11 tools
 sys-apps/gnome-disk-utility fat
 media-libs/gst-plugins-good -abi_x86_32
+gui-libs/libdecor abi_x86_32
+x11-libs/libxkbcommon abi_x86_32
+x11-libs/cairo abi_x86_32
+x11-libs/gtk+ abi_x86_32
+app-accessibility/ati-spi2-core abi_x86_32
+dev-libs/freebidi abi_x86_32
+media-libs/libepoxy abi_x86_32
+x11-libs/gdk-pixbuf abi_x86_32
+gnome-base/librsvg abi_x86_32
+x11-libs/libXdamage abi_x86_32
+x11-libs/pixman abi_x86_32
+dev-libs/libpcre2 abi_x86_32
+x11-libs/libXft abi_x86_32
 app-emulation/libvirt script
 media-video/mpv archive blueray ccda pipewire rubberband -vaapi
 gnome-extra/nemo exif
 net-misc/networkmanager iwd
 media-video/obs-studio pipewire python
+app-crpyt/p11-kit abi_x86_32
+x11-libs/pango abi_x86_32
 net-p2p/qbittorrent verify-sig
 app-emulation/qemu pipewire python xattr
+dev-util/spirv-tool abi_x86_32
 dev-vcs/subversion perl
 app-misc/tmux sixel
 app-arch/unzip bzip2 natspec unicode
@@ -18,6 +35,7 @@ app-emulation/virt-manager policykit gui verify-sig
 net-misc/wget verify-sig gnutls
 app-emulation/wine bluetooth ffmpeg pulseaudio udev usb v4l wayland wow64
 gui-libs/wlroots x11-backend
+x11-libs/xcb-util-keysyms abi_x86_32
 dev-libs/yazi redis ziffy
 app-text/zathura seccomp sqlite
 app-text/zathura-meta cb djvu epub postscript
@@ -40,6 +58,7 @@ dev-libs/libusb abi_x86_32
 dev-libs/libxml2 abi_x86_32
 dev-libs/libxslt abi_x86_32
 dev-libs/nettle abi_x86_32
+dev-libs/wayland abi_x86_32
 llvm-core/llvm abi_x86_32
 media-gfx/graphite2 abi_x86_32
 media-libs/alsa-lib abi_x86_32
@@ -89,6 +108,7 @@ virtual/libusb abi_x86_32
 virtual/opengl abi_x86_32
 x11-base/xcb-proto abi_x86_32
 x11-libs/libdrm abi_x86_32
+x11-libs/lib[ciaccess abi_x86_32
 x11-libs/libvdpau abi_x86_32
 x11-libs/libX11 abi_x86_32
 x11-libs/libXau abi_x86_32
