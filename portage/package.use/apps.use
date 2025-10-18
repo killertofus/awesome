@@ -4,7 +4,36 @@ media-video/ffmpeg vappi
 dev-vcs/git tk cvs subversion keyring cgi
 net-libs/gnutls pkcs11 tools
 sys-apps/gnome-disk-utility fat
-media-libs/gst-plugins-good -abi_x86_32
+media-libs/gst-plugins-good abi_x86_32
+media-libs/gst-plugins-base abi_x86_32
+media-libs/gstreamer abi_x86_32
+media-libs/gst-plugins-meta abi_x86_32
+media-libs/gst-plugins-a52dec abi_x86_32
+media-libs/gst-plugins-faad abi_x86_32
+media-libs/gst-plugins-dts abi_x86_32
+media-libs/gst-plugins-ugly abi_x86_32
+media-libs/gst-plugins-dvdread abi_x86_32
+media-libs/gst-plugins-mpeg2dec abi_x86_32
+media-libs/gst-plugins-flac abi_x86_32
+media-libs/gst-plugins-resindvd abi_x86_32
+media-libs/gst-plugins-mpg123 abi_x86_32
+media-libs/gst-plugins-opus abi_x86_32
+media-libs/gst-plugins-x264 abi_x86_32
+media-libs/x264 abi_x86_32
+media-libs/mpeg123-base abi_x86_32
+media-libs/libdvdnav abi_x86_32
+media-libs/libdvdread abi_x86_32
+media-libs/gst-plugins-bad abi_x86_32
+dev-lang/orc abi_x86_32
+media-libs/libdvdcss abi_x86_32
+media-libs/libmpeg2 abi_x86_32
+media-libs/libdca abi_x86_32
+media-libs/faad2 abi_x86_32
+media-libs/a52dec abi_x86_32
+sys-libs/pam abi_x86_32
+sys-libs/readline abi_x86_32
+x11-libs/libXv abi_x86_32
+media-libs/graphene abi_x86_32
 gui-libs/libdecor abi_x86_32
 x11-libs/libXtst abi_x86_32
 x11-libs/libxkbcommon abi_x86_32
@@ -26,7 +55,9 @@ media-video/mpv archive blueray ccda pipewire rubberband -vaapi
 gnome-extra/nemo exif
 net-misc/networkmanager iwd
 media-video/obs-studio pipewire python
-app-crpyt/p11-kit abi_x86_32
+media-plugins/gst-plugins-cdparanoia abi_x86_32
+media-sound/cdparanoia abi_x86_32
+app-crypt/p11-kit abi_x86_32
 x11-libs/pango abi_x86_32
 net-p2p/qbittorrent verify-sig
 app-emulation/qemu pipewire python xattr
