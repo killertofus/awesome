@@ -6,11 +6,12 @@ net-libs/gnutls pkcs11 tools
 sys-apps/gnome-disk-utility fat
 media-libs/gst-plugins-good -abi_x86_32
 gui-libs/libdecor abi_x86_32
+x11-libs/libXtst abi_x86_32
 x11-libs/libxkbcommon abi_x86_32
 x11-libs/cairo abi_x86_32
 x11-libs/gtk+ abi_x86_32
-app-accessibility/ati-spi2-core abi_x86_32
-dev-libs/freebidi abi_x86_32
+app-accessibility/at-spi2-core abi_x86_32
+dev-libs/fribidi abi_x86_32
 media-libs/libepoxy abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
 gnome-base/librsvg abi_x86_32
@@ -27,7 +28,8 @@ app-crpyt/p11-kit abi_x86_32
 x11-libs/pango abi_x86_32
 net-p2p/qbittorrent verify-sig
 app-emulation/qemu pipewire python xattr
-dev-util/spirv-tool abi_x86_32
+dev-util/spirv-tools abi_x86_32
+sys-libs/libcap abi_x86_32
 dev-vcs/subversion perl
 app-misc/tmux sixel
 app-arch/unzip bzip2 natspec unicode
