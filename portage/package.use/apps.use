@@ -108,7 +108,7 @@ virtual/libusb abi_x86_32
 virtual/opengl abi_x86_32
 x11-base/xcb-proto abi_x86_32
 x11-libs/libdrm abi_x86_32
-x11-libs/lib[ciaccess abi_x86_32
+x11-libs/libpciaccess abi_x86_32
 x11-libs/libvdpau abi_x86_32
 x11-libs/libX11 abi_x86_32
 x11-libs/libXau abi_x86_32
