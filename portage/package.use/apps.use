@@ -16,6 +16,7 @@ media-libs/libepoxy abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
 gnome-base/librsvg abi_x86_32
 x11-libs/libXdamage abi_x86_32
+sys-apps/systemd-utils abi_x86_32
 x11-libs/pixman abi_x86_32
 dev-libs/libpcre2 abi_x86_32
 x11-libs/libXft abi_x86_32
