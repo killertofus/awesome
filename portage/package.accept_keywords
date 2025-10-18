@@ -10,6 +10,7 @@ media-video/obs-studio ~amd64
 app-backup/pika-backup ~amd64
 */*::steam-overlay
 games-util/steam-launcher ~amd64
+games-util/game-device-udev-rules ~amd64
 gui-apps/swww ~amd64
 gui-apps/wdisplays ~amd64
 x11-apps/xcur2png

@@ -1,6 +1,6 @@
 app-arch/7zip rar wasm uasm
 net-dns/dnsmasq dbus script
-media-video/ffmpeg vappi
+media-video/ffmpeg vappi vpx
 dev-vcs/git tk cvs subversion keyring cgi
 net-libs/gnutls pkcs11 tools
 sys-apps/gnome-disk-utility fat
@@ -8,12 +8,15 @@ sys-apps/gnome-disk-utility fat
 app-emulation/libvirt script
 media-video/mpv archive blueray ccda pipewire rubberband -vaapi
 gnome-extra/nemo exif
+x11-libs/xapp introspection
+dev-libs/libdbusmenu gtk3
 net-misc/networkmanager iwd
 media-video/obs-studio pipewire python
 net-p2p/qbittorrent verify-sig
 app-emulation/qemu pipewire python xattr
 dev-vcs/subversion perl
 app-misc/tmux sixel
+media-plugins/alsa-plugins pulseaudio
 app-arch/unzip bzip2 natspec unicode
 app-emulation/virt-manager policykit gui verify-sig
 net-misc/wget verify-sig gnutls
