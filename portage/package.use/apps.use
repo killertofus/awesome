@@ -11,6 +11,7 @@ x11-libs/libxkbcommon abi_x86_32
 x11-libs/cairo abi_x86_32
 x11-libs/gtk+ abi_x86_32
 app-accessibility/at-spi2-core abi_x86_32
+dev-lang/rust-bin abi_x86_32
 dev-libs/fribidi abi_x86_32
 media-libs/libepoxy abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
