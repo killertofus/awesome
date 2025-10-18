@@ -4,7 +4,7 @@ media-video/ffmpeg vappi
 dev-vcs/git tk cvs subversion keyring cgi
 net-libs/gnutls pkcs11 tools
 sys-apps/gnome-disk-utility fat
-*/* abi: 32 64
+*/* ABI_X86: 32 64
 app-emulation/libvirt script
 media-video/mpv archive blueray ccda pipewire rubberband -vaapi
 gnome-extra/nemo exif
