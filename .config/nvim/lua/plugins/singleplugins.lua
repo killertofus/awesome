@@ -1,2 +1,2 @@
 return 
-{'HiPhish/rainbow-delimiters.nvim'}
+{'tpope/vim-sleuth'}

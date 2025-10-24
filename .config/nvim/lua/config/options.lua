@@ -58,22 +58,5 @@ require('lualine').setup {
 options = { theme = 'dracula' 
 }
 }
---
- require 'rainbow-delimiters.setup'.setup {
-        strategy = {
-	    html = 'rainbow-delimiters.strategy.local',
-	    css = 'rainbow-delimiters.strategy.local',
-        },
-        query = {
-            [''] = 'rainbow-delimiters',
-        },
-        highlight = {
-            'RainbowDelimiterRed',
-            'RainbowDelimiterYellow',
-            'RainbowDelimiterBlue',
-            'RainbowDelimiterOrange',
-            'RainbowDelimiterGreen',
-            'RainbowDelimiterViolet',
-            'RainbowDelimiterCyan',
-        }
-}
+
+--mason

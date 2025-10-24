@@ -4,3 +4,7 @@ require('config.options')
 require('config.keymap')
 require('config.autocmd')
 require('config.lsp')
+    vim.lsp.enable({
+      --rust
+      "rust-analyzer",
+    })
