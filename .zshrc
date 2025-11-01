@@ -30,31 +30,22 @@ PS1="%F{cyan}%~
 precmd_functions+=(update_prompt)
 update_prompt
 
-
-
-
-
-
-
-
+bindkey "\e[3~" delete-char
 
 
 #exports here
-export EDITOR=nvim
+export EDITOR=helix
 export BAT_THEME=Dracula
 export HISTFILE=~/.zsh_history
 HISTSIZE=8000
 SAVEHIST=8000
 
-PS1="%F{green}%~ %F{magenta}❯ "
-
-#PROMPT='%B%m%~%b$(git_super_status) %# '
 
 #sources here
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-#source ~/v/zsh-git-prompt-0.6/zshrc.sh
+source /usr/share/fzf/key-bindings.zsh
 
 #autoload
 autoload -Uz compinit && compinit
@@ -62,16 +53,13 @@ autoload -U colors && colors
 autoload -U promptinit && promptinit
 
 
-
-
-
 #alias here
+alias hx="helix"
 alias cat="bat"
 alias ls="lsd -a"
 alias lz="lazygit"
 alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 
-#LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 
