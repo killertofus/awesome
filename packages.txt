@@ -15,6 +15,7 @@ flameshot
 fzf
 git
 gnome-disk-utility
+helix
 jellyfin-server
 lazygit
 lsd
@@ -23,7 +24,6 @@ lxqt-archiver
 ly
 mpv
 nemo
-neovim
 networkmanager
 noto-fonts
 noto-fonts-cjk

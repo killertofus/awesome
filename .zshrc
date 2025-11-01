@@ -30,17 +30,11 @@ PS1="%F{cyan}%~
 precmd_functions+=(update_prompt)
 update_prompt
 
-
-
-
-
-
-
-
+bindkey "\e[3~" delete-char
 
 
 #exports here
-export EDITOR=nvim
+export EDITOR=helix
 export BAT_THEME=Dracula
 export HISTFILE=~/.zsh_history
 HISTSIZE=8000
@@ -58,10 +52,8 @@ autoload -U colors && colors
 autoload -U promptinit && promptinit
 
 
-
-
-
 #alias here
+alias hx="helix"
 alias cat="bat"
 alias ls="lsd -a"
 alias lz="lazygit"
