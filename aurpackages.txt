@@ -3,4 +3,3 @@ jdownloader2
 librewolf-bin
 piavpn-bin
 rustdesk-bin
-streamlink-twitch-gui-bin

@@ -4,7 +4,6 @@ sudo sed -i '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf
 sudo sed -i '32 a ILoveCandy' /etc/pacman.conf
 sudo sed -i '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
-sudo pacman -S --needed git base-devel --noconfirm
 git clone https://aur.archlinux.org/yay.git
 makepkg -siD yay --noconfirm
 sudo pacman -Syu --noconfirm
@@ -16,6 +15,5 @@ yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly piavpn libvirtd.socket libvirtd.service rustdesk
 yay -Scc --noconfirm
-nvim > /dev/null 2>&1 &
 ./configs.sh
 rm -rf $(pwd)
