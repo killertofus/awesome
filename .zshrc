@@ -40,6 +40,7 @@ export HISTFILE=~/.zsh_history
 HISTSIZE=8000
 SAVEHIST=8000
 
+ setopt share_history
 
 #sources here
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
