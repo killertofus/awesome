@@ -48,7 +48,7 @@ SAVEHIST=8000
 #sources here
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/fzf/key-bindings.zsh
 
 #autoload
@@ -56,6 +56,9 @@ autoload -Uz compinit && compinit
 autoload -U colors && colors
 autoload -U promptinit && promptinit
 
+zmodload zsh/complist
+zstyle ':completion:*' menu select
+compinit
 
 
 
