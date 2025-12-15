@@ -1,5 +1,4 @@
 chatterino2-bin
 jdownloader2
-librewolf-bin
 piavpn-bin
 rustdesk-bin

@@ -31,7 +31,12 @@ precmd_functions+=(update_prompt)
 update_prompt
 
 bindkey "\e[3~" delete-char
+bindkey  "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
 
+
+setopt pushd_minus
+setopt share_history
 
 #exports here
 export EDITOR=helix
@@ -40,13 +45,12 @@ export HISTFILE=~/.zsh_history
 HISTSIZE=8000
 SAVEHIST=8000
 
-setopt pushd_minus
-setopt share_history
 
 #sources here
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 
 #autoload
 autoload -Uz compinit && compinit
