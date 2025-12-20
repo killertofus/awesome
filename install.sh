@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 sudo sed -i -e  '/#MAKEFLAGS="-j2"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf -e '93,95s/debug/!debug/g' /etc/makepkg.conf -e '/#NPROC="2"/c\ NPROC="$(nproc)"'/etc/makepkg.conf
-sudo sed -i -e '/Color/s/^#//g' /etc/pacman.conf -e '30 a ILoveCandy' /etc/pacman.conf
+sudo sed -i -e '/Color/s/^#//g' /etc/pacman.conf -e '32 a ILoveCandy' /etc/pacman.conf
 sudo -v
 git clone https://aur.archlinux.org/yay.git
 makepkg -siD yay --noconfirm
