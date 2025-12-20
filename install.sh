@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo sed -i -e 's/debug/!debug/g' /etc/makepkg.conf -e '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf -e '/#NPROC="2"/c\ NPROC="$(nproc)"'/etc/makepkg.conf
+sudo sed -i -e /etc/makepkg.conf -e '/#MAKEFLAGS="5"/c\MAKEFLAGS="--jobs=$(nproc)"' /etc/makepkg.conf -e '/#NPROC="2"/c\ NPROC="$(nproc)"'/etc/makepkg.conf -e 's/debug/!debug/g' /etc/makepkg.conf 
 sudo sed -i -e '32 a ILoveCandy' /etc/pacman.conf -e '/Color/s/^#//g' /etc/pacman.conf
 sudo -v
 git clone https://aur.archlinux.org/yay.git
