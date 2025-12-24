@@ -27,6 +27,5 @@ yay --devel --save
 sudo pacman -Qttdq | sudo pacman -Rns - --noconfirm
 sudo systemctl enable ly piavpn rustdesk libvirtd.service libvirtd.socket
 yay -Scc --noconfirm
-nvim > /dev/null 2>&1 &
 ./configs.sh
 rm -rf $(pwd)
