@@ -31,10 +31,11 @@ precmd_functions+=(update_prompt)
 update_prompt
 
 bindkey "\e[3~" delete-char
+bindkey  "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
 
 
 setopt pushd_minus
-
 setopt share_history
 
 #exports here
@@ -48,22 +49,13 @@ SAVEHIST=8000
 #sources here
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source /usr/share/fzf/key-bindings.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 
 #autoload
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 autoload -U promptinit && promptinit
-
-zmodload zsh/complist
-zstyle ':completion:*' menu select
-compinit
-
-
-
-#bindkey "^[[A" history-beginning-search-backward
-
 
 
 #alias here
