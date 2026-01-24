@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 show_hidden = true
 sort_by     = "alphabetical"
 sort_translit  = true
@@ -20,12 +20,11 @@ ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
 [opener]
 edit = [
-	{ run = 'nvim "$@"', block = true, for = "unix" },
-	{ run = "nvim %*",   block = true, for = "windows" },
+	{ run = "${EDITOR} %s", block = true, for = "unix" },
 ]
 
 play = [
-    { run = 'vlc "$@"', desc = "VLC", orphan = true }
+   { run = "xdg-open %s1",    desc = "Play", for = "linux", orphan = true }
 ]
 
 open = [
@@ -37,7 +36,7 @@ open = [
 [open]
 rules = [
   { mime = "video/*", use = [ "play", "reveal" ] },
-{ name = "*", use = "edit" },
+{ url = "*", use = "edit" },
 ]
 
 
@@ -56,7 +55,7 @@ suppress_preload = false
 
 fetchers = [
 	# Mimetype
-	{ id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
+	{ id = "mime", url = "*", run = "mime.local", if = "!mime", prio = "high" },
 ]
 preloaders = [
 	# Image
@@ -71,7 +70,7 @@ preloaders = [
 	{ mime = "application/vnd.ms-opentype", run = "font" },
 ]
 previewers = [
-	{ name = "*/", run = "folder", sync = true },
+	{ url = "*/", run = "folder", sync = true },
 	# Code
 	{ mime = "text/*", run = "code" },
 	{ mime = "*/{xml,javascript,x-wine-extension-ini}", run = "code" },
