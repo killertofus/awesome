@@ -6,7 +6,7 @@ local cwc = cwc
 cwc.spawn_with_shell("swww-daemon")
 cwc.spawn_with_shell("waybar")
 cwc.spawn_with_shell("flameshot")
-cwc.spawn_with_shell("blueman-manager")
+cwc.spawn_with_shell("blueman-applet")
 cwc.spawn_with_shell("/opt/piavpn/bin/pia-client %u")
 cwc.spawn_with_shell("nm-applet")
 cwc.spawn_with_shell("dunst")
@@ -34,3 +34,4 @@ cwc.spawn_with_shell(
 local plugins_folder = cwc.is_nested() and "./build/plugins" or cwc.get_datadir() .. "/plugins"
 cwc.plugin.load(plugins_folder .. "/cwcle.so")
 cwc.plugin.load(plugins_folder .. "/flayout.so")
+cwc.plugin.load(plugins_folder .. "/dwl-ipc.so")
