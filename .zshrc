@@ -74,7 +74,7 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 #startups here
 if [ -z "$TMUX" ]
 then
-    tmux attach -t TMUX || tmux new -s TMUX \; new-window \ yazi;
+    tmux;
 fi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
