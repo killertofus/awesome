@@ -7,9 +7,14 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local enum = require("cuteful.enum")
 local tag = require("cuteful.tag")
+local impl = require("impl")
+local config = require("config")
 
 -- make it local so the `undefined global` lsp error stop yapping on every cwc access
 local cwc = cwc
+
+-- config.init should go first before anything else
+config.init(require("conf"))
 
 -- execute oneshot.lua once, cwc.is_startup() mark that the configuration is loaded for the first time
 if cwc.is_startup() then
@@ -18,36 +23,10 @@ end
 
 -- execute keybind script
 gears.protected_call(require, "keybind")
+gears.protected_call(require, "mousebind")
 
----------------------------------- CONFIGURATION --------------------------------------
--- A library for declarative configuration and per device configuration will be added later.
--- If you change configuration at runtime some of configuration need to get committed by calling
--- `cwc.commit()``
-
--- pointer config
-cwc.pointer.set_cursor_size(20)
-cwc.pointer.set_inactive_timeout(5)
-cwc.pointer.set_edge_threshold(32)
-cwc.pointer.set_edge_snapping_overlay_color(0.1, 0.2, 0.3, 0.05)
-
--- keyboard config
-cwc.kbd.set_repeat_rate(30)
-cwc.kbd.set_repeat_delay(300)
-
--- client config
-cwc.client.set_border_color_focus(gears.color(
-    "linear:0,0:0,0:0,#f08e97:0.1,#a7e1a4:0.2,#ffffa7:0.3,#a5c0e1:0.4,#c8a6e1:0.5,#a1d0d4:0.6,#f9b486:0.7,#e1a5d7:0.8,#b4b8e6:0.9,#b4b8e6:1.0,#f8e0b4"))
-cwc.client.set_border_color_normal(gears.color("#423e44"))
-cwc.client.set_border_width(1)
-cwc.client.set_border_color_rotation(64)
-
--- screen/tag config
-cwc.screen.set_useless_gaps(3)
-
--- plugin config
-if cwc.cwcle then
-    cwc.cwcle.set_border_color_raised(gears.color("#d2d6f9"))
-end
+-- use core implementation
+impl.use_core()
 
 -- input device config
 cwc.connect_signal("input::new", function(dev)
@@ -67,7 +46,7 @@ end)
 cwc.connect_signal("screen::new", function(screen)
     -- screen settings
     if screen.name == "DP-1" then
-        screen:set_position(0, 0)
+        screen:set_position(0, 0)       -- NOTE: Position(s) MUST be non-negative - based on #49 (https://github.com/Cudiph/cwcwm/issues/49).
 
         screen:set_mode(1920, 1080, 60) -- width, height, refresh rate
         screen:set_adaptive_sync(true)
@@ -132,7 +111,6 @@ cwc.connect_signal("client::map", function(client)
     -- It'll move any firefox app to the workspace 2 and maximize it also we moving to tag 2.
     if client.appid == "firefox" then
         client:move_to_tag(2)
-        client.maximize = true
         client.screen.active_workspace = 2
     end
 
