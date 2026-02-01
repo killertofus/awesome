@@ -21,7 +21,7 @@ Pinnacle.setup(function()
     end
 
     local terminal = "alacritty"
-
+    local.bar = "waybar"
     --------------------
     -- Mousebinds     --
     --------------------
@@ -400,7 +400,6 @@ Pinnacle.setup(function()
     ----------------------
 
     local tag_names = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
-    local tag = layout_cycler:cycle_layout_forward.get("1"),Layout.builtin.floating(),
     Output.for_each_output(function(output)
         local tags = Tag.add(output, tag_names)
         tags[1]:set_active(true)
@@ -492,4 +491,11 @@ Pinnacle.setup(function()
 
     -- Spawning should happen after you add tags, as Pinnacle currently doesn't render windows without tags.
     Process.spawn_once(terminal)
+    process.spawn_once(bar)
+    process.spawn_once(flameshot)
+    process.spawn_once(sww-daemon)
+    process.spawn_once(blueman-applet)
+    process.spawn_once(dunst)
+    process.spawn_once(/opt/piavpn/bin/pia-client %u)
+    process.spawn_once(/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1)
 end)
