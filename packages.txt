@@ -48,6 +48,7 @@ streamlink
 tmux
 unzip
 virt-manager
+vifm
 w3m
 waybar
 wayland
@@ -57,7 +58,6 @@ xauth
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xorg-server
-yazi
 zathura
 zathura-pdf-mupdf
 zsh
