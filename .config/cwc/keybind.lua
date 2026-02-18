@@ -11,7 +11,7 @@ local mod = enum.modifier
 local button = enum.mouse_btn
 local direction = enum.direction
 
-local MODKEY = mod.LOGO
+local MODKEY = mod.ALT
 local TERMINAL = "alacritty"
 
 -- prevent hotkey conflict on nested session
@@ -113,7 +113,7 @@ kbd.bind({ MODKEY, mod.CTRL }, "0", function()
 end, { description = "toggle client always visible", group = "client" })
 
 --------------------- stack based
-kbd.bind({ MODKEY, mod.CTRL }, "j", function()
+kbd.bind({ MODKEY.ALT }, "j", function()
     cful.client.focusidx(1)
 end, { description = "focus next client relative by index", group = "client" })
 
@@ -434,7 +434,7 @@ end, { description = "open a terminal", group = "launcher" })
 kbd.bind({ MODKEY }, "F1", function()
     cwc.spawn_with_shell("firefox")
 end, { description = "open a web browser", group = "launcher" })
-kbd.bind({}, "ALT_L", function()
+kbd.bind({}, "Super_L", function()
     cwc.spawn_with_shell(
         'rofi -show drun -show-icons')
 end, { description = "application launcher", group = "launcher" })
