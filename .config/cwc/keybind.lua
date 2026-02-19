@@ -117,7 +117,7 @@ kbd.bind({ MODKEY }, "j", function()
     cful.client.focusidx(1)
 end, { description = "focus next client relative by index", group = "client" })
 
-kbd.bind({ MODKEY, mod.CTRL }, "k", function()
+kbd.bind({ MODKEY }, "k", function()
     cful.client.focusidx(-1)
 end, { description = "focus previous client by index", group = "client" })
 
@@ -157,7 +157,7 @@ kbd.bind(MODKEY, "o", function()
     end
 end, { description = "focus down", group = "client" })
 
-kbd.bind(MODKEY, "k", function()
+kbd.bind(MODKEY, "z", function()
     local c = cwc.client.focused()
     if c then
         local near = c:get_nearest(direction.UP)
