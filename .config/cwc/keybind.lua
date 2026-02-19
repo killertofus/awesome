@@ -49,7 +49,7 @@ end
 ----------------- CLIENT COMMANDS ------------------------
 
 ------------------ general
-kbd.bind({ MODKEY, mod.SHIFT }, "q", function()
+kbd.bind({ MODKEY, mod.SHIFT }, "c", function()
     local c = cwc.client.focused()
     if c then c:close() end
 end, { description = "close client respectfully", group = "client" })
