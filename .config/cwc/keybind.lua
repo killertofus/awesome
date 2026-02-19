@@ -92,7 +92,7 @@ kbd.bind({ MODKEY, mod.CTRL }, "n", function()
     if c then c:focus() end
 end, { description = "restore minimized client", group = "client" })
 
-kbd.bind({ MODKEY }, "o", function()
+kbd.bind({ MODKEY }, "s", function()
     local c = cwc.client.focused()
     if c then c.ontop = not c.ontop end
 end, { description = "toggle client always on top", group = "client" })
@@ -113,7 +113,7 @@ kbd.bind({ MODKEY, mod.CTRL }, "0", function()
 end, { description = "toggle client always visible", group = "client" })
 
 --------------------- stack based
-kbd.bind({ MODKEY.ALT }, "j", function()
+kbd.bind({ MODKEY }, "j", function()
     cful.client.focusidx(1)
 end, { description = "focus next client relative by index", group = "client" })
 
@@ -149,7 +149,7 @@ kbd.bind({ MODKEY }, "bracketright", function()
 end, { description = "cycle move focused client to next screen", group = "client" })
 
 --------------------- direction based
-kbd.bind(MODKEY, "j", function()
+kbd.bind(MODKEY, "o", function()
     local c = cwc.client.focused()
     if c then
         local near = c:get_nearest(direction.DOWN)
