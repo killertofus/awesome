@@ -285,6 +285,7 @@ Pinnacle.setup(function()
         -- `Layout.builtin` contains functions that create various layout generators.
         -- Each of these has settings that can be overridden by passing in a table with
         -- overriding options.
+        Layout.builtin.floating(),
         Layout.builtin.master_stack(),
         Layout.builtin.master_stack({ master_side = "right" }),
         Layout.builtin.master_stack({ master_side = "top" }),
@@ -297,7 +298,6 @@ Pinnacle.setup(function()
         Layout.builtin.corner({ corner_loc = "bottom_right" }),
         Layout.builtin.fair(),
         Layout.builtin.fair({ axis = "horizontal" }),
-        Layout.builtin.floating(),
     })
 
     -- Use the cycling layout generator to manage layout requests.
