@@ -104,9 +104,9 @@ Pinnacle.setup(function()
     })
 
     -- mod_key + Return = Spawn `rofi`
-    Input.keybind({ Super_L, key.Return, function()
+    Input.keybind({ Super_L }, key.Return, function()
         Process.spawn("rofi", "-show", "drun", "-show-icons")
-    end,
+    end, {
     allow_when_locked = false,
         group = "apps",
         description = "run rofi",
@@ -499,11 +499,11 @@ Pinnacle.setup(function()
 
     -- Spawning should happen after you add tags, as Pinnacle currently doesn't render windows without tags.
     Process.spawn_once(terminal)
-    process.spawn_once(bar)
-    process.spawn_once(flameshot)
-    process.spawn_once(sww-daemon)
-    process.spawn_once(blueman-applet)
-    process.spawn_once(dunst)
-    process.spawn_once("/opt/piavpn/bin/pia-client %u")
-    process.spawn_once("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+    Process.spawn_once(bar)
+    Process.spawn_once(flameshot)
+    Process.spawn_once("swww-daemon")
+    Process.spawn_once("blueman-applet")
+    Process.spawn_once(dunst)
+   Process.spawn_once("/opt/piavpn/bin/pia-client")
+    Process.spawn_once("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 end)
