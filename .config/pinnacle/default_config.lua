@@ -14,7 +14,7 @@ Pinnacle.setup(function()
     local key = Input.key
 
     ---@type pinnacle.input.Mod
-    local mod_key = "super"
+    local mod_key = "alt"
     -- Change the mod key to "alt" when running as a nested window
     if Pinnacle.backend() == "window" then
         mod_key = "alt"
@@ -101,6 +101,14 @@ Pinnacle.setup(function()
     end, {
         group = "Window",
         description = "Close the focused window",
+    })
+
+    -- mod_key + Return = Spawn `rofi`
+    Input.keybind({ Super_L }, key.Return, function()
+        Process.spawn(  rofi -show drun -show-icons )
+    end, {
+        group = "Process",
+        description = "Spawn rofi",
     })
 
     -- mod_key + Return = Spawn `terminal`
