@@ -104,7 +104,7 @@ Pinnacle.setup(function()
     })
 
     -- mod_key + Return = Spawn `rofi`
-    Input.keybind({ Super_L }, key.Return, function()
+    Input.keybind({ Super_L }, function()
         Process.spawn("rofi", "-show", "drun", "-show-icons")
     end, {
     allow_when_locked = false,
