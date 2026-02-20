@@ -104,13 +104,13 @@ Pinnacle.setup(function()
     })
 
     -- mod_key + Return = Spawn `rofi`
-    Input.keybind({ Super_L }, key.Return, function()
-        Process.spawn("rofi", "-show", "drun," "-show-icons")
-    end, {
-        group = "Process",
-        description = "Spawn rofi",
+    Input.keybind({ Super_L, key.Return, function()
+        Process.spawn("rofi", "-show", "drun", "-show-icons")
+    end,
+    allow_when_locked = false,
+        group = "apps",
+        description = "run rofi",
     })
-
     -- mod_key + Return = Spawn `terminal`
     Input.keybind({ mod_key }, key.Return, function()
         Process.spawn(terminal)
@@ -504,6 +504,6 @@ Pinnacle.setup(function()
     process.spawn_once(sww-daemon)
     process.spawn_once(blueman-applet)
     process.spawn_once(dunst)
-    process.spawn_once(/opt/piavpn/bin/pia-client %u)
-    process.spawn_once(/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1)
+    process.spawn_once("/opt/piavpn/bin/pia-client %u")
+    process.spawn_once("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 end)
