@@ -7,6 +7,15 @@ local Tag = require("pinnacle.tag")
 local Window = require("pinnacle.window")
 local Layout = require("pinnacle.layout")
 local Util = require("pinnacle.util")
+local keybind_key = Input.key.Super_L
+local keybind_mods = {
+        "ignore_shift",
+        "ignore_ctrl",
+        "ignore_alt",
+        "ignore_super",
+        "ignore_iso_level3_shift",
+        "ignore_iso_level5_shift",
+    }
 -- `Snowcap` will be false when the Snowcap API isn't installed or Snowcap isn't running
 local Snowcap = require("pinnacle.snowcap")
 
@@ -105,8 +114,8 @@ Pinnacle.setup(function()
 
     -- mod_key + Return = Spawn `rofi`
     Input.keybind({
-        mods = {},
-            key = key.Super_L,
+            mods =  keybind_mods,
+            key = keybind_key,
             on_press = function()
                 Process.spawn("rofi", "-show", "drun", "-show-icons")
             end,
