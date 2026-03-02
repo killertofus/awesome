@@ -6,11 +6,12 @@ local cwc = cwc
 cwc.spawn_with_shell("swww-daemon")
 cwc.spawn_with_shell("waybar")
 cwc.spawn_with_shell("flameshot")
-cwc.spawn_with_shell("blueman-manager")
+cwc.spawn_with_shell("blueman-applet")
 cwc.spawn_with_shell("/opt/piavpn/bin/pia-client %u")
 cwc.spawn_with_shell("nm-applet")
 cwc.spawn_with_shell("dunst")
 cwc.spawn_with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+
 --local idle_cmd = "playerctl pause; cwctl screen --filter '*' set dpms false"
 --local resume_cmd = "playerctl play; cwctl screen --filter='*' set dpms true"
 --local swayidle_cmd = string.format('swayidle -w timeout 3600 "%s" resume "%s"', idle_cmd, resume_cmd)
@@ -26,9 +27,8 @@ end, { one_shot = true })
 cwc.setenv("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
 
 -- xdg-desktop-portal-wlr
-cwc.spawn_with_shell("gentoo-pipewire-launcher")
-cwc.spawn_with_shell("/usr/libexec/xdg-desktop-portal-gtrk -r")
-cwc.spawn_with_shell("/usr/libexec/xdg-desktop-portal-wlr -r")
+cwc.spawn_with_shell(
+    "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 
 -- load builtin cwc C plugin
 local plugins_folder = cwc.is_nested() and "./build/plugins" or cwc.get_datadir() .. "/plugins"

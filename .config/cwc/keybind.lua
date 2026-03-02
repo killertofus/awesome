@@ -16,7 +16,7 @@ local TERMINAL = "alacritty"
 
 -- prevent hotkey conflict on nested session
 if cwc.is_nested() then
-    MODKEY = mod.Caps_lock
+    MODKEY = mod.ALT
 end
 
 ------------------- pointer/mouse binding ---------------------
@@ -113,12 +113,11 @@ kbd.bind({ MODKEY, mod.CTRL }, "0", function()
 end, { description = "toggle client always visible", group = "client" })
 
 --------------------- stack based
-
-kbd.bind(MODKEY, "j", function()
+kbd.bind({ MODKEY }, "j", function()
     cful.client.focusidx(1)
 end, { description = "focus next client relative by index", group = "client" })
 
-kbd.bind(MODKEY, "k",  function()
+kbd.bind({ MODKEY }, "k", function()
     cful.client.focusidx(-1)
 end, { description = "focus previous client by index", group = "client" })
 
@@ -150,7 +149,7 @@ kbd.bind({ MODKEY }, "bracketright", function()
 end, { description = "cycle move focused client to next screen", group = "client" })
 
 --------------------- direction based
-kbd.bind({ MODKEY, mod.CTRL }, "j", function()
+kbd.bind(MODKEY, "o", function()
     local c = cwc.client.focused()
     if c then
         local near = c:get_nearest(direction.DOWN)
@@ -158,7 +157,7 @@ kbd.bind({ MODKEY, mod.CTRL }, "j", function()
     end
 end, { description = "focus down", group = "client" })
 
-kbd.bind({ MODKEY, mod.CTRL }, "k", function()
+kbd.bind(MODKEY, "z", function()
     local c = cwc.client.focused()
     if c then
         local near = c:get_nearest(direction.UP)
@@ -313,7 +312,7 @@ kbd.bind({ mod.LOGO, mod.ALT }, "k", function()
 end, { description = "focus the previous screen", group = "screen" })
 
 ----------------- tag
-for i = 1, 2 do
+for i = 1, 9 do
     local i_str = tostring(i)
     kbd.bind(MODKEY, i_str, function()
         local t = cwc.screen.focused():get_tag(i)
