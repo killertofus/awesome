@@ -1,14 +1,11 @@
-app-arch/7zip rar wasm uasm
-net-dns/dnsmasq dbus script
+app-arch/7zip rar jwasm
+net-dns/dnsmasq script
 media-video/ffmpeg vappi vpx
 dev-vcs/git tk cvs subversion keyring cgi
-net-libs/gnutls pkcs11 tools
 sys-apps/gnome-disk-utility fat
-*/* ABI_X86: 32 64
-app-emulation/libvirt script
+net-libs/gnutls pkcs11 tools
 media-video/mpv archive blueray ccda pipewire rubberband -vaapi
-gnome-extra/nemo exif
-x11-libs/xapp introspection
+gnome-extra/nemo tracker
 dev-libs/libdbusmenu gtk3
 net-misc/networkmanager iwd
 media-video/obs-studio pipewire python
@@ -18,10 +15,10 @@ dev-vcs/subversion perl
 app-misc/tmux sixel
 media-plugins/alsa-plugins pulseaudio
 app-arch/unzip bzip2 natspec unicode
+app-misc/vifm glib
 app-emulation/virt-manager policykit gui verify-sig
 net-misc/wget verify-sig gnutls
-app-emulation/wine bluetooth ffmpeg pulseaudio udev usb v4l wayland wow64
 gui-libs/wlroots x11-backend
-dev-libs/yazi redis ziffy
-app-text/zathura seccomp sqlite
+app-text/zathura seccomp
 app-text/zathura-meta cb djvu epub postscript
+x11-libs/xapp introspection

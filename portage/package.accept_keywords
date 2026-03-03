@@ -1,14 +1,18 @@
 net-im/chatterino ~amd64
 gui-wm/cwcwm ~amd64
+net-misc/rustdesk ~amd64
 www-apps/jellyfin-bin ~amd64
 dev-vcs/lazygit ~amd64
 sys-libs/libudev-compat
+gui-apps/awww ~amd64
 x11-misc/ly ~amd64
 media-fonts/nerdfonts ~amd64
 app-misc/nwg-look ~amd64
 media-video/obs-studio ~amd64
+app-misc/brightnessctl ~amd64
 app-backup/pika-backup ~amd64
 */*::steam-overlay
+*/*::hyproverlay
 games-util/steam-launcher ~amd64
 games-util/game-device-udev-rules ~amd64
 gui-apps/swww ~amd64
