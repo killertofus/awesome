@@ -1,5 +1,6 @@
 net-im/chatterino ~amd64
 gui-wm/cwcwm ~amd64
+app-misc/durdraw ~amd64
 net-misc/rustdesk ~amd64
 www-apps/jellyfin-bin ~amd64
 dev-vcs/lazygit ~amd64

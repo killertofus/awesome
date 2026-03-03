@@ -6,6 +6,7 @@ bluez
 btop
 chatterino
 cwcwm
+display-manager-init
 dnsmasq
 dunst
 fastfetch
