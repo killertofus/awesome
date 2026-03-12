@@ -7,10 +7,10 @@ cwc.spawn_with_shell("swww-daemon")
 cwc.spawn_with_shell("waybar")
 cwc.spawn_with_shell("flameshot")
 cwc.spawn_with_shell("blueman-applet")
-cwc.spawn_with_shell("/opt/piavpn/bin/pia-client %u")
-cwc.spawn_with_shell("nm-applet")
+cwc.spawn_with_shell("/opt/piavpn/bin/pia-client")
 cwc.spawn_with_shell("dunst")
-cwc.spawn_with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+cwc.spawn_with_shell("/usr/libexec/xdg-desktop-portal")
+cwc.spawn_with_shell("/usr/libexec/polkit-gnome/polkit-gnome-authentication-agent-1")
 
 --local idle_cmd = "playerctl pause; cwctl screen --filter '*' set dpms false"
 --local resume_cmd = "playerctl play; cwctl screen --filter='*' set dpms true"
