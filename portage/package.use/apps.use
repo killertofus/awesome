@@ -7,18 +7,22 @@ net-libs/gnutls pkcs11 tools
 media-video/mpv archive blueray ccda pipewire rubberband -vaapi
 gnome-extra/nemo tracker
 dev-libs/libdbusmenu gtk3
+sys-libs/minizip-ng compat
 net-misc/networkmanager iwd
 media-video/obs-studio pipewire python
+media-video/pipewire bluetooth
 net-p2p/qbittorrent verify-sig
 app-emulation/qemu pipewire python xattr
 dev-vcs/subversion perl
 app-misc/tmux sixel
 media-plugins/alsa-plugins pulseaudio
 app-arch/unzip bzip2 natspec unicode
-app-misc/vifm glib
+app-misc/vifm glib -vim -vim-syntax
 app-emulation/virt-manager policykit gui verify-sig
 net-misc/wget verify-sig gnutls
+gui-apps/waybar tray
+app-emulation/wine-staging bluetooth capi ffmpeg gphoto2 netapi nls odbc opencl pcap perl pulseaudio scanner udev v4l
 gui-libs/wlroots x11-backend
-app-text/zathura seccomp
+app-text/zathura seccomp -mupdf
 app-text/zathura-meta cb djvu epub postscript
 x11-libs/xapp introspection

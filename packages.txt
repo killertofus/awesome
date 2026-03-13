@@ -1,5 +1,6 @@
 7zip
 alacritty
+awww
 bat
 blueman
 bluez
@@ -16,6 +17,7 @@ fzf
 dev-vcs/git
 gnome-disk-utility
 hack
+helix
 jellyfin-bin
 lazygit
 librewolf-bin
@@ -26,7 +28,6 @@ ly
 mirrorselect
 mpv
 nemo
-neovim
 nerdfonts
 networkmanager
 noto
