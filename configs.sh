@@ -8,6 +8,3 @@ gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.nemo.preferences show-hidden-files true
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
-export WINEPREFIX="$XDG_DATA_HOME"/wine
-export HISTFILE="$XDG_STATE_HOME"/zsh/history
-export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
